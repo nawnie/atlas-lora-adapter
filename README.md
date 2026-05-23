@@ -124,24 +124,6 @@ This project is **not** claiming:
 The sample training records are **schema/scaffold examples**, not final SFT-quality records.
 
 
-## Brand / positioning quick read
-
-For public-facing language, use:
-
-```text
-Atlas Reader LoRA tests a portable reading protocol for a versioned structured-RAG contract.
-```
-
-Avoid claiming a new LoRA algorithm or proven performance before training.
-
-See:
-
-```text
-01_strategy/BRAND_AND_POSITIONING_GUIDE.md
-00_landing_page/PUBLIC_SUMMARY_DRAFT.md
-10_source_materials/CITATION_STYLE_GUIDE.md
-```
-
 ## Quick start for reviewers
 
 Read these first:
@@ -158,7 +140,7 @@ lora_training_lab/05_evaluation/SMOKE_TRAIN_PROTOCOL.md
 
 ## Repository map
 
-This README is the project landing page. Build notes, audits, and handoff records are kept in dedicated files so reviewers can inspect them without crowding the project overview.
+This README is the project landing page. Build notes, audits, and packaging records are kept in dedicated files so reviewers can inspect them without crowding the project overview.
 
 Start here:
 
@@ -260,9 +242,7 @@ scripts/compute_significance.py
 
 ## Source policy
 
-AI assistants, chatbots, and drafting tools are not research sources.
-
-Valid sources are:
+Citable sources for this project are:
 
 - primary papers;
 - official docs;
@@ -275,20 +255,6 @@ See:
 ```text
 01_strategy/SOURCE_AND_ATTRIBUTION_POLICY.md
 ```
-
-## Release governance
-
-This repo is still below the `v0.3.0` milestone.
-
-Promotion to `v0.3.0` requires explicit owner approval.
-
-Valid approval language should be explicit, such as:
-
-```text
-Approved: promote to v0.3.0
-```
-
-No AI assistant or automation may promote this project across a `.0` milestone gate without that approval.
 
 ## Next task
 
@@ -309,8 +275,6 @@ Detailed build history and quality-control notes are intentionally kept outside 
 CHANGELOG.md
 09_research_notes/
 07_quality_control/
-GITHUB_UPLOAD_NOTES.md
-RAG_HANDOFF_GUIDE.md
 ```
 
 Current status: pre-training research lab. No finished adapter is claimed. The next publishable artifact is a measured run log with raw data and assessment.
