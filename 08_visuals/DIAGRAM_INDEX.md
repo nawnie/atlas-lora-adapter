@@ -6,6 +6,12 @@ Date: 2026-05-22
 
 ## Included diagrams
 
+Brand mark:
+
+```text
+AIWF_LOGO.png
+```
+
 | File | Purpose |
 |---|---|
 | `ATLAS_SYSTEM_OVERVIEW_DIAGRAM.png` | What the Atlas Reader LoRA adapter is |

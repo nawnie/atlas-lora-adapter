@@ -5,6 +5,7 @@ claiming training results.
 
 Changed:
 
+- added the AI Without Fear logo to the GitHub-facing README header;
 - added `.gitignore` rules for runtime artifacts, model weights, local secrets,
   preserved incoming payloads, private handoff material, and forensic Git
   history;

@@ -2,7 +2,7 @@
     "project":  "atlas-lora-adapter",
     "project_version":  "v0.2.9-dev21",
     "maturity":  "github_upload_prep",
-    "generated_utc":  "2026-05-23T08:06:52.8960785Z",
+    "generated_utc":  "2026-05-23T08:13:25.4680601Z",
     "description":  "GitHub/public-review package for the Atlas Reader LoRA research scaffold.",
     "upload_profile":  "public_review_lora_adapter_repo",
     "excluded_local_only_paths":  [
@@ -18,7 +18,7 @@
     "training_run_completed":  false,
     "adapter_trained":  false,
     "owner_approval_required_for_v0_3":  true,
-    "total_files":  845,
+    "total_files":  846,
     "files":  [
                   ".agents/plugins/marketplace.json",
                   ".gitignore",
@@ -697,6 +697,7 @@
                   "07_quality_control/SOURCE_POLICY_QC_v0.2.9-dev5-clean.md",
                   "07_quality_control/v0.3_OWNER_REVIEW_PACKET.md",
                   "07_quality_control/v0.3_OWNER_REVIEW_REMINDER_v0.2.9.md",
+                  "08_visuals/AIWF_LOGO.png",
                   "08_visuals/AIWF_VISUAL_BRANDING_NOTES.md",
                   "08_visuals/ATLAS_ROUTING_FLOWCHART_OVERVIEW.png",
                   "08_visuals/ATLAS_ROUTING_SYSTEM_FLOWCHART_OVERVIEW.png",

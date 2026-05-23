@@ -1,5 +1,9 @@
 # AI Without Fear — Atlas Reader LoRA Lab
 
+<p align="center">
+  <img src="08_visuals/AIWF_LOGO.png" alt="AI Without Fear logo" width="220">
+</p>
+
 ## Current status: pre-install
 
 This package has not been installed on the target PC yet.
