@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Contract Schema v1",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "adapter_family",
+    "tier",
+    "base_model",
+    "lane_count",
+    "cards_per_lane",
+    "retrieval_depth",
+    "contract_version",
+    "target_model_range",
+    "card_types",
+    "expected_behavior"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "adapter_family": {
+      "type": "string"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "mini",
+        "extended",
+        "deep",
+        "experimental"
+      ]
+    },
+    "base_model": {
+      "type": "string"
+    },
+    "lane_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cards_per_lane": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "retrieval_depth": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "contract_version": {
+      "type": "string"
+    },
+    "target_model_range": {
+      "type": "string"
+    },
+    "card_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_behavior": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

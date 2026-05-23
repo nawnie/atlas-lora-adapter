@@ -1,0 +1,51 @@
+{
+  "lane_id": "35_atlas_evaluation_benchmarking",
+  "title": "Adapter Evaluation and Proof Testing",
+  "version": "v2.13",
+  "status": "vol1_research_lane_added",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md",
+    "lane_profile.json"
+  ],
+  "retrieval_card_count": 12,
+  "related_lanes": [
+    "02_atlas_architecture_chunking_embedding",
+    "14_evaluation_observability",
+    "24_ai_application_architecture",
+    "34_aiwf_gradio_topics20_25_learning_guide"
+  ],
+  "sources": [
+    {
+      "title": "Ragas metrics documentation",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/"
+    },
+    {
+      "title": "MLflow LLM and Agent Evaluation",
+      "url": "https://mlflow.org/docs/latest/genai/eval-monitor/"
+    },
+    {
+      "title": "DeepEval LLM Evaluation Framework",
+      "url": "https://deepeval.com/"
+    },
+    {
+      "title": "DeepEval G-Eval metric documentation",
+      "url": "https://deepeval.com/docs/metrics-llm-evals"
+    },
+    {
+      "title": "LangSmith Evaluation documentation",
+      "url": "https://docs.langchain.com/langsmith/evaluation"
+    },
+    {
+      "title": "LangSmith evaluation concepts",
+      "url": "https://docs.langchain.com/langsmith/evaluation-concepts"
+    }
+  ]
+}

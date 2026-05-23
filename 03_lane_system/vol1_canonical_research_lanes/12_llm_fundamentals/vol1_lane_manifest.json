@@ -1,0 +1,41 @@
+{
+  "lane_id": "12_llm_fundamentals",
+  "title": "LLM Fundamentals",
+  "version": "v1.1",
+  "status": "vol1_research_lane_added",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "retrieval_card_count": 12,
+  "related_lanes": [
+    "02_atlas_architecture_chunking_embedding",
+    "11_gradio_ui_research",
+    "24_ai_application_architecture"
+  ],
+  "sources": [
+    {
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "title": "Hugging Face platform and model ecosystem",
+      "url": "https://huggingface.co/"
+    },
+    {
+      "title": "scikit-learn ML foundations",
+      "url": "https://scikit-learn.org/"
+    },
+    {
+      "title": "Stanford CS229 course description",
+      "url": "https://cs229.stanford.edu/"
+    }
+  ]
+}

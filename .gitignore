@@ -1,0 +1,48 @@
+# Python / local runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Training outputs and local run artifacts
+outputs/
+runs/
+wandb/
+tensorboard/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.log
+
+# Local secrets and machine-specific config
+.env
+*.env
+*.local
+secrets/
+private/
+*.pem
+*.key
+id_rsa*
+
+# Preserved incoming/source payloads that should not be part of the public GitHub repo by default.
+# Keep these on disk locally; do not commit them unless a release explicitly needs the raw archive.
+11_incoming_user_updates/AIWF_ATLAS_uploaded_2026-05-23/
+11_incoming_user_updates/AIWF_ATLAS_uploaded_2026-05-23_FOR_FORENSIC_WITH_GIT/
+11_incoming_user_updates/codex-profile-handoff/
+11_incoming_user_updates/persona-packs-torchie/
+11_incoming_user_updates/metadata/
+11_incoming_user_updates/top_level_docs/
+08_visuals/incoming_from_AIWF_ATLAS/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini

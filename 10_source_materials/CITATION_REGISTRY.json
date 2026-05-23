@@ -1,0 +1,415 @@
+{
+  "version": "v0.2.9-dev19",
+  "generated_utc": "2026-05-23T06:05:30.254667+00:00",
+  "policy": "Cite primary papers and official docs directly. Do not cite AI assistants as sources.",
+  "citations": [
+    {
+      "key": "adsul2026taskaware_lora",
+      "title": "Task-Aware LoRA Adapter Composition via Similarity Retrieval in Vector Databases",
+      "authors": "Riya Adsul; Balachandra Devarangadi Sunil; Isha Nalawade; Sudharshan Govindan",
+      "year": "2026",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2602.21222",
+      "kind": "paper",
+      "supports": [
+        "Retrieval-based LoRA adapter composition/routing is related work.",
+        "Atlas Reader should distinguish corpus/card routing from adapter-bank routing."
+      ]
+    },
+    {
+      "key": "asai2023selfrag",
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "authors": "Akari Asai; Zeqiu Wu; Yizhong Wang; Avirup Sil; Hannaneh Hajishirzi",
+      "year": "2023",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2310.11511",
+      "kind": "paper",
+      "supports": [
+        "Training models to retrieve, critique, and reflect on retrieved evidence is prior art.",
+        "Insufficient-context and critique-style behavior are related prior art."
+      ]
+    },
+    {
+      "key": "dettmers2023qlora",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "authors": "Tim Dettmers; Artidoro Pagnoni; Ari Holtzman; Luke Zettlemoyer",
+      "year": "2023",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2305.14314",
+      "kind": "paper",
+      "supports": [
+        "QLoRA trains adapters through 4-bit quantized frozen models.",
+        "NF4, double quantization, and memory-efficient fine-tuning are prior art."
+      ]
+    },
+    {
+      "key": "devine2025aloftrag",
+      "title": "ALoFTRAG: Automatic Local Fine Tuning for Retrieval Augmented Generation",
+      "authors": "Peter Devine",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2501.11929",
+      "kind": "paper",
+      "supports": [
+        "LoRA fine-tuning to improve RAG citation/answer accuracy is prior art.",
+        "Synthetic data generation/filtering for RAG fine-tuning is prior art."
+      ]
+    },
+    {
+      "key": "dwivedi2025autoraglora",
+      "title": "AutoRAG-LoRA: Hallucination-Triggered Knowledge Retuning via Lightweight Adapters",
+      "authors": "Kaushik Dwivedi; Padmanabh Patanjali Mishra",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2507.10586",
+      "kind": "paper",
+      "supports": [
+        "RAG + LoRA adapter retuning for hallucination/factuality control is related work.",
+        "Atlas Reader LoRA should state its contribution as contract/interface discipline, not adapter retuning generally."
+      ]
+    },
+    {
+      "key": "edge2024graphrag",
+      "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+      "authors": "Darren Edge; Ha Trinh; Newman Cheng; Joshua Bradley; Alex Chao; Apurva Mody; Steven Truitt; Jonathan Larson",
+      "year": "2024",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2404.16130",
+      "kind": "paper",
+      "supports": [
+        "GraphRAG / graph-structured retrieval is prior art.",
+        "Atlas should not claim structured or graph-like RAG as new."
+      ]
+    },
+    {
+      "key": "hf_accelerate_docs",
+      "title": "Hugging Face Accelerate documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/accelerate/index",
+      "kind": "official_docs",
+      "supports": [
+        "Accelerate is a training dependency used under Hugging Face training stacks.",
+        "Hardware/device orchestration should cite official docs when discussed."
+      ]
+    },
+    {
+      "key": "hf_bitsandbytes_install",
+      "title": "bitsandbytes Installation Guide",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/bitsandbytes/main/en/installation",
+      "kind": "official_docs",
+      "supports": [
+        "bitsandbytes Python >= 3.10 and PyTorch >= 2.4 minimum requirements.",
+        "bitsandbytes NVIDIA CUDA support and NF4/FP4 quantization support.",
+        "Windows x86-64 CUDA wheel support ranges.",
+        "pip install bitsandbytes guidance."
+      ]
+    },
+    {
+      "key": "hf_datasets_docs",
+      "title": "Hugging Face Datasets documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/datasets/index",
+      "kind": "official_docs",
+      "supports": [
+        "Dataset loading and Dataset object usage in training scripts.",
+        "The training script's use of Hugging Face Datasets should cite official docs."
+      ]
+    },
+    {
+      "key": "hf_peft_loraconfig",
+      "title": "PEFT LoRA documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/peft/main/en/package_reference/lora",
+      "kind": "official_docs",
+      "supports": [
+        "LoraConfig parameters: r, target_modules, lora_alpha, lora_dropout, bias, task_type.",
+        "LoRA config examples used by the training templates."
+      ]
+    },
+    {
+      "key": "hf_safetensors_docs",
+      "title": "Safetensors documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/safetensors/index",
+      "kind": "official_docs",
+      "supports": [
+        "Safetensors is included in training requirements.",
+        "Adapter/model serialization claims should cite official docs when discussed."
+      ]
+    },
+    {
+      "key": "hf_transformers_bitsandbytes",
+      "title": "Transformers bitsandbytes quantization documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/transformers/main/en/quantization/bitsandbytes",
+      "kind": "official_docs",
+      "supports": [
+        "BitsAndBytesConfig.",
+        "4-bit quantization.",
+        "NF4 for training 4-bit base models.",
+        "Nested/double quantization."
+      ]
+    },
+    {
+      "key": "hf_transformers_callbacks",
+      "title": "Transformers Callbacks documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/transformers/main_classes/callback",
+      "kind": "official_docs",
+      "supports": [
+        "TensorBoardCallback sends Trainer logs to TensorBoard.",
+        "Trainer callbacks support logging to TensorBoard and other ML platforms.",
+        "TENSORBOARD_LOGGING_DIR / output-dir based TensorBoard logging behavior."
+      ]
+    },
+    {
+      "key": "hf_transformers_trainer",
+      "title": "Transformers Trainer documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/transformers/main_classes/trainer",
+      "kind": "official_docs",
+      "supports": [
+        "Gradient accumulation.",
+        "Gradient checkpointing.",
+        "Training arguments and stability settings."
+      ]
+    },
+    {
+      "key": "hf_trl_sfttrainer",
+      "title": "TRL SFT Trainer documentation",
+      "authors": "Hugging Face",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://huggingface.co/docs/trl/main/en/sft_trainer",
+      "kind": "official_docs",
+      "supports": [
+        "SFTTrainer usage.",
+        "Conversational messages dataset format.",
+        "packing=True.",
+        "assistant_only_loss=True.",
+        "PEFT adapter training through SFTTrainer."
+      ]
+    },
+    {
+      "key": "hu2021lora",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "authors": "Edward J. Hu; Yelong Shen; Phillip Wallis; Zeyuan Allen-Zhu; Yuanzhi Li; Shean Wang; Lu Wang; Weizhu Chen",
+      "year": "2021",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "kind": "paper",
+      "supports": [
+        "LoRA freezes base model weights and trains low-rank adapter matrices.",
+        "Atlas Reader LoRA uses LoRA as mechanism, not invention."
+      ]
+    },
+    {
+      "key": "lewis2020rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Patrick Lewis; Ethan Perez; Aleksandra Piktus; Fabio Petroni; Vladimir Karpukhin; Naman Goyal; Heinrich K\u00fcttler; Mike Lewis; Wen-tau Yih; Tim Rockt\u00e4schel; Sebastian Riedel; Douwe Kiela",
+      "year": "2020",
+      "venue": "NeurIPS",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "kind": "paper",
+      "supports": [
+        "RAG itself is prior art.",
+        "Atlas Reader LoRA should not claim retrieval-augmented generation as new.",
+        "RAG keeps knowledge external to the model while generation uses retrieved context."
+      ]
+    },
+    {
+      "key": "mavromatis2024gnnrag",
+      "title": "GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning",
+      "authors": "Costas Mavromatis; George Karypis",
+      "year": "2024",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2405.20139",
+      "kind": "paper",
+      "supports": [
+        "Knowledge-graph / graph-neural retrieval for RAG is related prior art.",
+        "Graph-based retrieval and reasoning are not novel to Atlas."
+      ]
+    },
+    {
+      "key": "openai_agent_evals",
+      "title": "Evaluate agent workflows",
+      "authors": "OpenAI",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://developers.openai.com/api/docs/guides/agent-evals",
+      "kind": "official_docs",
+      "supports": [
+        "Agent workflows should be evaluated.",
+        "Atlas agent protocol should be treated as an evaluation arm, not a proof claim."
+      ]
+    },
+    {
+      "key": "openai_codex_agents_md",
+      "title": "Custom instructions with AGENTS.md",
+      "authors": "OpenAI",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "kind": "official_docs",
+      "supports": [
+        "Codex reads AGENTS.md files before doing work.",
+        "Global and project-level guidance can be layered.",
+        "Repository-level AGENTS.md can encode project norms."
+      ]
+    },
+    {
+      "key": "openai_codex_plugins_build",
+      "title": "Build plugins",
+      "authors": "OpenAI",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://developers.openai.com/codex/plugins/build",
+      "kind": "official_docs",
+      "supports": [
+        "Codex plugins use .codex-plugin/plugin.json manifests.",
+        "Plugins can include skills directories with SKILL.md files.",
+        "Repo marketplaces can expose local plugins through .agents/plugins/marketplace.json."
+      ]
+    },
+    {
+      "key": "openai_codex_rules",
+      "title": "Rules",
+      "authors": "OpenAI",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://developers.openai.com/codex/rules",
+      "kind": "official_docs",
+      "supports": [
+        "Codex rules control which commands can run outside the sandbox.",
+        "Rules are experimental and may change.",
+        "codex execpolicy check can test rule files."
+      ]
+    },
+    {
+      "key": "pytorch_get_started",
+      "title": "PyTorch Get Started Locally",
+      "authors": "PyTorch",
+      "year": "2026",
+      "venue": "Official documentation",
+      "url": "https://pytorch.org/get-started/locally/",
+      "kind": "official_docs",
+      "supports": [
+        "PyTorch Windows install guidance.",
+        "Python 3.10+ support requirement.",
+        "Pip installation from PyTorch CUDA wheel indexes.",
+        "CUDA availability verification with torch.cuda.is_available()."
+      ]
+    },
+    {
+      "key": "rathore2025_lora_rank",
+      "title": "How Much is Too Much? Exploring LoRA Rank Trade-offs for Retaining Knowledge and Domain Robustness",
+      "authors": "Darshita Rathore; Vineet Kumar; Chetna Bansal; Anindya Moitra",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2512.15634",
+      "kind": "paper",
+      "supports": [
+        "Alias key retained because earlier related-work draft used this spelling.",
+        "LoRA rank affects downstream performance and robustness.",
+        "Cross-domain/robustness questions are legitimate to evaluate rather than assume."
+      ]
+    },
+    {
+      "key": "rathore2025lora_rank",
+      "title": "How Much is Too Much? Exploring LoRA Rank Trade-offs for Retaining Knowledge and Domain Robustness",
+      "authors": "Darshita Rathore; Vineet Kumar; Chetna Bansal; Anindya Moitra",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2512.15634",
+      "kind": "paper",
+      "supports": [
+        "LoRA rank affects downstream performance and robustness.",
+        "Cross-domain/robustness questions are legitimate to evaluate rather than assume."
+      ]
+    },
+    {
+      "key": "sarthi2024raptor",
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "authors": "Parth Sarthi; Salman Abdullah; Aditi Tuli; Shubh Khanna; Anna Goldie; Christopher D. Manning",
+      "year": "2024",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2401.18059",
+      "kind": "paper",
+      "supports": [
+        "Tree-organized / hierarchical retrieval is prior art.",
+        "Atlas lanes/cards should be positioned as a structured interface, not the first hierarchical retrieval system."
+      ]
+    },
+    {
+      "key": "su2025polyprag",
+      "title": "Parametric Retrieval-Augmented Generation using Latent Routing of LoRA Adapters",
+      "authors": "Zhan Su; Fengran Mo; Jian-yun Nie",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2511.17044",
+      "kind": "paper",
+      "supports": [
+        "LoRA adapter routing / parametric RAG is related prior art.",
+        "Atlas lane routing should be framed as content-level protocol, not new adapter routing algorithm."
+      ]
+    },
+    {
+      "key": "tensorboard_get_started",
+      "title": "Get started with TensorBoard",
+      "authors": "TensorFlow",
+      "year": "2024",
+      "venue": "Official documentation",
+      "url": "https://www.tensorflow.org/tensorboard/get_started",
+      "kind": "official_docs",
+      "supports": [
+        "TensorBoard as a measurement and visualization tool for ML workflows.",
+        "Scalars/Time Series dashboards for loss, metrics, training speed, and learning rate.",
+        "Launching TensorBoard with --logdir."
+      ]
+    },
+    {
+      "key": "xu2025rdr2",
+      "title": "Equipping Retrieval-Augmented Large Language Models with Document Structure Awareness",
+      "authors": "Lingnan Xu; Chong Feng; Kaiyuan Zhang; Liu Zhengyong; Wenqiang Xu; Fanqing Meng",
+      "year": "2025",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2510.04293",
+      "kind": "paper",
+      "supports": [
+        "Structure-aware retrieval is prior art.",
+        "Atlas lanes/cards should be framed as a structured-RAG cousin, not a new structured-RAG invention."
+      ]
+    },
+    {
+      "key": "zhang2024raft",
+      "title": "RAFT: Adapting Language Model to Domain Specific RAG",
+      "authors": "Tianjun Zhang; Shishir G. Patil; Naman Jain; Sheng Shen; Matei Zaharia; Ion Stoica; Joseph E. Gonzalez",
+      "year": "2024",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2403.10131",
+      "kind": "paper",
+      "supports": [
+        "Retrieval-aware fine-tuning is prior art.",
+        "Distractor-aware RAG training is prior art.",
+        "Atlas Reader LoRA should not claim retrieval-aware fine-tuning as new."
+      ]
+    }
+  ]
+}

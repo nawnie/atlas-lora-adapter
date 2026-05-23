@@ -1,0 +1,27 @@
+{
+  "lane_id": "34_aiwf_gradio_topics20_25_learning_guide",
+  "title": "AIWF Gradio + Topics 20-25 Learning Guide Integration",
+  "adapter_version": "v2.4-current",
+  "ingestion_priority": "canonical_lane_first",
+  "freshness_class": "fast_moving",
+  "web_verification_required_for_current_claims": true,
+  "default_claim_types": [
+    "project_policy",
+    "operational_recommendation",
+    "source_crosswalk"
+  ],
+  "preferred_files_for_retrieval": [
+    "CANONICAL_OVERVIEW.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "SOURCE_COVERAGE.md",
+    "CONCEPT_MAP.md"
+  ],
+  "source_layer_hint": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/aiwf_gradio_learning_guide_topics20_25_v2",
+  "do_not_index_by_default": [
+    "vol1_lane_manifest.json",
+    "lane_profile.json"
+  ],
+  "conflict_rule": "Prefer existing subject-matter canonical lanes for factual claims; use this lane for learning sequence, capstone routing, UI pattern selection, and cross-topic integration.",
+  "status": "canonical_current",
+  "no_active_roadmap_or_draft_markers": true
+}

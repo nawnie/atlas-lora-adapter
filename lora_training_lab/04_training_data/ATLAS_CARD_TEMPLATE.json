@@ -1,0 +1,28 @@
+{
+  "card_id": "L42-CARD-001",
+  "lane_id": "42_comfyui_socket_contract_debugging",
+  "card_type": "failure_signature",
+  "title": "IMAGE to LATENT socket mismatch",
+  "user_phrasing": [
+    "why won't these ComfyUI nodes connect",
+    "input type mismatch",
+    "IMAGE and LATENT socket error"
+  ],
+  "canonical_summary": "Route here when a ComfyUI workflow fails because one node emits IMAGE while the next expects LATENT, or when socket datatype boundaries are likely involved.",
+  "must_retrieve": [
+    "ComfyUI datatype boundary notes",
+    "workflow socket contract docs",
+    "object_info or source-backed node definition if exact node names are required"
+  ],
+  "source_priority_rule": "For exact socket and class_type claims, installed object_info or source-backed node definitions outrank memory and old archive notes.",
+  "do_not_confuse_with": [
+    "Python dependency import failure",
+    "missing custom node installation",
+    "missing model file path"
+  ],
+  "answer_pattern": "Explain the socket mismatch, identify the datatype boundary, recommend verifying the output/input socket types, and avoid inventing exact node names unless source-backed.",
+  "exactness_guard": "Do not invent node class_type names, conversion nodes, or workflow paths without retrieved evidence.",
+  "needs_current_verification": false,
+  "risk_level": "medium",
+  "notes": "Small-model friendly card: concrete, narrow, and source-aware."
+}

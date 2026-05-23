@@ -1,0 +1,31 @@
+{
+  "lane_id": "RP11",
+  "slug": "11_gradio_ui_research",
+  "title": "Gradio UI Research",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [],
+  "source_counts": {
+    "files": 0,
+    "md": 0,
+    "csv": 0,
+    "json": 0,
+    "code": 0
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 12,
+  "status_before": "missing as a dedicated Gradio/common UI research lane",
+  "official_source_notes": [
+    "Gradio official docs consulted for Interface, Blocks, ChatInterface, State, flagging, components, and changelog."
+  ]
+}

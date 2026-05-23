@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Context Pack Schema v1",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "max_cards",
+    "primary_lane_id",
+    "cards"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "max_cards": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "primary_lane_id": {
+      "type": "string"
+    },
+    "secondary_lane_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "lane_id",
+          "card_id",
+          "card_type",
+          "title",
+          "canonical_summary",
+          "source_priority_rule",
+          "do_not_confuse_with",
+          "answer_pattern",
+          "exactness_guard"
+        ],
+        "properties": {
+          "lane_id": {
+            "type": "string"
+          },
+          "card_id": {
+            "type": "string"
+          },
+          "card_type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "canonical_summary": {
+            "type": "string"
+          },
+          "source_priority_rule": {
+            "type": "string"
+          },
+          "do_not_confuse_with": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "answer_pattern": {
+            "type": "string"
+          },
+          "exactness_guard": {
+            "type": "string"
+          },
+          "is_secondary_lane_card": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "routing_rule": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

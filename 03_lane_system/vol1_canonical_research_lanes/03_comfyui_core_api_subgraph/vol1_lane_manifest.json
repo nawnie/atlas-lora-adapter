@@ -1,0 +1,31 @@
+{
+  "lane_id": "RP03",
+  "slug": "03_comfyui_core_api_subgraph",
+  "title": "ComfyUI Core API, Workflow JSON, and Subgraph Research",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.5-comfyui-core-api-subgraph",
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.6-cfg-denoise-inpaint-theory"
+  ],
+  "source_counts": {
+    "files": 69,
+    "md": 62,
+    "csv": 1,
+    "json": 4,
+    "code": 1
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "v0.5 focused pass"
+}

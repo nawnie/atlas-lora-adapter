@@ -1,0 +1,23 @@
+{
+  "lane_id": "28_comfyui_workflow_api_graph_subgraph_advanced",
+  "slug": "28_comfyui_workflow_api_graph_subgraph_advanced",
+  "title": "ComfyUI Workflow API, Graph, and Subgraph Advanced Patterns",
+  "status": "canonical_current",
+  "freshness": "fast_moving",
+  "claim_confidence": "sourced_to_official_docs_where_possible",
+  "preferred_for_queries": [
+    "ComfyUI advanced usage",
+    "custom node development",
+    "workflow API",
+    "subgraph/UI/troubleshooting"
+  ],
+  "source_priority": [
+    "official ComfyUI docs",
+    "ComfyUI source code",
+    "verified custom-node docs",
+    "community examples as secondary"
+  ],
+  "adapter_version": "v2.0-current",
+  "web_verification_required_for_current_claims": true,
+  "no_active_roadmap_or_draft_markers": true
+}

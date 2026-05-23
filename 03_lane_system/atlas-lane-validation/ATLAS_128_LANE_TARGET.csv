@@ -1,0 +1,129 @@
+target_number,lane_id,title,source_status,validation_status,why_it_matters
+1,01_source_ledger_evidence,Source Ledger Evidence,existing,baseline,"Source provenance, evidence grade, claim lineage."
+2,02_atlas_architecture_chunking_embedding,"Atlas Architecture, Chunking, and Embedding",existing,baseline,"RAG architecture, chunking, embedding, metadata discipline."
+3,03_comfyui_core_api_subgraph,ComfyUI Core API and Subgraph,existing,baseline,"ComfyUI API, workflow JSON, subgraph basics."
+4,04_comfyui_custom_node_ecosystem,ComfyUI Custom Node Ecosystem,existing,baseline,Nodepack evaluation and node safety.
+5,05_pip_runtime_dependency_knowledge,Pip Runtime Dependency Knowledge,existing,baseline,Python package/runtime dependency issues.
+6,06_training_data_centric_ml_vol2,Training Data-Centric ML,existing,baseline,Dataset and training-data thinking.
+7,07_cfg_denoise_inpaint_theory,"CFG, Denoise, and Inpaint Theory",existing,baseline,"Guidance, denoise, and inpainting principles."
+8,08_compatibility_matrix_atlas,Compatibility Matrix Atlas,existing,baseline,Compatibility matrices and version-sensitive matching.
+9,09_failure_signature_atlas,Failure Signature Atlas,existing,baseline,Known failure signatures and routing.
+10,10_workflow_pattern_atlas_library,Workflow Pattern Atlas Library,existing,baseline,Reusable workflow patterns.
+11,11_gradio_ui_research,Gradio UI Research,existing,baseline,Gradio UI concepts and app-building research.
+12,12_llm_fundamentals,LLM Fundamentals,existing,baseline,LLM concepts and behavior.
+13,13_agent_tool_use_mcp,Agent Tool Use and MCP,existing,baseline,"Agents, tool use, MCP, tool schemas."
+14,14_evaluation_observability,Evaluation and Observability,existing,baseline,"Eval, logging, observability, test harnesses."
+15,15_safety_security_red_team,"Safety, Security, and Red Team",existing,baseline,Safety/security/risk review.
+16,16_governance_licensing_ethics,"Governance, Licensing, and Ethics",existing,baseline,"Licensing, ethics, rights, governance."
+17,17_model_serving_deployment,Model Serving and Deployment,existing,baseline,Model servers and deployment patterns.
+18,18_mlops_llmops_release_management,"MLOps, LLMOps, and Release Management",existing,baseline,"Release processes, maintenance, versioning."
+19,19_math_for_ai_practitioners,Math for AI Practitioners,existing,baseline,Practical math concepts for AI.
+20,20_data_engineering_for_ai,Data Engineering for AI,existing,baseline,Data pipelines and AI-ready data.
+21,21_audio_speech_music_ai,"Audio, Speech, and Music AI",existing,baseline,Audio and speech AI workflows.
+22,22_vision_language_ocr_document_ai,"Vision, OCR, and Document AI",existing,baseline,Vision-language and document workflows.
+23,23_synthetic_data_dataset_creation,Synthetic Data and Dataset Creation,existing,baseline,Synthetic datasets and generation loops.
+24,24_ai_application_architecture,AI Application Architecture,existing,baseline,AI app architecture and system design.
+25,25_hardware_cost_performance_planning,Hardware Cost and Performance Planning,existing,baseline,Hardware/VRAM/cost planning.
+26,26_comfyui_advanced_node_io_datatypes,ComfyUI Advanced Node I/O and Datatypes,existing,baseline,Advanced sockets and datatypes.
+27,27_comfyui_custom_node_development_patterns,ComfyUI Custom Node Development Patterns,existing,baseline,Custom node implementation patterns.
+28,28_comfyui_workflow_api_graph_subgraph_advanced,"ComfyUI Workflow API, Graph, and Subgraph Advanced Patterns",existing,baseline,Advanced graph and subgraph patterns.
+29,29_comfyui_frontend_extensions_ui_controls,ComfyUI Frontend Extensions and UI Controls,existing,baseline,Frontend extension and UI control patterns.
+30,30_comfyui_troubleshooting_migration_packaging,"ComfyUI Troubleshooting, Migration, and Packaging",existing,baseline,"Troubleshooting, migration, packaging safety."
+31,31_comfyui_datatype_conversion_boundaries,ComfyUI Datatype Conversion Boundaries,existing,baseline,Datatype boundaries and conversion logic.
+32,32_comfyui_workflow_api_automation_gradio_bridge,ComfyUI Workflow API Automation and Gradio Bridge,existing,baseline,Automation and Gradio bridge patterns.
+33,33_comfyui_advanced_workflow_design_patterns,ComfyUI Advanced Workflow Design Patterns,existing,baseline,Advanced workflow design.
+34,34_aiwf_gradio_topics20_25_learning_guide,AIWF Gradio + Topics 20-25 Learning Guide,existing,baseline,Learning-guide integration.
+35,35_atlas_evaluation_benchmarking,Atlas Evaluation and Proof Testing,existing,baseline,Benchmarking and proof tests.
+36,36_retrieval_card_authoring,Retrieval Card Authoring,new,seed_started,Turns weak routing cards into answer-bearing retrieval cards.
+37,37_small_model_retrieval_optimization,Small-Model Retrieval Optimization,new,seed_started,Optimizes context packs for 3B/4B/7B local models.
+38,38_windows_ai_workstation_setup,Windows AI Workstation Setup,new,seed_started,"PowerShell, paths, permissions, venvs, launchers."
+39,39_cuda_torch_runtime_alignment,"CUDA, Torch, and Runtime Alignment",new,seed_started,Driver/CUDA/PyTorch/xFormers/cuDNN mismatch diagnosis.
+40,40_model_folder_architecture,Model Folder Architecture,new,seed_started,"Central model storage, symlinks, extra_model_paths, deduping."
+41,41_comfyui_workflow_repair,ComfyUI Workflow Repair,new,seed_started,"Broken JSON, missing links, stale nodes, workflow validation."
+42,42_comfyui_socket_contract_debugging,ComfyUI Socket Contract Debugging,new,seed_started,IMAGE/LATENT/MASK/CONDITIONING/MODEL boundary errors.
+43,43_inpainting_fundamentals,Inpainting Fundamentals,new,seed_started,"Mask, denoise, crop context, identity preservation basics."
+44,44_video_vram_optimization,Video VRAM Optimization,new,seed_started,"Frame count, batch size, offload, cache, OOM control."
+45,45_last_frame_chaining_video_extension,Last-Frame Chaining and Video Extension,new,seed_started,WAN/LTX extension with last-frame carryover.
+46,46_gradio_multi_venv_orchestration,Gradio Multi-venv Orchestration,new,seed_started,One UI controlling isolated tool environments.
+47,47_raw_rag_vs_atlas_comparison,Raw RAG vs Atlas Comparison,new,seed_started,Measures Atlas structure against flat-file retrieval.
+48,48_small_vs_large_model_benchmarking,Small vs Large Model Benchmarking,new,seed_started,4B vs 7B vs larger baselines with/without Atlas.
+49,49_aiwf_core_philosophy,AIWF Core Philosophy,new,seed_started,"Principles, brand thesis, and project alignment."
+50,50_diagram_visual_asset_system,Diagram and Visual Asset System,new,seed_started,"Figure naming, Torchie callouts, diagram governance."
+51,51_atlas_lane_design_system,Atlas Lane Design System,new,seed_started,"When to create, merge, validate, or reject lanes."
+52,52_source_ledger_maintenance,Source Ledger Maintenance,new,seed_started,"Source paths, evidence grades, claim lineage, refresh queues."
+53,53_claim_freshness_verification,Claim Freshness and Verification,new,seed_started,Current verification for volatile tool/model/API claims.
+54,54_conflict_resolution_patterns,Conflict Resolution Patterns,new,candidate,Resolve source disagreement and downgrade confidence.
+55,55_chunking_strategy_by_file_type,Chunking Strategy by File Type,new,candidate,"Markdown, JSON, CSV, code, image, manifest, log chunking."
+56,56_metadata_schema_design,Metadata Schema Design,new,candidate,Metadata fields that survive ingestion into vector systems.
+57,57_hybrid_retrieval_reranking,Hybrid Retrieval and Reranking,new,candidate,Dense + keyword + rerank for exact identifiers.
+58,58_long_context_failure_modes,Long-Context Failure Modes,new,candidate,"Lost-in-middle, over-retrieval, stale-source flooding."
+59,59_atlas_import_profiles,Atlas Import Profiles,new,candidate,"AnythingLLM, Open WebUI, custom Python, Gradio import profiles."
+60,60_atlas_packaging_release_qa,Atlas Packaging and Release QA,new,candidate,"Manifests, checksums, releases, public preview gates."
+61,61_python_version_strategy,Python Version Strategy,new,candidate,Python 3.10/3.11/3.12 compatibility and venv strategy.
+62,62_vram_memory_management,VRAM and Memory Management,new,candidate,"OOM, pagefile, tiled VAE, batch size, cache/offload flags."
+63,63_ports_local_services,Ports and Local Services,new,candidate,"ComfyUI, Ollama, Gradio, Forge, InvokeAI port conflicts."
+64,64_one_click_launcher_patterns,One-Click Launcher Patterns,new,candidate,"BAT/PowerShell launchers, settings files, relaunch logic."
+65,65_dependency_isolation_multi_venv_apps,Dependency Isolation and Multi-venv Apps,new,candidate,Plugin/module isolation for conflicting dependency stacks.
+66,66_runtime_log_diagnosis,Runtime Log Diagnosis,new,candidate,"Stack traces, import errors, warnings, missing modules."
+67,67_ai_workstation_validator,AI Workstation Validator,new,candidate,"Diagnostics, telemetry, reports, system health checks."
+68,68_comfyui_install_migration,ComfyUI Install and Migration,new,candidate,"Portable vs clone, manager setup, migration patterns."
+69,69_comfyui_workflow_json_internals,ComfyUI Workflow JSON Internals,new,candidate,"nodes, links, widgets_values, class_type, object_info."
+70,70_comfyui_api_execution,ComfyUI API Execution,new,candidate,"/prompt, /history, /view, queueing, remote execution."
+71,71_comfyui_subgraph_design,ComfyUI Subgraph Design,new,candidate,Reusable subgraphs and app-like workflow components.
+72,72_comfyui_custom_node_packaging,ComfyUI Custom Node Packaging,new,candidate,"nodes.py, __init__.py, requirements, class mappings."
+73,73_comfyui_frontend_extension_design,ComfyUI Frontend Extension Design,new,candidate,"Panels, widgets, overlays, tooltips, UI controls."
+74,74_comfyui_workflow_validation,ComfyUI Workflow Validation,new,candidate,"Preflight checks, node checks, schema checks."
+75,75_comfyui_manager_nodepack_safety,ComfyUI Manager and Nodepack Safety,new,candidate,"Dependency conflicts, update risks, version pinning."
+76,76_prompt_anatomy_image_models,Prompt Anatomy for Image Models,new,candidate,"Subject, style, medium, camera, lighting, negatives."
+77,77_sampler_scheduler_behavior,Sampler and Scheduler Behavior,new,candidate,"Steps, sampler families, scheduler tradeoffs."
+78,78_cfg_guidance_behavior,CFG and Guidance Behavior,new,candidate,"CFG, overcooking, prompt adherence, guidance failures."
+79,79_seed_variation_control,Seed and Variation Control,new,candidate,"Reproducibility, fixed seeds, controlled variation."
+80,80_advanced_inpainting_systems,Advanced Inpainting Systems,new,candidate,"SAM2, GroundingDINO, crop-stitch, differential diffusion."
+81,81_controlnet_adapter_union_control,"ControlNet, T2I Adapter, and Union Control",new,candidate,"Pose, depth, canny, lineart, tile, normal, softedge."
+82,82_ipadapter_reference_conditioning,IPAdapter and Reference Conditioning,new,candidate,Face/style/reference image conditioning.
+83,83_face_restore_faceswap,Face Restore and Face Swap,new,candidate,"ReActor, CodeFormer, GFPGAN, non-diffusion face tools."
+84,84_upscaling_restoration,Upscaling and Restoration,new,candidate,"ESRGAN, SUPIR, tiled diffusion, artifact control."
+85,85_old_photo_restoration,Old Photo Restoration,new,candidate,"Scratch removal, colorization, detail reconstruction."
+86,86_product_clothing_tryon_workflows,"Product, Clothing, and Try-on Workflows",new,candidate,"Shape preservation, garment transfer, masking, identity risk."
+87,87_character_consistency,Character Consistency,new,candidate,"LoRA, reference images, embeddings, identity preservation."
+88,88_image_prompt_failure_signatures,Image Prompt Failure Signatures,new,candidate,"Slop, extra limbs, bad text, wax skin, identity drift."
+89,89_video_model_fundamentals,Video Model Fundamentals,new,candidate,"I2V, T2V, V2V, temporal coherence, motion strength."
+90,90_wan_video_workflows,WAN Video Workflows,new,candidate,"WAN setup, frames, VAE, model placement."
+91,91_ltx_video_workflows,LTX Video Workflows,new,candidate,"LTX setup, prompt behavior, length, encoder issues."
+92,92_animatediff_motion_modules,AnimateDiff and Motion Modules,new,candidate,Legacy SD motion modules and AnimateDiff patterns.
+93,93_video_stitching_looping,Video Stitching and Looping,new,candidate,"Ping-pong, overlap, blending, continuity."
+94,94_video_inpainting_object_editing,Video Inpainting and Object Editing,new,candidate,"Masked video edits, flicker, temporal consistency."
+95,95_video_upscale_interpolation,Video Upscaling and Frame Interpolation,new,candidate,"RIFE, upscaling, restoration, artifact control."
+96,96_video_failure_signatures,Video Failure Signatures,new,candidate,"Flicker, melting, identity drift, scene reset, motion collapse."
+97,97_model_file_types_placement,Model File Types and Placement,new,candidate,"Checkpoints, safetensors, UNet, VAE, CLIP, text encoders."
+98,98_model_family_differences,Model Family Differences,new,candidate,"SD 1.5, SDXL, Flux, WAN, LTX requirements."
+99,99_vae_latent_behavior,VAE and Latent Behavior,new,candidate,"Decode artifacts, tiling, color shifts, latent mismatch."
+100,100_text_encoders_tokenizers,Text Encoders and Tokenizers,new,candidate,"CLIP, T5, dual encoders, prompt interpretation."
+101,101_lora_lycoris_embeddings,"LoRA, LyCORIS, and Embeddings",new,candidate,"Use, stacking, strength, training artifacts."
+102,102_quantization_precision,Quantization and Precision,new,candidate,"fp16, bf16, fp8, GGUF, quality vs VRAM."
+103,103_model_licensing_use_risk,Model Licensing and Use Risk,new,candidate,"Commercial use, redistribution, third-party restrictions."
+104,104_model_download_dedup_strategy,Model Download and Dedup Strategy,new,candidate,Avoid duplicate downloads across local AI apps.
+105,105_captioning_tool_design,Captioning Tool Design,new,candidate,"Batch captioning, prefix/suffix, filename captions, limits."
+106,106_caption_model_finetuning,Caption Model Fine-Tuning,new,candidate,Teaching captioners people/concepts; limits and risks.
+107,107_dataset_curation,Dataset Curation,new,candidate,"Image selection, quality filters, duplicates, balance."
+108,108_person_identity_dataset_strategy,Person and Identity Dataset Strategy,new,candidate,"Face/body/pose coverage, regularization, consent."
+109,109_lora_training_practical_guide,LoRA Training Practical Guide,new,candidate,"LR, repeats, epochs, loss, samples, overfit signs."
+110,110_pose_composition_dataset_tagging,Pose and Composition Dataset Tagging,new,candidate,"OpenPose, clustering, sorting training images."
+111,111_synthetic_data_flywheels,Synthetic Data Flywheels,new,candidate,"Generate, select, refine, train, evaluate loops."
+112,112_dataset_rights_privacy,Dataset Rights and Privacy,new,candidate,"Consent, likeness, sensitive data, private datasets."
+113,113_gradio_app_architecture,Gradio App Architecture,new,candidate,"Blocks, tabs, state, events, layout patterns."
+114,114_gradio6_migration,Gradio 6 Migration,new,candidate,Gradio 5 to 6 changes and compatibility.
+115,115_gradio_comfyui_bridge,Gradio and ComfyUI Bridge,new,candidate,"API calls, workflow execution, queue handling."
+116,116_gradio_remote_phone_ui,Gradio Remote Access and Phone UI,new,candidate,"LAN, auth, share links, mobile UI, security warnings."
+117,117_gradio_file_handling,Gradio File Handling,new,candidate,"Uploads, previews, save/load, video/image display."
+118,118_gradio_queue_progress,Gradio Job Queue and Progress,new,candidate,"Long jobs, cancellation, progress updates."
+119,119_gradio_settings_relaunch_panels,Gradio Settings and Relaunch Panels,new,candidate,"User settings, backend relaunch, config persistence."
+120,120_modular_plugin_app_design,Modular Plugin App Design,new,candidate,Add-on architecture similar to A1111/ComfyUI.
+121,121_app_packaging_for_beginners,App Packaging for Beginners,new,candidate,"install.bat, launch.bat, requirements, README, troubleshooting."
+122,122_local_llm_runtime_selection,Local LLM Runtime Selection,new,candidate,"Ollama, LM Studio, llama.cpp, vLLM, text-generation-webui."
+123,123_small_model_behavior,Small Model Behavior,new,candidate,"3B/4B/7B strengths, routing, context limits, failures."
+124,124_prompting_for_local_models,Prompting for Local Models,new,candidate,"System prompts, instruction formats, role discipline."
+125,125_multi_model_routing,Multi-Model Routing,new,candidate,Coding model vs reasoning model vs vision model.
+126,126_tool_calling_mcp,Tool Calling and MCP,new,candidate,"Tool schemas, filesystem tools, browser tools, local actions."
+127,127_rag_assistant_behavior,RAG Assistant Behavior,new,candidate,"Retrieval discipline, citation, refusal, uncertainty."
+128,128_persona_voice_packs,Persona and Voice Packs,new,candidate,"Torchie, Atlas assistant, guide narrator, technical editor."

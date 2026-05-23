@@ -1,0 +1,29 @@
+{
+  "lane_id": "RP31",
+  "slug": "31_comfyui_datatype_conversion_boundaries",
+  "title": "ComfyUI Datatype Conversion and Boundary Design",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md",
+    "IMAGE_LATENT_MASK_CONVERSION_GUIDE.md",
+    "lane_profile.json",
+    "vol1_lane_manifest.json"
+  ],
+  "source_anchor_dir": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/comfyui_advanced_pass02_datatype_boundaries",
+  "card_count": 12,
+  "source_ids": [
+    "COMFY-PASS02-DOC-001",
+    "COMFY-PASS02-DOC-002",
+    "COMFY-PASS02-DOC-003",
+    "COMFY-PASS02-DOC-004",
+    "COMFY-PASS02-DOC-005",
+    "COMFY-PASS02-DOC-006"
+  ]
+}

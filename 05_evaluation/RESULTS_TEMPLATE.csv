@@ -1,0 +1,1 @@
+experiment_id,question_id,model,model_size,adapter,rag_condition,retrieval_method,grounding,exactness,actionability,retrieval_discipline,beginner_safety,format_fit,uncertainty_handling,total_score,pass_fail,failure_tags,notes

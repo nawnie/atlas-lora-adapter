@@ -1,0 +1,28 @@
+{
+  "lane_id": "18_mlops_llmops_release_management",
+  "title": "Mlops Llmops Release Management",
+  "adapter_version": "v2.0-current",
+  "ingestion_priority": "canonical_lane_first",
+  "freshness_class": "fast_moving",
+  "web_verification_required_for_current_claims": true,
+  "default_claim_types": [
+    "project_policy",
+    "operational_recommendation",
+    "sourced_fact"
+  ],
+  "preferred_files_for_retrieval": [
+    "CANONICAL_OVERVIEW.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "source_layer_hint": "03_SOURCE_CONTENT/C_USER_EXPANDED_TOPIC_NOTES",
+  "do_not_index_by_default": [
+    "vol1_lane_manifest.json",
+    "lane_profile.json"
+  ],
+  "conflict_rule": "Prefer canonical lane files over raw source payloads unless the user asks for provenance/history. For volatile claims, verify online before presenting as current.",
+  "status": "canonical_current",
+  "no_active_roadmap_or_draft_markers": true
+}

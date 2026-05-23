@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Lane Validation Record",
+  "type": "object",
+  "required": [
+    "lane_id",
+    "title",
+    "status",
+    "source_status",
+    "minimum_records_before_training",
+    "validation_checks",
+    "training_coverage_targets",
+    "promotion_gate"
+  ],
+  "properties": {
+    "lane_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "existing",
+        "approved_next",
+        "candidate",
+        "validated",
+        "rejected",
+        "merged"
+      ]
+    },
+    "source_status": {
+      "type": "string",
+      "enum": [
+        "existing",
+        "new",
+        "mixed"
+      ]
+    },
+    "minimum_records_before_training": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "validation_checks": {
+      "type": "object",
+      "required": [
+        "canonical_overview",
+        "retrieval_cards",
+        "source_coverage",
+        "qa_prompts",
+        "answer_patterns",
+        "do_not_confuse_with",
+        "failure_signatures"
+      ],
+      "properties": {
+        "canonical_overview": {
+          "type": "boolean"
+        },
+        "retrieval_cards": {
+          "type": "boolean"
+        },
+        "source_coverage": {
+          "type": "boolean"
+        },
+        "qa_prompts": {
+          "type": "boolean"
+        },
+        "answer_patterns": {
+          "type": "boolean"
+        },
+        "do_not_confuse_with": {
+          "type": "boolean"
+        },
+        "failure_signatures": {
+          "type": "boolean"
+        }
+      }
+    },
+    "training_coverage_targets": {
+      "type": "object",
+      "required": [
+        "lane_routing",
+        "answer_from_context",
+        "conflict_resolution",
+        "insufficient_context",
+        "exactness_guard",
+        "freshness_check"
+      ],
+      "properties": {
+        "lane_routing": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answer_from_context": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "conflict_resolution": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "insufficient_context": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "exactness_guard": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "freshness_check": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "promotion_gate": {
+      "type": "string"
+    }
+  }
+}

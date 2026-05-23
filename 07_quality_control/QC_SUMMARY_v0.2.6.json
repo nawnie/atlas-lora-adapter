@@ -1,0 +1,90 @@
+{
+  "version_qc": "v0.2.6",
+  "source_archive": "atlas-lora-adapter-v0.2.5-six-seed-lanes-2026-05-22.zip",
+  "lanes_found": 6,
+  "cards_found": 72,
+  "schema_blocking_issues": 0,
+  "quality_warnings": 58,
+  "card_type_totals": {
+    "concept": 24,
+    "failure_signature": 18,
+    "diagnostic_branch": 12,
+    "source_priority": 6,
+    "do_not_confuse": 6,
+    "answer_pattern": 6
+  },
+  "lanes": {
+    "36_retrieval_card_authoring": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    },
+    "37_small_model_retrieval_optimization": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    },
+    "41_comfyui_workflow_repair": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    },
+    "42_comfyui_socket_contract_debugging": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    },
+    "44_video_vram_optimization": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    },
+    "45_last_frame_chaining_video_extension": {
+      "cards": 12,
+      "card_mix": {
+        "concept": 4,
+        "failure_signature": 3,
+        "diagnostic_branch": 2,
+        "source_priority": 1,
+        "do_not_confuse": 1,
+        "answer_pattern": 1
+      },
+      "missing_files": []
+    }
+  }
+}

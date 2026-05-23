@@ -1,0 +1,20 @@
+{
+  "name": "aiwf-local",
+  "interface": {
+    "displayName": "AIWF Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "aiwf-atlas-protocol",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aiwf-atlas-protocol"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

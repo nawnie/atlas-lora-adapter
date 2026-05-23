@@ -1,0 +1,34 @@
+{
+  "lane_id": "20_data_engineering_for_ai",
+  "title": "Data Engineering For Ai",
+  "adapter_version": "v2.0-current",
+  "ingestion_priority": "canonical_lane_first",
+  "freshness_class": "slow_changing",
+  "web_verification_required_for_current_claims": true,
+  "default_claim_types": [
+    "project_policy",
+    "operational_recommendation",
+    "sourced_fact"
+  ],
+  "preferred_files_for_retrieval": [
+    "CANONICAL_OVERVIEW.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "source_layer_hint": "03_SOURCE_CONTENT/C_USER_EXPANDED_TOPIC_NOTES",
+  "do_not_index_by_default": [
+    "vol1_lane_manifest.json",
+    "lane_profile.json"
+  ],
+  "conflict_rule": "Prefer canonical lane files over raw source payloads unless the user asks for provenance/history. For volatile claims, verify online before presenting as current.",
+  "source_hardening_v1_7": {
+    "source_verification_status": "verified_with_volatile_synthetic_ratio_claims",
+    "critical_answer_gate": "Do not state 30-70% frontier training data is synthetic as a hard fact; phrase as volatile estimate unless verified with a stronger primary source.",
+    "verified_source_matrix": "04_MANIFESTS/topics_20_25_source_verification_matrix_v1_6.csv",
+    "claim_override_file": "10_SCHEMA_AND_INDEX/topics_20_25_claim_status_overrides_v1_7.jsonl"
+  },
+  "status": "canonical_current",
+  "no_active_roadmap_or_draft_markers": true
+}

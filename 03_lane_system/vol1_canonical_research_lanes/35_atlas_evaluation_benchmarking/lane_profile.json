@@ -1,0 +1,18 @@
+{
+  "lane_id": "35_atlas_evaluation_benchmarking",
+  "title": "Adapter Evaluation and Proof Testing",
+  "status": "canonical_current",
+  "freshness": "fast_moving",
+  "role": "proof-testing layer for the Atlas Layer",
+  "index_by_default": true,
+  "retrieval_card_count": 12,
+  "source_confidence": "official_docs_verified_for_framework_claims; benchmark_required_for_aiwf_performance_claims",
+  "related_lanes": [
+    "02_atlas_architecture_chunking_embedding",
+    "14_evaluation_observability",
+    "24_ai_application_architecture",
+    "34_aiwf_gradio_topics20_25_learning_guide"
+  ],
+  "humor_level": "low; only in reassurance and field notes",
+  "source_pack": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/adapter_evaluation_benchmarking_v2_13"
+}

@@ -1,0 +1,1026 @@
+[
+  {
+    "target_number": 1,
+    "lane_id": "01_source_ledger_evidence",
+    "title": "Source Ledger Evidence",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Source provenance, evidence grade, claim lineage."
+  },
+  {
+    "target_number": 2,
+    "lane_id": "02_atlas_architecture_chunking_embedding",
+    "title": "Atlas Architecture, Chunking, and Embedding",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "RAG architecture, chunking, embedding, metadata discipline."
+  },
+  {
+    "target_number": 3,
+    "lane_id": "03_comfyui_core_api_subgraph",
+    "title": "ComfyUI Core API and Subgraph",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "ComfyUI API, workflow JSON, subgraph basics."
+  },
+  {
+    "target_number": 4,
+    "lane_id": "04_comfyui_custom_node_ecosystem",
+    "title": "ComfyUI Custom Node Ecosystem",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Nodepack evaluation and node safety."
+  },
+  {
+    "target_number": 5,
+    "lane_id": "05_pip_runtime_dependency_knowledge",
+    "title": "Pip Runtime Dependency Knowledge",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Python package/runtime dependency issues."
+  },
+  {
+    "target_number": 6,
+    "lane_id": "06_training_data_centric_ml_vol2",
+    "title": "Training Data-Centric ML",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Dataset and training-data thinking."
+  },
+  {
+    "target_number": 7,
+    "lane_id": "07_cfg_denoise_inpaint_theory",
+    "title": "CFG, Denoise, and Inpaint Theory",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Guidance, denoise, and inpainting principles."
+  },
+  {
+    "target_number": 8,
+    "lane_id": "08_compatibility_matrix_atlas",
+    "title": "Compatibility Matrix Atlas",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Compatibility matrices and version-sensitive matching."
+  },
+  {
+    "target_number": 9,
+    "lane_id": "09_failure_signature_atlas",
+    "title": "Failure Signature Atlas",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Known failure signatures and routing."
+  },
+  {
+    "target_number": 10,
+    "lane_id": "10_workflow_pattern_atlas_library",
+    "title": "Workflow Pattern Atlas Library",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Reusable workflow patterns."
+  },
+  {
+    "target_number": 11,
+    "lane_id": "11_gradio_ui_research",
+    "title": "Gradio UI Research",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Gradio UI concepts and app-building research."
+  },
+  {
+    "target_number": 12,
+    "lane_id": "12_llm_fundamentals",
+    "title": "LLM Fundamentals",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "LLM concepts and behavior."
+  },
+  {
+    "target_number": 13,
+    "lane_id": "13_agent_tool_use_mcp",
+    "title": "Agent Tool Use and MCP",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Agents, tool use, MCP, tool schemas."
+  },
+  {
+    "target_number": 14,
+    "lane_id": "14_evaluation_observability",
+    "title": "Evaluation and Observability",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Eval, logging, observability, test harnesses."
+  },
+  {
+    "target_number": 15,
+    "lane_id": "15_safety_security_red_team",
+    "title": "Safety, Security, and Red Team",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Safety/security/risk review."
+  },
+  {
+    "target_number": 16,
+    "lane_id": "16_governance_licensing_ethics",
+    "title": "Governance, Licensing, and Ethics",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Licensing, ethics, rights, governance."
+  },
+  {
+    "target_number": 17,
+    "lane_id": "17_model_serving_deployment",
+    "title": "Model Serving and Deployment",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Model servers and deployment patterns."
+  },
+  {
+    "target_number": 18,
+    "lane_id": "18_mlops_llmops_release_management",
+    "title": "MLOps, LLMOps, and Release Management",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Release processes, maintenance, versioning."
+  },
+  {
+    "target_number": 19,
+    "lane_id": "19_math_for_ai_practitioners",
+    "title": "Math for AI Practitioners",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Practical math concepts for AI."
+  },
+  {
+    "target_number": 20,
+    "lane_id": "20_data_engineering_for_ai",
+    "title": "Data Engineering for AI",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Data pipelines and AI-ready data."
+  },
+  {
+    "target_number": 21,
+    "lane_id": "21_audio_speech_music_ai",
+    "title": "Audio, Speech, and Music AI",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Audio and speech AI workflows."
+  },
+  {
+    "target_number": 22,
+    "lane_id": "22_vision_language_ocr_document_ai",
+    "title": "Vision, OCR, and Document AI",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Vision-language and document workflows."
+  },
+  {
+    "target_number": 23,
+    "lane_id": "23_synthetic_data_dataset_creation",
+    "title": "Synthetic Data and Dataset Creation",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Synthetic datasets and generation loops."
+  },
+  {
+    "target_number": 24,
+    "lane_id": "24_ai_application_architecture",
+    "title": "AI Application Architecture",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "AI app architecture and system design."
+  },
+  {
+    "target_number": 25,
+    "lane_id": "25_hardware_cost_performance_planning",
+    "title": "Hardware Cost and Performance Planning",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Hardware/VRAM/cost planning."
+  },
+  {
+    "target_number": 26,
+    "lane_id": "26_comfyui_advanced_node_io_datatypes",
+    "title": "ComfyUI Advanced Node I/O and Datatypes",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Advanced sockets and datatypes."
+  },
+  {
+    "target_number": 27,
+    "lane_id": "27_comfyui_custom_node_development_patterns",
+    "title": "ComfyUI Custom Node Development Patterns",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Custom node implementation patterns."
+  },
+  {
+    "target_number": 28,
+    "lane_id": "28_comfyui_workflow_api_graph_subgraph_advanced",
+    "title": "ComfyUI Workflow API, Graph, and Subgraph Advanced Patterns",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Advanced graph and subgraph patterns."
+  },
+  {
+    "target_number": 29,
+    "lane_id": "29_comfyui_frontend_extensions_ui_controls",
+    "title": "ComfyUI Frontend Extensions and UI Controls",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Frontend extension and UI control patterns."
+  },
+  {
+    "target_number": 30,
+    "lane_id": "30_comfyui_troubleshooting_migration_packaging",
+    "title": "ComfyUI Troubleshooting, Migration, and Packaging",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Troubleshooting, migration, packaging safety."
+  },
+  {
+    "target_number": 31,
+    "lane_id": "31_comfyui_datatype_conversion_boundaries",
+    "title": "ComfyUI Datatype Conversion Boundaries",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Datatype boundaries and conversion logic."
+  },
+  {
+    "target_number": 32,
+    "lane_id": "32_comfyui_workflow_api_automation_gradio_bridge",
+    "title": "ComfyUI Workflow API Automation and Gradio Bridge",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Automation and Gradio bridge patterns."
+  },
+  {
+    "target_number": 33,
+    "lane_id": "33_comfyui_advanced_workflow_design_patterns",
+    "title": "ComfyUI Advanced Workflow Design Patterns",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Advanced workflow design."
+  },
+  {
+    "target_number": 34,
+    "lane_id": "34_aiwf_gradio_topics20_25_learning_guide",
+    "title": "AIWF Gradio + Topics 20-25 Learning Guide",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Learning-guide integration."
+  },
+  {
+    "target_number": 35,
+    "lane_id": "35_atlas_evaluation_benchmarking",
+    "title": "Atlas Evaluation and Proof Testing",
+    "source_status": "existing",
+    "validation_status": "baseline",
+    "why_it_matters": "Benchmarking and proof tests."
+  },
+  {
+    "target_number": 36,
+    "lane_id": "36_retrieval_card_authoring",
+    "title": "Retrieval Card Authoring",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Turns weak routing cards into answer-bearing retrieval cards."
+  },
+  {
+    "target_number": 37,
+    "lane_id": "37_small_model_retrieval_optimization",
+    "title": "Small-Model Retrieval Optimization",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Optimizes context packs for 3B/4B/7B local models."
+  },
+  {
+    "target_number": 38,
+    "lane_id": "38_windows_ai_workstation_setup",
+    "title": "Windows AI Workstation Setup",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "PowerShell, paths, permissions, venvs, launchers."
+  },
+  {
+    "target_number": 39,
+    "lane_id": "39_cuda_torch_runtime_alignment",
+    "title": "CUDA, Torch, and Runtime Alignment",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Driver/CUDA/PyTorch/xFormers/cuDNN mismatch diagnosis."
+  },
+  {
+    "target_number": 40,
+    "lane_id": "40_model_folder_architecture",
+    "title": "Model Folder Architecture",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Central model storage, symlinks, extra_model_paths, deduping."
+  },
+  {
+    "target_number": 41,
+    "lane_id": "41_comfyui_workflow_repair",
+    "title": "ComfyUI Workflow Repair",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Broken JSON, missing links, stale nodes, workflow validation."
+  },
+  {
+    "target_number": 42,
+    "lane_id": "42_comfyui_socket_contract_debugging",
+    "title": "ComfyUI Socket Contract Debugging",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "IMAGE/LATENT/MASK/CONDITIONING/MODEL boundary errors."
+  },
+  {
+    "target_number": 43,
+    "lane_id": "43_inpainting_fundamentals",
+    "title": "Inpainting Fundamentals",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Mask, denoise, crop context, identity preservation basics."
+  },
+  {
+    "target_number": 44,
+    "lane_id": "44_video_vram_optimization",
+    "title": "Video VRAM Optimization",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Frame count, batch size, offload, cache, OOM control."
+  },
+  {
+    "target_number": 45,
+    "lane_id": "45_last_frame_chaining_video_extension",
+    "title": "Last-Frame Chaining and Video Extension",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "WAN/LTX extension with last-frame carryover."
+  },
+  {
+    "target_number": 46,
+    "lane_id": "46_gradio_multi_venv_orchestration",
+    "title": "Gradio Multi-venv Orchestration",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "One UI controlling isolated tool environments."
+  },
+  {
+    "target_number": 47,
+    "lane_id": "47_raw_rag_vs_atlas_comparison",
+    "title": "Raw RAG vs Atlas Comparison",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Measures Atlas structure against flat-file retrieval."
+  },
+  {
+    "target_number": 48,
+    "lane_id": "48_small_vs_large_model_benchmarking",
+    "title": "Small vs Large Model Benchmarking",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "4B vs 7B vs larger baselines with/without Atlas."
+  },
+  {
+    "target_number": 49,
+    "lane_id": "49_aiwf_core_philosophy",
+    "title": "AIWF Core Philosophy",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Principles, brand thesis, and project alignment."
+  },
+  {
+    "target_number": 50,
+    "lane_id": "50_diagram_visual_asset_system",
+    "title": "Diagram and Visual Asset System",
+    "source_status": "new",
+    "validation_status": "approved_next",
+    "why_it_matters": "Figure naming, Torchie callouts, diagram governance."
+  },
+  {
+    "target_number": 51,
+    "lane_id": "51_atlas_lane_design_system",
+    "title": "Atlas Lane Design System",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "When to create, merge, validate, or reject lanes."
+  },
+  {
+    "target_number": 52,
+    "lane_id": "52_source_ledger_maintenance",
+    "title": "Source Ledger Maintenance",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Source paths, evidence grades, claim lineage, refresh queues."
+  },
+  {
+    "target_number": 53,
+    "lane_id": "53_claim_freshness_verification",
+    "title": "Claim Freshness and Verification",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Current verification for volatile tool/model/API claims."
+  },
+  {
+    "target_number": 54,
+    "lane_id": "54_conflict_resolution_patterns",
+    "title": "Conflict Resolution Patterns",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Resolve source disagreement and downgrade confidence."
+  },
+  {
+    "target_number": 55,
+    "lane_id": "55_chunking_strategy_by_file_type",
+    "title": "Chunking Strategy by File Type",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Markdown, JSON, CSV, code, image, manifest, log chunking."
+  },
+  {
+    "target_number": 56,
+    "lane_id": "56_metadata_schema_design",
+    "title": "Metadata Schema Design",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Metadata fields that survive ingestion into vector systems."
+  },
+  {
+    "target_number": 57,
+    "lane_id": "57_hybrid_retrieval_reranking",
+    "title": "Hybrid Retrieval and Reranking",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Dense + keyword + rerank for exact identifiers."
+  },
+  {
+    "target_number": 58,
+    "lane_id": "58_long_context_failure_modes",
+    "title": "Long-Context Failure Modes",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Lost-in-middle, over-retrieval, stale-source flooding."
+  },
+  {
+    "target_number": 59,
+    "lane_id": "59_atlas_import_profiles",
+    "title": "Atlas Import Profiles",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "AnythingLLM, Open WebUI, custom Python, Gradio import profiles."
+  },
+  {
+    "target_number": 60,
+    "lane_id": "60_atlas_packaging_release_qa",
+    "title": "Atlas Packaging and Release QA",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Manifests, checksums, releases, public preview gates."
+  },
+  {
+    "target_number": 61,
+    "lane_id": "61_python_version_strategy",
+    "title": "Python Version Strategy",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Python 3.10/3.11/3.12 compatibility and venv strategy."
+  },
+  {
+    "target_number": 62,
+    "lane_id": "62_vram_memory_management",
+    "title": "VRAM and Memory Management",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "OOM, pagefile, tiled VAE, batch size, cache/offload flags."
+  },
+  {
+    "target_number": 63,
+    "lane_id": "63_ports_local_services",
+    "title": "Ports and Local Services",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "ComfyUI, Ollama, Gradio, Forge, InvokeAI port conflicts."
+  },
+  {
+    "target_number": 64,
+    "lane_id": "64_one_click_launcher_patterns",
+    "title": "One-Click Launcher Patterns",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "BAT/PowerShell launchers, settings files, relaunch logic."
+  },
+  {
+    "target_number": 65,
+    "lane_id": "65_dependency_isolation_multi_venv_apps",
+    "title": "Dependency Isolation and Multi-venv Apps",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Plugin/module isolation for conflicting dependency stacks."
+  },
+  {
+    "target_number": 66,
+    "lane_id": "66_runtime_log_diagnosis",
+    "title": "Runtime Log Diagnosis",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Stack traces, import errors, warnings, missing modules."
+  },
+  {
+    "target_number": 67,
+    "lane_id": "67_ai_workstation_validator",
+    "title": "AI Workstation Validator",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Diagnostics, telemetry, reports, system health checks."
+  },
+  {
+    "target_number": 68,
+    "lane_id": "68_comfyui_install_migration",
+    "title": "ComfyUI Install and Migration",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Portable vs clone, manager setup, migration patterns."
+  },
+  {
+    "target_number": 69,
+    "lane_id": "69_comfyui_workflow_json_internals",
+    "title": "ComfyUI Workflow JSON Internals",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "nodes, links, widgets_values, class_type, object_info."
+  },
+  {
+    "target_number": 70,
+    "lane_id": "70_comfyui_api_execution",
+    "title": "ComfyUI API Execution",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "/prompt, /history, /view, queueing, remote execution."
+  },
+  {
+    "target_number": 71,
+    "lane_id": "71_comfyui_subgraph_design",
+    "title": "ComfyUI Subgraph Design",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Reusable subgraphs and app-like workflow components."
+  },
+  {
+    "target_number": 72,
+    "lane_id": "72_comfyui_custom_node_packaging",
+    "title": "ComfyUI Custom Node Packaging",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "nodes.py, __init__.py, requirements, class mappings."
+  },
+  {
+    "target_number": 73,
+    "lane_id": "73_comfyui_frontend_extension_design",
+    "title": "ComfyUI Frontend Extension Design",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Panels, widgets, overlays, tooltips, UI controls."
+  },
+  {
+    "target_number": 74,
+    "lane_id": "74_comfyui_workflow_validation",
+    "title": "ComfyUI Workflow Validation",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Preflight checks, node checks, schema checks."
+  },
+  {
+    "target_number": 75,
+    "lane_id": "75_comfyui_manager_nodepack_safety",
+    "title": "ComfyUI Manager and Nodepack Safety",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Dependency conflicts, update risks, version pinning."
+  },
+  {
+    "target_number": 76,
+    "lane_id": "76_prompt_anatomy_image_models",
+    "title": "Prompt Anatomy for Image Models",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Subject, style, medium, camera, lighting, negatives."
+  },
+  {
+    "target_number": 77,
+    "lane_id": "77_sampler_scheduler_behavior",
+    "title": "Sampler and Scheduler Behavior",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Steps, sampler families, scheduler tradeoffs."
+  },
+  {
+    "target_number": 78,
+    "lane_id": "78_cfg_guidance_behavior",
+    "title": "CFG and Guidance Behavior",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "CFG, overcooking, prompt adherence, guidance failures."
+  },
+  {
+    "target_number": 79,
+    "lane_id": "79_seed_variation_control",
+    "title": "Seed and Variation Control",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Reproducibility, fixed seeds, controlled variation."
+  },
+  {
+    "target_number": 80,
+    "lane_id": "80_advanced_inpainting_systems",
+    "title": "Advanced Inpainting Systems",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "SAM2, GroundingDINO, crop-stitch, differential diffusion."
+  },
+  {
+    "target_number": 81,
+    "lane_id": "81_controlnet_adapter_union_control",
+    "title": "ControlNet, T2I Adapter, and Union Control",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Pose, depth, canny, lineart, tile, normal, softedge."
+  },
+  {
+    "target_number": 82,
+    "lane_id": "82_ipadapter_reference_conditioning",
+    "title": "IPAdapter and Reference Conditioning",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Face/style/reference image conditioning."
+  },
+  {
+    "target_number": 83,
+    "lane_id": "83_face_restore_faceswap",
+    "title": "Face Restore and Face Swap",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "ReActor, CodeFormer, GFPGAN, non-diffusion face tools."
+  },
+  {
+    "target_number": 84,
+    "lane_id": "84_upscaling_restoration",
+    "title": "Upscaling and Restoration",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "ESRGAN, SUPIR, tiled diffusion, artifact control."
+  },
+  {
+    "target_number": 85,
+    "lane_id": "85_old_photo_restoration",
+    "title": "Old Photo Restoration",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Scratch removal, colorization, detail reconstruction."
+  },
+  {
+    "target_number": 86,
+    "lane_id": "86_product_clothing_tryon_workflows",
+    "title": "Product, Clothing, and Try-on Workflows",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Shape preservation, garment transfer, masking, identity risk."
+  },
+  {
+    "target_number": 87,
+    "lane_id": "87_character_consistency",
+    "title": "Character Consistency",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "LoRA, reference images, embeddings, identity preservation."
+  },
+  {
+    "target_number": 88,
+    "lane_id": "88_image_prompt_failure_signatures",
+    "title": "Image Prompt Failure Signatures",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Slop, extra limbs, bad text, wax skin, identity drift."
+  },
+  {
+    "target_number": 89,
+    "lane_id": "89_video_model_fundamentals",
+    "title": "Video Model Fundamentals",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "I2V, T2V, V2V, temporal coherence, motion strength."
+  },
+  {
+    "target_number": 90,
+    "lane_id": "90_wan_video_workflows",
+    "title": "WAN Video Workflows",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "WAN setup, frames, VAE, model placement."
+  },
+  {
+    "target_number": 91,
+    "lane_id": "91_ltx_video_workflows",
+    "title": "LTX Video Workflows",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "LTX setup, prompt behavior, length, encoder issues."
+  },
+  {
+    "target_number": 92,
+    "lane_id": "92_animatediff_motion_modules",
+    "title": "AnimateDiff and Motion Modules",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Legacy SD motion modules and AnimateDiff patterns."
+  },
+  {
+    "target_number": 93,
+    "lane_id": "93_video_stitching_looping",
+    "title": "Video Stitching and Looping",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Ping-pong, overlap, blending, continuity."
+  },
+  {
+    "target_number": 94,
+    "lane_id": "94_video_inpainting_object_editing",
+    "title": "Video Inpainting and Object Editing",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Masked video edits, flicker, temporal consistency."
+  },
+  {
+    "target_number": 95,
+    "lane_id": "95_video_upscale_interpolation",
+    "title": "Video Upscaling and Frame Interpolation",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "RIFE, upscaling, restoration, artifact control."
+  },
+  {
+    "target_number": 96,
+    "lane_id": "96_video_failure_signatures",
+    "title": "Video Failure Signatures",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Flicker, melting, identity drift, scene reset, motion collapse."
+  },
+  {
+    "target_number": 97,
+    "lane_id": "97_model_file_types_placement",
+    "title": "Model File Types and Placement",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Checkpoints, safetensors, UNet, VAE, CLIP, text encoders."
+  },
+  {
+    "target_number": 98,
+    "lane_id": "98_model_family_differences",
+    "title": "Model Family Differences",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "SD 1.5, SDXL, Flux, WAN, LTX requirements."
+  },
+  {
+    "target_number": 99,
+    "lane_id": "99_vae_latent_behavior",
+    "title": "VAE and Latent Behavior",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Decode artifacts, tiling, color shifts, latent mismatch."
+  },
+  {
+    "target_number": 100,
+    "lane_id": "100_text_encoders_tokenizers",
+    "title": "Text Encoders and Tokenizers",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "CLIP, T5, dual encoders, prompt interpretation."
+  },
+  {
+    "target_number": 101,
+    "lane_id": "101_lora_lycoris_embeddings",
+    "title": "LoRA, LyCORIS, and Embeddings",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Use, stacking, strength, training artifacts."
+  },
+  {
+    "target_number": 102,
+    "lane_id": "102_quantization_precision",
+    "title": "Quantization and Precision",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "fp16, bf16, fp8, GGUF, quality vs VRAM."
+  },
+  {
+    "target_number": 103,
+    "lane_id": "103_model_licensing_use_risk",
+    "title": "Model Licensing and Use Risk",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Commercial use, redistribution, third-party restrictions."
+  },
+  {
+    "target_number": 104,
+    "lane_id": "104_model_download_dedup_strategy",
+    "title": "Model Download and Dedup Strategy",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Avoid duplicate downloads across local AI apps."
+  },
+  {
+    "target_number": 105,
+    "lane_id": "105_captioning_tool_design",
+    "title": "Captioning Tool Design",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Batch captioning, prefix/suffix, filename captions, limits."
+  },
+  {
+    "target_number": 106,
+    "lane_id": "106_caption_model_finetuning",
+    "title": "Caption Model Fine-Tuning",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Teaching captioners people/concepts; limits and risks."
+  },
+  {
+    "target_number": 107,
+    "lane_id": "107_dataset_curation",
+    "title": "Dataset Curation",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Image selection, quality filters, duplicates, balance."
+  },
+  {
+    "target_number": 108,
+    "lane_id": "108_person_identity_dataset_strategy",
+    "title": "Person and Identity Dataset Strategy",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Face/body/pose coverage, regularization, consent."
+  },
+  {
+    "target_number": 109,
+    "lane_id": "109_lora_training_practical_guide",
+    "title": "LoRA Training Practical Guide",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "LR, repeats, epochs, loss, samples, overfit signs."
+  },
+  {
+    "target_number": 110,
+    "lane_id": "110_pose_composition_dataset_tagging",
+    "title": "Pose and Composition Dataset Tagging",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "OpenPose, clustering, sorting training images."
+  },
+  {
+    "target_number": 111,
+    "lane_id": "111_synthetic_data_flywheels",
+    "title": "Synthetic Data Flywheels",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Generate, select, refine, train, evaluate loops."
+  },
+  {
+    "target_number": 112,
+    "lane_id": "112_dataset_rights_privacy",
+    "title": "Dataset Rights and Privacy",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Consent, likeness, sensitive data, private datasets."
+  },
+  {
+    "target_number": 113,
+    "lane_id": "113_gradio_app_architecture",
+    "title": "Gradio App Architecture",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Blocks, tabs, state, events, layout patterns."
+  },
+  {
+    "target_number": 114,
+    "lane_id": "114_gradio6_migration",
+    "title": "Gradio 6 Migration",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Gradio 5 to 6 changes and compatibility."
+  },
+  {
+    "target_number": 115,
+    "lane_id": "115_gradio_comfyui_bridge",
+    "title": "Gradio and ComfyUI Bridge",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "API calls, workflow execution, queue handling."
+  },
+  {
+    "target_number": 116,
+    "lane_id": "116_gradio_remote_phone_ui",
+    "title": "Gradio Remote Access and Phone UI",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "LAN, auth, share links, mobile UI, security warnings."
+  },
+  {
+    "target_number": 117,
+    "lane_id": "117_gradio_file_handling",
+    "title": "Gradio File Handling",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Uploads, previews, save/load, video/image display."
+  },
+  {
+    "target_number": 118,
+    "lane_id": "118_gradio_queue_progress",
+    "title": "Gradio Job Queue and Progress",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Long jobs, cancellation, progress updates."
+  },
+  {
+    "target_number": 119,
+    "lane_id": "119_gradio_settings_relaunch_panels",
+    "title": "Gradio Settings and Relaunch Panels",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "User settings, backend relaunch, config persistence."
+  },
+  {
+    "target_number": 120,
+    "lane_id": "120_modular_plugin_app_design",
+    "title": "Modular Plugin App Design",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Add-on architecture similar to A1111/ComfyUI."
+  },
+  {
+    "target_number": 121,
+    "lane_id": "121_app_packaging_for_beginners",
+    "title": "App Packaging for Beginners",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "install.bat, launch.bat, requirements, README, troubleshooting."
+  },
+  {
+    "target_number": 122,
+    "lane_id": "122_local_llm_runtime_selection",
+    "title": "Local LLM Runtime Selection",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Ollama, LM Studio, llama.cpp, vLLM, text-generation-webui."
+  },
+  {
+    "target_number": 123,
+    "lane_id": "123_small_model_behavior",
+    "title": "Small Model Behavior",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "3B/4B/7B strengths, routing, context limits, failures."
+  },
+  {
+    "target_number": 124,
+    "lane_id": "124_prompting_for_local_models",
+    "title": "Prompting for Local Models",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "System prompts, instruction formats, role discipline."
+  },
+  {
+    "target_number": 125,
+    "lane_id": "125_multi_model_routing",
+    "title": "Multi-Model Routing",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Coding model vs reasoning model vs vision model."
+  },
+  {
+    "target_number": 126,
+    "lane_id": "126_tool_calling_mcp",
+    "title": "Tool Calling and MCP",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Tool schemas, filesystem tools, browser tools, local actions."
+  },
+  {
+    "target_number": 127,
+    "lane_id": "127_rag_assistant_behavior",
+    "title": "RAG Assistant Behavior",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Retrieval discipline, citation, refusal, uncertainty."
+  },
+  {
+    "target_number": 128,
+    "lane_id": "128_persona_voice_packs",
+    "title": "Persona and Voice Packs",
+    "source_status": "new",
+    "validation_status": "candidate",
+    "why_it_matters": "Torchie, Atlas assistant, guide narrator, technical editor."
+  }
+]

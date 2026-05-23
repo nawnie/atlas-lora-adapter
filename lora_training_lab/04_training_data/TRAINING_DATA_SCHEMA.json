@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Reader LoRA Training Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "task_type",
+    "user_question",
+    "retrieved_context",
+    "expected_behavior",
+    "output"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "lane_routing",
+        "answer_from_context",
+        "conflict_resolution",
+        "insufficient_context",
+        "exactness_guard",
+        "freshness_check",
+        "answer_format_selection",
+        "multi_rag_generalization"
+      ]
+    },
+    "user_question": {
+      "type": "string"
+    },
+    "retrieved_context": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_path",
+          "layer",
+          "priority",
+          "content"
+        ],
+        "properties": {
+          "source_path": {
+            "type": "string"
+          },
+          "layer": {
+            "type": "string",
+            "enum": [
+              "root_guidance",
+              "read_first",
+              "retrieval_index",
+              "canonical_lane",
+              "source_pack",
+              "source_archive",
+              "change_history",
+              "evaluation",
+              "unknown"
+            ]
+          },
+          "lane_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "freshness": {
+            "type": "string",
+            "enum": [
+              "current",
+              "stable",
+              "stale",
+              "volatile",
+              "unknown"
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "expected_behavior": {
+      "type": "object",
+      "required": [
+        "confidence",
+        "answer_format"
+      ],
+      "properties": {
+        "primary_lane": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "secondary_lanes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources_to_use": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources_to_ignore": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "needs_current_verification": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "answer_format": {
+          "type": "string",
+          "enum": [
+            "diagnostic_tree",
+            "roadmap",
+            "audit",
+            "checklist",
+            "code_fix",
+            "evidence_map",
+            "explanation",
+            "routing_decision",
+            "refusal_or_boundary"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "output": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

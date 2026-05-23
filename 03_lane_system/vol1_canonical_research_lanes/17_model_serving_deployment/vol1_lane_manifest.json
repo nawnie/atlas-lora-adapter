@@ -1,0 +1,45 @@
+{
+  "lane_id": "17_model_serving_deployment",
+  "title": "Model Serving and Deployment",
+  "version": "v1.1",
+  "status": "vol1_research_lane_added",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "retrieval_card_count": 12,
+  "related_lanes": [
+    "02_atlas_architecture_chunking_embedding",
+    "11_gradio_ui_research",
+    "24_ai_application_architecture"
+  ],
+  "sources": [
+    {
+      "title": "vLLM documentation",
+      "url": "https://docs.vllm.ai/en/latest/"
+    },
+    {
+      "title": "llama.cpp HTTP server README",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md"
+    },
+    {
+      "title": "llama-cpp-python OpenAI compatible server",
+      "url": "https://llama-cpp-python.readthedocs.io/en/latest/server/"
+    },
+    {
+      "title": "Ollama",
+      "url": "https://ollama.com/"
+    },
+    {
+      "title": "Hugging Face Text Generation Inference",
+      "url": "https://huggingface.co/docs/text-generation-inference/index"
+    }
+  ]
+}

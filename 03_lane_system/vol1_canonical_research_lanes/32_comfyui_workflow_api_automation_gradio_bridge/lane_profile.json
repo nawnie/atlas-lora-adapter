@@ -1,0 +1,16 @@
+{
+  "lane_id": "32_comfyui_workflow_api_automation_gradio_bridge",
+  "slug": "32_comfyui_workflow_api_automation_gradio_bridge",
+  "title": "ComfyUI Workflow API Automation and Gradio Bridge Patterns",
+  "status": "canonical_current",
+  "freshness": "fast_moving",
+  "claim_confidence": "official_docs_synthesized",
+  "primary_use": "Route ComfyUI automation, workflow API, prompt JSON, output retrieval, and Gradio bridge questions.",
+  "source_priority": [
+    "official_comfyui_docs",
+    "official_comfyui_repo_examples",
+    "official_gradio_docs"
+  ],
+  "default_answer_gate": "Distinguish local vs cloud API and workflow JSON vs API prompt format before giving code.",
+  "retrieval_card_count": 12
+}

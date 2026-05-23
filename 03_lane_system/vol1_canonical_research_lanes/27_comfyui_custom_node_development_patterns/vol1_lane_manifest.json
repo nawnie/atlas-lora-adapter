@@ -1,0 +1,39 @@
+{
+  "lane_id": "RP27",
+  "slug": "27_comfyui_custom_node_development_patterns",
+  "title": "ComfyUI Custom Node Development Patterns",
+  "vol1_status": "advanced_research_pass01_created",
+  "created_day": "2026-05-20",
+  "source_pack": "comfyui_advanced_pass01_official_docs",
+  "source_ids": [
+    "COMFY-DOC-001",
+    "COMFY-DOC-002",
+    "COMFY-DOC-003",
+    "COMFY-DOC-004",
+    "COMFY-DOC-005",
+    "COMFY-DOC-006",
+    "COMFY-DOC-007",
+    "COMFY-DOC-008",
+    "COMFY-DOC-009",
+    "COMFY-DOC-010",
+    "COMFY-DOC-011",
+    "COMFY-DOC-012",
+    "COMFY-DOC-013",
+    "COMFY-DOC-014",
+    "COMFY-DOC-015"
+  ],
+  "card_count": 10,
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md",
+    "lane_profile.json",
+    "vol1_lane_manifest.json"
+  ]
+}

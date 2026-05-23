@@ -1,0 +1,11 @@
+{
+  "lane_id": "32",
+  "slug": "32_comfyui_workflow_api_automation_gradio_bridge",
+  "title": "ComfyUI Workflow API Automation and Gradio Bridge Patterns",
+  "status": "canonical_current",
+  "file_count": 12,
+  "retrieval_card_count": 12,
+  "source_pack": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/comfyui_advanced_pass03_workflow_api_automation_gradio_bridge",
+  "freshness": "fast_moving",
+  "claim_confidence": "official_docs_synthesized"
+}

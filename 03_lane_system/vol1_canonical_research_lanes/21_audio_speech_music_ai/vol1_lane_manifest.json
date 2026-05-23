@@ -1,0 +1,25 @@
+{
+  "lane_id": "RP21",
+  "slug": "21_audio_speech_music_ai",
+  "title": "Audio, Speech, and Music AI",
+  "vol1_status": "expanded_notes_promoted_to_canonical_lane",
+  "integrated_day": "2026-05-19",
+  "source_files": [
+    "03_SOURCE_CONTENT/topics_20_25_expanded_notes/21_Audio_Speech_Music_AI_Expanded_Notes.md"
+  ],
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 16,
+  "source_note_version": "2.2 Expanded",
+  "status_before": "reserved source slot",
+  "status_after": "canonical Vol. 1 lane with expanded notes"
+}

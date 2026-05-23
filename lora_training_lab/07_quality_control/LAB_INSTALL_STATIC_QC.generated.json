@@ -1,0 +1,23 @@
+{
+  "files": {
+    "labinstall.bat": true,
+    "tools/powershell/labinstall.ps1": true,
+    "tools/powershell/start_tensorboard.ps1": true,
+    "scripts/lab_smoke_test.py": true,
+    "requirements-training.txt": true,
+    "04_training_data/LAB_INSTALL_GUIDE.md": true
+  },
+  "checks": {
+    "checks_py310": true,
+    "creates_venv310": true,
+    "installs_pytorch_from_index": true,
+    "supports_cu128": true,
+    "supports_cu126": true,
+    "supports_cu118": true,
+    "supports_cpu": true,
+    "runs_smoke_test": true,
+    "writes_pip_freeze": true
+  },
+  "issues": [],
+  "passed": true
+}

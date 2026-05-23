@@ -1,0 +1,23 @@
+{
+  "lane_id": "27_comfyui_custom_node_development_patterns",
+  "slug": "27_comfyui_custom_node_development_patterns",
+  "title": "ComfyUI Custom Node Development Patterns",
+  "status": "canonical_current",
+  "freshness": "fast_moving",
+  "claim_confidence": "sourced_to_official_docs_where_possible",
+  "preferred_for_queries": [
+    "ComfyUI advanced usage",
+    "custom node development",
+    "workflow API",
+    "subgraph/UI/troubleshooting"
+  ],
+  "source_priority": [
+    "official ComfyUI docs",
+    "ComfyUI source code",
+    "verified custom-node docs",
+    "community examples as secondary"
+  ],
+  "adapter_version": "v2.0-current",
+  "web_verification_required_for_current_claims": true,
+  "no_active_roadmap_or_draft_markers": true
+}

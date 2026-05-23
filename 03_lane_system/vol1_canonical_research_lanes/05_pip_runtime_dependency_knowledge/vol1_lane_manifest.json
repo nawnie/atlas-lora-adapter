@@ -1,0 +1,31 @@
+{
+  "lane_id": "RP05",
+  "slug": "05_pip_runtime_dependency_knowledge",
+  "title": "Python/Pip Runtime Dependencies and Local AI Environment Support",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF_Pip_Package_RAG_Starter_v1_9",
+    "AIWF_Pip_Package_RAG_Starter_v1_5"
+  ],
+  "source_counts": {
+    "files": 440,
+    "md": 366,
+    "csv": 10,
+    "json": 10,
+    "code": 43
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "already broad v1.9 package map; needs balanced Vol. 1 bridge into the full data pack"
+}

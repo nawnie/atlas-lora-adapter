@@ -1,0 +1,9 @@
+{
+  "lane_id": "52_source_ledger_maintenance",
+  "title": "Source Ledger Maintenance",
+  "status": "seed_started",
+  "version_added": "v0.2.9-dev2",
+  "card_count": 12,
+  "target_card_count": 12,
+  "notes": "Seed lane; not final research evidence."
+}

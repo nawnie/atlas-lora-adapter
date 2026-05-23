@@ -1,0 +1,29 @@
+{
+  "contract_id": "atlas-contract_mini_128L-12C-5D_v1",
+  "adapter_family": "atlas-reader",
+  "tier": "mini",
+  "base_model": "qwen3-4b",
+  "lane_count": 128,
+  "cards_per_lane": 12,
+  "retrieval_depth": 5,
+  "contract_version": "v1",
+  "target_model_range": ".8B to 4B",
+  "card_types": [
+    "concept",
+    "failure_signature",
+    "diagnostic_branch",
+    "source_priority",
+    "do_not_confuse",
+    "answer_pattern"
+  ],
+  "expected_behavior": [
+    "route user questions to the correct lane",
+    "rank retrieved cards by source priority",
+    "use do-not-confuse guidance",
+    "avoid unsupported exact identifiers",
+    "flag insufficient context",
+    "answer compactly for small models",
+    "warn when volatile claims require current verification"
+  ],
+  "notes": "Baseline small-model Atlas Reader contract. Use for compact 128-lane, 12-card-per-lane Atlas RAG systems."
+}

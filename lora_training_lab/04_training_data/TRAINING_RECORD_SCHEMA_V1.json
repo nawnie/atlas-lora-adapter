@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Reader Mini Training Record v1",
+  "type": "object",
+  "required": [
+    "record_id",
+    "dataset_version",
+    "record_type",
+    "contract_id",
+    "user_query",
+    "context_pack",
+    "expected_route",
+    "expected_answer",
+    "quality_flags"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "dataset_version": {
+      "type": "string"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "route_primary_lane",
+        "select_cards",
+        "ignore_distractor",
+        "secondary_lane_reference",
+        "exactness_guard",
+        "insufficient_context",
+        "freshness_check",
+        "answer_pattern"
+      ]
+    },
+    "contract_id": {
+      "type": "string"
+    },
+    "user_query": {
+      "type": "string"
+    },
+    "context_pack": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Atlas Context Pack Schema v1",
+      "type": "object",
+      "required": [
+        "contract_id",
+        "max_cards",
+        "primary_lane_id",
+        "cards"
+      ],
+      "properties": {
+        "contract_id": {
+          "type": "string"
+        },
+        "max_cards": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "primary_lane_id": {
+          "type": "string"
+        },
+        "secondary_lane_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "lane_id",
+              "card_id",
+              "card_type",
+              "title",
+              "canonical_summary",
+              "source_priority_rule",
+              "do_not_confuse_with",
+              "answer_pattern",
+              "exactness_guard"
+            ],
+            "properties": {
+              "lane_id": {
+                "type": "string"
+              },
+              "card_id": {
+                "type": "string"
+              },
+              "card_type": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "canonical_summary": {
+                "type": "string"
+              },
+              "source_priority_rule": {
+                "type": "string"
+              },
+              "do_not_confuse_with": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "answer_pattern": {
+                "type": "string"
+              },
+              "exactness_guard": {
+                "type": "string"
+              },
+              "is_secondary_lane_card": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "routing_rule": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "expected_route": {
+      "type": "object",
+      "required": [
+        "primary_lane_id",
+        "used_card_ids"
+      ],
+      "properties": {
+        "primary_lane_id": {
+          "type": "string"
+        },
+        "secondary_lane_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "used_card_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ignored_card_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "expected_answer": {
+      "type": "object",
+      "required": [
+        "answer",
+        "limits"
+      ],
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "limits": {
+          "type": "string"
+        },
+        "should_refuse_or_qualify": {
+          "type": "boolean"
+        }
+      }
+    },
+    "quality_flags": {
+      "type": "object",
+      "properties": {
+        "has_distractor": {
+          "type": "boolean"
+        },
+        "has_secondary_lane": {
+          "type": "boolean"
+        },
+        "requires_freshness_check": {
+          "type": "boolean"
+        },
+        "tests_exactness_guard": {
+          "type": "boolean"
+        },
+        "is_smoke_test_record": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

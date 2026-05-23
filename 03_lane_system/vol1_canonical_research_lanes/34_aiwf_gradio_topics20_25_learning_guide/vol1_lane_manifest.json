@@ -1,0 +1,9 @@
+{
+  "lane_id": "34_aiwf_gradio_topics20_25_learning_guide",
+  "title": "AIWF Gradio + Topics 20-25 Learning Guide Integration",
+  "status": "canonical_current",
+  "created_in": "v2.4",
+  "source_pack": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/aiwf_gradio_learning_guide_topics20_25_v2",
+  "retrieval_card_count": 12,
+  "purpose": "Coordinate learning-guide source material across existing AIWF lanes without replacing canonical lane content."
+}

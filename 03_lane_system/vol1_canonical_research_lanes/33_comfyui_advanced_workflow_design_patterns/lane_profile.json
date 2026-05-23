@@ -1,0 +1,22 @@
+{
+  "lane_id": "33_comfyui_advanced_workflow_design_patterns",
+  "slug": "33_comfyui_advanced_workflow_design_patterns",
+  "title": "ComfyUI Advanced Workflow Design Patterns",
+  "status": "canonical_active",
+  "freshness": "fast_moving",
+  "claim_confidence": "official_docs_synthesized",
+  "primary_use": [
+    "advanced ComfyUI workflow design",
+    "subgraph modularity",
+    "router and switch design",
+    "workflow-as-app contracts",
+    "node pack packaging patterns"
+  ],
+  "source_pack": "03_SOURCE_CONTENT/A_CANONICAL_SOURCE_PACKS/comfyui_advanced_pass04_workflow_design_patterns",
+  "related_lanes": [
+    "03_comfyui_core_api_subgraph",
+    "26_comfyui_advanced_node_io_datatypes",
+    "31_comfyui_datatype_conversion_boundaries",
+    "32_comfyui_workflow_api_automation_gradio_bridge"
+  ]
+}

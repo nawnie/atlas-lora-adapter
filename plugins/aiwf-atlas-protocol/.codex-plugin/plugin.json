@@ -1,0 +1,22 @@
+{
+  "name": "aiwf-atlas-protocol",
+  "version": "0.1.0",
+  "description": "AI Without Fear Atlas protocol guidance for source-aware, no-hype repo work.",
+  "author": {
+    "name": "AI Without Fear",
+    "url": "https://github.com/nawnie/ai-without-fear"
+  },
+  "license": "MIT",
+  "keywords": [
+    "aiwf",
+    "atlas",
+    "rag",
+    "source-policy",
+    "research"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AIWF Atlas Protocol",
+    "description": "Use the Atlas reading protocol, source rules, and no-wins guardrails while working in the repo."
+  }
+}

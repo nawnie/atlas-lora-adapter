@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atlas Card Schema v1",
+  "type": "object",
+  "required": [
+    "card_id",
+    "lane_id",
+    "card_type",
+    "title",
+    "user_phrasing",
+    "canonical_summary",
+    "must_retrieve",
+    "source_priority_rule",
+    "do_not_confuse_with",
+    "answer_pattern",
+    "exactness_guard",
+    "needs_current_verification",
+    "risk_level"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string"
+    },
+    "lane_id": {
+      "type": "string"
+    },
+    "card_type": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "failure_signature",
+        "diagnostic_branch",
+        "source_priority",
+        "do_not_confuse",
+        "answer_pattern"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "user_phrasing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "canonical_summary": {
+      "type": "string"
+    },
+    "must_retrieve": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_priority_rule": {
+      "type": "string"
+    },
+    "do_not_confuse_with": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "answer_pattern": {
+      "type": "string"
+    },
+    "exactness_guard": {
+      "type": "string"
+    },
+    "needs_current_verification": {
+      "type": "boolean"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

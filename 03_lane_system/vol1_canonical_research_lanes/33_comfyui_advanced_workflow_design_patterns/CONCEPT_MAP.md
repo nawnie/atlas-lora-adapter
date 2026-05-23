@@ -1,0 +1,37 @@
+# Concept Map — ComfyUI Advanced Workflow Design Patterns
+
+- ComfyUI workflow design
+  - graph readability
+  - dataflow correctness
+  - branch control
+  - modularity
+  - reproducibility
+- Subgraphs
+  - reusable modules
+  - exposed input slots
+  - exposed output slots
+  - nested subgraphs
+  - subgraph blueprints
+- Routers
+  - switch nodes
+  - soft switch nodes
+  - lazy custom switches
+  - output selectors
+  - architecture selectors
+- Branch control
+  - bypass
+  - mute
+  - app-side payload mutation
+  - runtime lazy evaluation
+  - ExecutionBlocker
+- App workflows
+  - master control panel
+  - stable node IDs
+  - hidden internals
+  - explicit output selection
+  - Gradio bridge compatibility
+- Packaging
+  - workflow templates
+  - subgraph blueprints
+  - node replacement for migration
+  - source/version notes

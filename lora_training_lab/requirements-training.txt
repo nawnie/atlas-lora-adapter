@@ -1,0 +1,17 @@
+# labinstall.bat installs PyTorch separately from the official PyTorch wheel index.
+# Atlas Reader LoRA training requirements
+#
+# Install PyTorch separately for your CUDA version first.
+# Then install these packages in the training venv.
+
+transformers>=4.45.0
+datasets>=2.20.0
+accelerate>=0.33.0
+peft>=0.12.0
+trl>=0.11.0
+bitsandbytes>=0.49.2
+safetensors>=0.4.3
+scipy>=1.11.0
+pandas>=2.0.0
+# Local training dashboard
+tensorboard>=2.16.0

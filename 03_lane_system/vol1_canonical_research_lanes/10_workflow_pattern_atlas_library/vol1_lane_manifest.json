@@ -1,0 +1,33 @@
+{
+  "lane_id": "RP10",
+  "slug": "10_workflow_pattern_atlas_library",
+  "title": "Workflow Pattern Library RAG",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF_RAG_Concept_Additions_v0_1",
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.5-comfyui-core-api-subgraph",
+    "aiwf_node_research_pass02N_flux_model_control_sampler_mds_v1_4",
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.6-cfg-denoise-inpaint-theory"
+  ],
+  "source_counts": {
+    "files": 323,
+    "md": 182,
+    "csv": 120,
+    "json": 19,
+    "code": 1
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "concept note plus ComfyUI workflow policy/source passes"
+}

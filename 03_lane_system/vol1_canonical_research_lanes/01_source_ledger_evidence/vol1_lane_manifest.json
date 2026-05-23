@@ -1,0 +1,32 @@
+{
+  "lane_id": "RP01",
+  "slug": "01_source_ledger_evidence",
+  "title": "Source Ledger and Evidence Governance",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.3-rag-source-ledger",
+    "AIWF-Project-Chat-Distribution-Roadmap-v0.6-cfg-denoise-inpaint-theory",
+    "AIWF_RAG_Concept_Additions_v0_1"
+  ],
+  "source_counts": {
+    "files": 73,
+    "md": 67,
+    "csv": 0,
+    "json": 5,
+    "code": 0
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "concept/early structure"
+}

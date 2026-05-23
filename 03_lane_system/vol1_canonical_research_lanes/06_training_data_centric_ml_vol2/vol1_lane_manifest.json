@@ -1,0 +1,30 @@
+{
+  "lane_id": "RP06",
+  "slug": "06_training_data_centric_ml_vol2",
+  "title": "Training, Data-Centric ML, and Volume II Research Spine",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF_Vol2_Training_The_Fear_RAG_v0_17_DATA_CENTRIC_ML"
+  ],
+  "source_counts": {
+    "files": 412,
+    "md": 339,
+    "csv": 70,
+    "json": 0,
+    "code": 0
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "rich v0.17 Vol. 2 archive; not converted into balanced Vol. 1 lane for the combined data pack"
+}

@@ -1,0 +1,25 @@
+{"question_id": "SQ001", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "Why will these ComfyUI nodes not connect if IMAGE cannot go into LATENT?", "category": "socket_mismatch"}
+{"question_id": "SQ002", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "The workflow says input type mismatch. Should I reinstall Python packages first?", "category": "distractor_sensitive"}
+{"question_id": "SQ003", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "A MASK output will not connect to an IMAGE input. What should I check?", "category": "socket_mismatch"}
+{"question_id": "SQ004", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "After a custom node update, an old workflow has broken links. Is this probably a model path issue?", "category": "schema_change"}
+{"question_id": "SQ005", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "Can you give the exact node name to fix this if the context does not include installed nodes?", "category": "exactness_guard"}
+{"question_id": "SQ006", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "The workflow mentions class_type missing and input mismatch. Which should be checked first?", "category": "routing_branch"}
+{"question_id": "SQ007", "target_lane_id": "42_comfyui_socket_contract_debugging", "question": "Why should exact socket claims be checked against object_info or installed definitions?", "category": "source_priority"}
+{"question_id": "SQ008", "target_lane_id": "44_video_vram_optimization", "question": "WAN video crashes at 121 frames but still images work. What should I test first?", "category": "video_vram"}
+{"question_id": "SQ009", "target_lane_id": "44_video_vram_optimization", "question": "A short video works, but a long video fails. Is this prompt quality or VRAM scaling?", "category": "video_vram"}
+{"question_id": "SQ010", "target_lane_id": "44_video_vram_optimization", "question": "ComfyUI slows down after several video runs and memory usage creeps up. What does that suggest?", "category": "memory_creep"}
+{"question_id": "SQ011", "target_lane_id": "44_video_vram_optimization", "question": "If CUDA is unavailable, should I reduce frame count to fix it?", "category": "routing_branch"}
+{"question_id": "SQ012", "target_lane_id": "44_video_vram_optimization", "question": "I want a longer WAN clip but one big run crashes. When should last-frame chaining enter the answer?", "category": "secondary_lane"}
+{"question_id": "SQ013", "target_lane_id": "44_video_vram_optimization", "question": "What evidence should be trusted first when diagnosing video OOM?", "category": "source_priority"}
+{"question_id": "SQ014", "target_lane_id": "44_video_vram_optimization", "question": "Can you give exact launch flags from memory if logs are not provided?", "category": "exactness_guard"}
+{"question_id": "SQ015", "target_lane_id": "53_claim_freshness_verification", "question": "Can I claim a model license is safe for commercial use because an old note says so?", "category": "freshness_license"}
+{"question_id": "SQ016", "target_lane_id": "53_claim_freshness_verification", "question": "If a package install command is from last year, should it be treated as current?", "category": "freshness"}
+{"question_id": "SQ017", "target_lane_id": "53_claim_freshness_verification", "question": "What is the difference between a stable principle and a volatile implementation detail?", "category": "freshness_branch"}
+{"question_id": "SQ018", "target_lane_id": "53_claim_freshness_verification", "question": "If current verification is needed but unavailable, what should the answer do?", "category": "insufficient_context"}
+{"question_id": "SQ019", "target_lane_id": "53_claim_freshness_verification", "question": "Does a newer random blog automatically outrank older official docs?", "category": "source_priority"}
+{"question_id": "SQ020", "target_lane_id": "53_claim_freshness_verification", "question": "Can the assistant say a 2026 tool feature exists without checking a current source?", "category": "freshness"}
+{"question_id": "SQ021", "target_lane_id": "47_raw_rag_vs_atlas_comparison", "question": "How do we prove Atlas RAG is better than raw RAG without guessing?", "category": "evaluation"}
+{"question_id": "SQ022", "target_lane_id": "48_small_vs_large_model_benchmarking", "question": "If a 4B Atlas model beats a 7B model on one lane, can we say 4B equals 7B generally?", "category": "overclaim"}
+{"question_id": "SQ023", "target_lane_id": "52_source_ledger_maintenance", "question": "Is a citation enough, or does source governance also matter?", "category": "source_governance"}
+{"question_id": "SQ024", "target_lane_id": "51_atlas_lane_design_system", "question": "When should a new idea become a lane instead of a card?", "category": "lane_design"}
+{"question_id": "SQ025", "target_lane_id": "49_aiwf_core_philosophy", "question": "Why is a failed adapter still useful research if documented honestly?", "category": "negative_result"}

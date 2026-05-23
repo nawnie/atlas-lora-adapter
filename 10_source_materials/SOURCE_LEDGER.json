@@ -1,0 +1,2302 @@
+{
+  "project": "atlas-lora-adapter",
+  "project_version": "v0.2.9-dev8",
+  "generated_utc": "2026-05-23T02:53:06.549262+00:00",
+  "policy": {
+    "ai_assistants_are_sources": false,
+    "assistant_outputs_allowed_as": "drafting_aids_only",
+    "valid_evidence_sources": [
+      "primary papers",
+      "official documentation",
+      "official repositories/model cards",
+      "measured local experiment outputs",
+      "project-authored source materials marked as internal/source documents"
+    ]
+  },
+  "user_provided_sources_added": [
+    "10_source_materials/AIWF_force_multiplier_insert.md",
+    "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap"
+  ],
+  "external_training_sources": [
+    {
+      "name": "Hugging Face TRL SFTTrainer",
+      "url": "https://huggingface.co/docs/trl/main/en/sft_trainer",
+      "source_type": "official_documentation",
+      "used_for": [
+        "SFTTrainer support",
+        "conversational messages dataset format",
+        "assistant_only_loss",
+        "packing",
+        "PEFT adapter training through SFTTrainer"
+      ],
+      "verification_status": "verified_url_opened_2026-05-22"
+    },
+    {
+      "name": "Hugging Face PEFT LoRAConfig",
+      "url": "https://huggingface.co/docs/peft/main/en/package_reference/lora",
+      "source_type": "official_documentation",
+      "used_for": [
+        "LoRA rank r",
+        "lora_alpha",
+        "lora_dropout",
+        "target_modules",
+        "task_type"
+      ],
+      "verification_status": "verified_url_opened_2026-05-22"
+    },
+    {
+      "name": "Hugging Face Transformers bitsandbytes quantization",
+      "url": "https://huggingface.co/docs/transformers/main/en/quantization/bitsandbytes",
+      "source_type": "official_documentation",
+      "used_for": [
+        "4-bit quantization",
+        "NF4",
+        "double quantization",
+        "BitsAndBytesConfig"
+      ],
+      "verification_status": "verified_url_opened_2026-05-22"
+    },
+    {
+      "name": "Hugging Face Transformers Trainer",
+      "url": "https://huggingface.co/docs/transformers/main_classes/trainer",
+      "source_type": "official_documentation",
+      "used_for": [
+        "training arguments concepts",
+        "gradient accumulation",
+        "gradient checkpointing",
+        "logging/eval/save cadence"
+      ],
+      "verification_status": "verified_url_opened_2026-05-22"
+    }
+  ],
+  "training_code_inventory": [
+    {
+      "path": "06_experiments/training_configs/A_sanity_r8_lr0001.json",
+      "bytes": 1303,
+      "sha256": "2d63269d93695f3d528986f790cc7e96927b1cc779d0ff78f1f8e54e163e5ef2",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/B_baseline_r16_lr0002.json",
+      "bytes": 1397,
+      "sha256": "981ef0ee2e58f99ab58817c3df04205a9c5afc61689c17410bf913076e823792",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/C_capacity_r32_lr0001.json",
+      "bytes": 1397,
+      "sha256": "69f8c4c5555f494603925917ed60e4e67ab9e19b6417db67b0a71f6463b3a94d",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/D_stability_r32_lr00005.json",
+      "bytes": 1400,
+      "sha256": "571709be38406ac60ce67df19ea40efa64cc961fabc7e5d4084d5aa27aee5a0c",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/E_nodrop_r16_lr0002.json",
+      "bytes": 1392,
+      "sha256": "3034be0141961cf5806e520ed48b4820fc5ac1ea053cc6afce805b9f31336073",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/F_context4096_r16.json",
+      "bytes": 1389,
+      "sha256": "31a4fd38d5561a6836efda4f7b9c0ab739d693a30000e756afb0afd68b0f1d19",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/G_rank64_stress.json",
+      "bytes": 1386,
+      "sha256": "8ef44ebbcc403d12ddfa33cd70f1bba1ebaa6e07861fac524770b12729d56d3e",
+      "role": "training_config"
+    },
+    {
+      "path": "06_experiments/training_configs/H_packing_efficiency.json",
+      "bytes": 1394,
+      "sha256": "ebe1bb91334efd6717bdf59215be0c454ecace84202c46a17df0f4476174fb50",
+      "role": "training_config"
+    },
+    {
+      "path": "requirements-training.txt",
+      "bytes": 305,
+      "sha256": "a81c39fe489000f77df5a5d9c8053aed300175d7f47598a7bfb9d8fd412e2e17",
+      "role": "requirements"
+    },
+    {
+      "path": "scripts/build_seed_training_records.py",
+      "bytes": 4088,
+      "sha256": "f0e79c90dd2717770b64ef3300aa7e4c2c5254849204609bda028a8e33c09a7b",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/check_training_record_quality.py",
+      "bytes": 2899,
+      "sha256": "53820bc698981e0af4903736406e88b83601b23861cacf5d40b0f1e9a9dcd3c9",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/compute_significance.py",
+      "bytes": 3080,
+      "sha256": "9d1f0228c28aa96641af0c9744fc8f8bdb550cea136303a9ea81197724a1f786",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/create_train_eval_split.py",
+      "bytes": 1767,
+      "sha256": "f3cdcd2ce6863af6afebe1bad2c7348a8bc18aa9a811f7caeaa0935e193b3290",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/render_atlas_sft_dataset.py",
+      "bytes": 2993,
+      "sha256": "3aec2f6b5b03a1d185897e69584d6c6211beefbda810ac9a82a29cc50d005125",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/summarize_results.py",
+      "bytes": 1570,
+      "sha256": "bffe5dd766f521202cb6396afe5addbd498579ecf01f2a84f14ba245e5271a94",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/train_atlas_reader_qlora.py",
+      "bytes": 15226,
+      "sha256": "4c0e47c30b54ad60787be860297f2511e51e97e232cc56dc7dbd23bbe8375e11",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/validate_seed_cards.py",
+      "bytes": 3900,
+      "sha256": "0f155b9908b742372225fb7e841dc6c5216d2e481ef453e7367d7deb82e87065",
+      "role": "python_script"
+    },
+    {
+      "path": "scripts/validate_training_records.py",
+      "bytes": 3398,
+      "sha256": "44e5cac7c8cf367c1e23c0550132e60863f2ee64b96abc5d0d64c30947e7b326",
+      "role": "python_script"
+    },
+    {
+      "path": "tools/powershell/dry_run_training_config.ps1",
+      "bytes": 278,
+      "sha256": "0f2c975be465408788a5357acbd0bbfb629a76992c22788d093e18a3f527d6f9",
+      "role": "powershell_helper"
+    },
+    {
+      "path": "tools/powershell/train_atlas_reader.ps1",
+      "bytes": 251,
+      "sha256": "25e50c5700db3f8e87414e36ddb8dd0bec1be1ec41c66236f796116791691f15",
+      "role": "powershell_helper"
+    }
+  ],
+  "all_repo_sources": [
+    {
+      "path": "00_landing_page/LANDING_PAGE_COPY.md",
+      "category": "repo_root_or_other",
+      "bytes": 3412,
+      "sha256": "0ae6a590ba49b36188be39852fc38b98303e5561e6c8c849de9d4aac7ea5f174"
+    },
+    {
+      "path": "00_landing_page/LANDING_PAGE_PLAIN_TEXT.txt",
+      "category": "repo_root_or_other",
+      "bytes": 3312,
+      "sha256": "be0eae3323b1818c4d6a9769b701c8bdb5331420c16fbad552f446d453ab538f"
+    },
+    {
+      "path": "00_landing_page/README.md",
+      "category": "repo_root_or_other",
+      "bytes": 191,
+      "sha256": "01630068c60abe20010cf8bc6eb2d0e95acef5968af70d53c3fb26eb1c8cee5a"
+    },
+    {
+      "path": "01_strategy/ARCHITECTURE_OVERVIEW.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 1364,
+      "sha256": "772da57a3e2748798b77e585ef1fb843852f19fe9831f30929c71130c38c5219"
+    },
+    {
+      "path": "01_strategy/ATLAS_READER_LORA_STRATEGY.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 22704,
+      "sha256": "1ad613e3b8fcde98447107a9954024f0bc663619995cb088d2e4c36d96018890"
+    },
+    {
+      "path": "01_strategy/CLAIMS_AND_LIMITS.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 1349,
+      "sha256": "e8f58d5d688248d2af8d63a93557d2b12d49e9899437c445750f9211ac5f0837"
+    },
+    {
+      "path": "01_strategy/README.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 206,
+      "sha256": "f2ed5656ed17bc750925521c38d53d100464b72f6af3f3cc15c9ba84d9ff2bbd"
+    },
+    {
+      "path": "01_strategy/RELATED_WORK.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 9654,
+      "sha256": "1882179e9ae090a5c03f3156834701b8bab8714fb2e9f3db8ecad7629f45ddc7"
+    },
+    {
+      "path": "01_strategy/SMALL_MODEL_ATLAS_READER_MODE.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 2690,
+      "sha256": "62d770c16caf5ef8853323ed0fef2bf1bab35fcf0a2acb291d078c8856b15a5b"
+    },
+    {
+      "path": "01_strategy/SOURCE_AND_ATTRIBUTION_POLICY.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 1425,
+      "sha256": "6b6df87026bc03b1569acdb5fe4c0adb2f39f3f52b1c7e99ec92a9d5a97a4186"
+    },
+    {
+      "path": "01_strategy/STANDARD_RAG_VS_ATLAS_RAG.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 1377,
+      "sha256": "7c36a548c4952f6510b2b58f9b173aea91c223ba3dc93b797e768275c4896157"
+    },
+    {
+      "path": "01_strategy/TERMINOLOGY.md",
+      "category": "strategy_and_claim_governance",
+      "bytes": 1108,
+      "sha256": "8ea93459336b651e5da36d22202bb8494ed56dd2725f3a6ce33cec1d16113128"
+    },
+    {
+      "path": "02_atlas_contracts/ATLAS_CONTRACT_NAMING.md",
+      "category": "atlas_contract",
+      "bytes": 6012,
+      "sha256": "d3c5b363aa1ce16621b424879ba08ead590345da0ac141cfc81187e4670fb559"
+    },
+    {
+      "path": "02_atlas_contracts/ATLAS_CONTRACT_SCHEMA_V1.json",
+      "category": "atlas_contract",
+      "bytes": 1278,
+      "sha256": "5075667fb0954cd9872e66e7f1e9d6c1b19f0b3c65ec47def577ca26eeeb7a64"
+    },
+    {
+      "path": "02_atlas_contracts/README.md",
+      "category": "atlas_contract",
+      "bytes": 175,
+      "sha256": "92ecf59ae725e957fc039afb2ece80a07bddf39159561b704b88aa29062d7b90"
+    },
+    {
+      "path": "02_atlas_contracts/atlas-contract_mini_128L-12C-5D_v1.json",
+      "category": "atlas_contract",
+      "bytes": 885,
+      "sha256": "2cfd77f4b9b0d0acaecb92465c0c4ca7ec4cf4555c91f7e08d1ef6b7dcdf56db"
+    },
+    {
+      "path": "03_lane_system/README.md",
+      "category": "lane_card_source",
+      "bytes": 227,
+      "sha256": "f7b1de6c69e3629e6f317340db7cd8a8f0cebe2921e87fe845c015fb0ff1af51"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/ATLAS_128_LANE_TARGET.csv",
+      "category": "lane_card_source",
+      "bytes": 16788,
+      "sha256": "7da1784fca6371083c7094440f5f77604326d6ae28230e8f7addcb2e484ebd88"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/ATLAS_128_LANE_TARGET.md",
+      "category": "lane_card_source",
+      "bytes": 3991,
+      "sha256": "e259a189ebe26bfd1fdd33b1614a14e49b3f014c38dbccf64e50b29785ab72af"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/CARD_TARGET_PLAN.md",
+      "category": "lane_card_source",
+      "bytes": 5949,
+      "sha256": "0a84469030b41d1e24396b08bf06da40237de096f659f60f73acbdf19ddd4876"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/LANE_VALIDATION_SCHEMA.json",
+      "category": "lane_card_source",
+      "bytes": 2559,
+      "sha256": "54a2fb814be7a40398007ae6a4ca4c463dde56e3b3ed4d556e518a52525474dd"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/LANE_VALIDATION_WORKFLOW.md",
+      "category": "lane_card_source",
+      "bytes": 2164,
+      "sha256": "08cb31c52a979ec0f8de334e080ae11503fde227a529d3b0023f68e9c8d6373e"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/PRETRAINING_GATE.md",
+      "category": "lane_card_source",
+      "bytes": 2744,
+      "sha256": "79e264bccabd2d4c9131c59e94384a17e6e3e671503ab48c509073e1c9ba19a8"
+    },
+    {
+      "path": "03_lane_system/atlas-lane-validation/atlas_128_lane_target.json",
+      "category": "lane_card_source",
+      "bytes": 34454,
+      "sha256": "ad5160b3ddf9c4a7eea8b4267a52503171c43451df1be1de57ecb7a36383a96c"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 176,
+      "sha256": "81ae8c057c880449c46835d45617dae8be0591dd0ae6bd3661b684ca53d56079"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 583,
+      "sha256": "919874bcceecddc69ca011132e53992d9516a3e8253ee3f0ec3c67a80524df5c"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 459,
+      "sha256": "7c830f50350979f14e75bbb6fcaa30da09e5b7e3f3767e8f024d8d595a09871e"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 122,
+      "sha256": "e666eef06059e292125d849abbbe040432a11565c492c4e0bbeefb819af3ad59"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 201,
+      "sha256": "644e6c7f240243e5d710812d8a7e9c52bcffe97572ff04eb389210f8755705b4"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 456,
+      "sha256": "0af0a92f2d7f67f1fb502377ba4fa00a8074f2e308a6adf7ed555b19e73661b8"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 179,
+      "sha256": "ded16c61fd03fc244a06a6ca9e99d9bde0a02fbdcf461e42ec76245f1bafd9c8"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10274,
+      "sha256": "5526a60f8ce075b63402a351f04e4b672a846555c37ce150af33a7a0090563e6"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 362,
+      "sha256": "2c7e77fb47e7528fb1ae402155b5168569816e8cc88251dab66bcfd0f8d9b290"
+    },
+    {
+      "path": "03_lane_system/lanes/36_retrieval_card_authoring/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 275,
+      "sha256": "1f112a40777d4dd99a47c2396e54dd0a3b4a5e292641aec63c88bdcb9bd28717"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 169,
+      "sha256": "94614bef541b17f0b1b1e6cd78fb8dbc6ff1821749486045d64a52ce2136fb4e"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 664,
+      "sha256": "a865c50d28dbd46ba131f8d4c3d11e0a34dea15118ed9c7bd503851b3f7e4763"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 415,
+      "sha256": "975fb02a66d2d56f752da727f60ad3824e1511255d8c79d278fa22c8cc0030e8"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 143,
+      "sha256": "de62c81ea11478a4acd7ac1e6ed531399c9e9626ac5f8af36cb03697db9126da"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 150,
+      "sha256": "c42ca1c203f2972ee951d8bf976eb19da04eaaaf567cf7cbd769dc0b8dc6e9d5"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 467,
+      "sha256": "e988d6f9876d2300391b14b8da6b0b1d8f00e73af0524eac21a3812303877200"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 157,
+      "sha256": "b9938c9bbef46ceb56bf426d25f2e75a672c11ebccf1484f66482f84ea634e37"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 11233,
+      "sha256": "6c5e7b6bb0cabef72813ee88866cbe84a0e00dd9f92e24de1171dd0df67fd587"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 406,
+      "sha256": "1402e49ecafaa18d4ecf58d0106fe1b7ff4935fac9ef7e2064897a5c1fed71d2"
+    },
+    {
+      "path": "03_lane_system/lanes/37_small_model_retrieval_optimization/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 263,
+      "sha256": "f8190753c7865f74e86d9103eff5d1b7bb853e5b6b797554c06bf5cd0e0e7ad7"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 170,
+      "sha256": "8df40b46af0f048c654028abeee90960c10781cac92042b87aa3338aa07ac1c6"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 609,
+      "sha256": "c58ccef4b57e1ce97347589eec034bf1d02327fa3ea6204fee890dc0b01dc20e"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 488,
+      "sha256": "d3216afbeafbe6246ad6ff51ee490b88cfe72524f8521dbb1fae2e8d5f4cd1e3"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 109,
+      "sha256": "1dd6c62659c0552897916bcf810d292bc12dae6c3dfb840bde1003695021beba"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 195,
+      "sha256": "b2a8dbe53fbf313e30ba84682a2305acf39ca32f54d359226d271e52aea4df0b"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 542,
+      "sha256": "a5d07a0890d826eab172397830395f9f426c0837f3ce2c121eeb020380e04e09"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 196,
+      "sha256": "941e8277057b5dd3f59456f3ef16bf5f657504493185739cccd894d3bbcb67a2"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10518,
+      "sha256": "6b4becc1adc5d13a6ae3df5ee1ea6a3a136a6c78ff8e8b77638d5712cc278671"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 344,
+      "sha256": "7a23df7321b60576d8a9b15f06140578c49981e39696f4edb38b4981b677a6ee"
+    },
+    {
+      "path": "03_lane_system/lanes/38_windows_ai_workstation_setup/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 251,
+      "sha256": "3c57c84fe52ec91de5cc5b36bf0de9545027b2cb371f727e51424bcf9eb93689"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 216,
+      "sha256": "1b1bd187a12464a9c529eaf8635b529b4aca46552ff61364f96e425a47de9ac7"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 617,
+      "sha256": "f45d81381d2336a0e8a191e0cfe15f67c23e7fa5ba117538ada93e1f0776f881"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 528,
+      "sha256": "5ecb7d03774d921b9a6098e64eb8be4880c8a8f3674987e8dee2bafca21367f4"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 124,
+      "sha256": "8ba4199c6d143dac4e0fc4b4afdebf15be1aa2a8f6a27378598114aa9b6e62cb"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 151,
+      "sha256": "050be36036ebc3c4a959c388f74d4c48b22ebfba55ac817f4fbdd2bbb8bdb9dd"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 548,
+      "sha256": "cb0042226596b691e0b12c24d3c00f7640d6ff636c117022f28fcef6ed7c57ae"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 172,
+      "sha256": "065644b2ea36eee983e348cce41e856c81371bc79a10c195fdd8abd013355cd5"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9988,
+      "sha256": "31939ceb29eb21d0f151320cc6c3288176afbae3073b411c2cd0d9090658ff96"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 371,
+      "sha256": "7812d4f56877b7efd0d3eb407f068c008945864657515315add646fb19b5a32e"
+    },
+    {
+      "path": "03_lane_system/lanes/39_cuda_torch_runtime_alignment/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 257,
+      "sha256": "2f05ba09c759f2e581d5013b0632726040be4f1e39b2e7802f473e40bcc61629"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 151,
+      "sha256": "b0d3649303d13aa5ec818d9b36b841b1436ed09f0ec33c067ba3fd8d595c7d18"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 598,
+      "sha256": "485c3674e4d184447896dd277911d4b25a6b5ec04a678a13b91f2bd48b52a633"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 463,
+      "sha256": "c8dcea1b5e251e938528836d46b0f54156ad710a6ffe5b5eba1b9c0feac067b8"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 122,
+      "sha256": "b107c23c14428d2cf678828f78e67db7107028449cb5c45a1182568de285bb97"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 150,
+      "sha256": "64cf49cd1214219486647e29d87cf001a2386a3828c2608345e572f558b2aaaf"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 539,
+      "sha256": "722f8db095af91c18d323eaf9ae764e5156ad9d9018abdd23b442fcda94139ce"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 159,
+      "sha256": "e54dc93cdf18678bf63cc9ded087bedd0235e1601468d511134fd72d9df214f6"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9735,
+      "sha256": "ca460c3fa095ab7a207759f7f11f957c56fc42509c0af90032b01c31dc4215f7"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 361,
+      "sha256": "5683509aaa3e168da1fd552fe0d758e6dff9343e7e3fc52e78c08bddbb04df92"
+    },
+    {
+      "path": "03_lane_system/lanes/40_model_folder_architecture/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 245,
+      "sha256": "0b80264a77f232268f1901302ececb881102c730f194580cd952cd44a18043d2"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 147,
+      "sha256": "eb191ebe5566073f719209a0617e53d8139c5e9ca413512b8e1689070d9f3f5f"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 665,
+      "sha256": "2e4b8bb66e66ec2edbb0e7cde0f938a6e97dbbefb83c1aaf6ae485494c4bfc48"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 456,
+      "sha256": "e73a8dfdf00bbdb11cca7af3b501a402cfbd148395f1069eacacc7f042fd9f2a"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 116,
+      "sha256": "fde7e202467943887f555716a03affd41c6f6a21548ced6d327e84d8c1511700"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 152,
+      "sha256": "0982c7fb3bccf2413389bf126e7e9ebc533d551a0d169426683174739f87ca4c"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 456,
+      "sha256": "3405d96778db13b0e4841844c5b669d581d2356b9e540a365bac3423de935af0"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 194,
+      "sha256": "f0edc18469db0e54900901adc4f50615f4d211e185dc7d25f82f2a3be82723d0"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10774,
+      "sha256": "f925ea443ed6a3be30c0623180f86a9a611d076b0b8ec883775e3375b8a9cfdc"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 378,
+      "sha256": "f4f604685ca57d3950da63c863dda1fb734e55277838092c3e5961235a85d384"
+    },
+    {
+      "path": "03_lane_system/lanes/41_comfyui_workflow_repair/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 241,
+      "sha256": "56f50b41d989b713ad95c1e44225074b91642d4d55a2165532470b099701ebb8"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 181,
+      "sha256": "5a18a182ce0afa0c31476d5f395a0f827a2759995d31c25b6ccb142b195f83d3"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 590,
+      "sha256": "7fc264223277088450a0cb23a4c4e20059c91119f577120607ce3d2745193751"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 548,
+      "sha256": "111fa3bb4072cbb1716de52ff0a0600046d2e6cc2a56e867b96ee155f5ff34ce"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 134,
+      "sha256": "7205907ea987f6b0f7ab4f6bb5057fcb9cc96940fad3ef5879f95e352ff854da"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 157,
+      "sha256": "babdc25211bea89af49ff63366c0946f4505835b07895e6f3b8d40fb16be7745"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 465,
+      "sha256": "d71394b7eede70f561075e545c7c0242258a154345a0e65631481ff2d0b94dc0"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 214,
+      "sha256": "54147bc105156cfa9b3c86102e3221829ae06482cdc9b7897b320ce416e0f6db"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10471,
+      "sha256": "06defe63718f9d8846b3d0077f5fa17e7e2dca3abb0a8c4f9004cd5e93ca9e84"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 404,
+      "sha256": "64464c41f483056e2270aed760cae6075debd3c1467fa91141c01a880aa47cd4"
+    },
+    {
+      "path": "03_lane_system/lanes/42_comfyui_socket_contract_debugging/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 293,
+      "sha256": "ed39a78158d9628460caaf96b99673c06284897a73424371f7df93854a840c43"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 151,
+      "sha256": "c5cab542069bc42b7118f5fefe7cdc37162ad7f3300fc8db0613a0d80f4cb630"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 571,
+      "sha256": "4139544e1f0adf0308f4ba8629b423ca35b36cd686d59c3a237b0f5139dd4ea6"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 481,
+      "sha256": "3ed1b116ad26f7a1691a5cdd0f24122d97d1e770afad06b72e04ec847abfd783"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 96,
+      "sha256": "57de78d6262a76be3aa63a8fc3ec87fd5f35770ca6c2f3ab5be0f25b637132ec"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 155,
+      "sha256": "44be3f3e361b5c2664ff006c5070ebfdf40309303391efe9fb7c5335284224ff"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 537,
+      "sha256": "b24b8344956dc3a7e2ff7a5ab040081a4b230bf0d21a894bd4bb5c0711fc5154"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 185,
+      "sha256": "bf7a2e2f0cba9dfd531c11f24731965292e2dfb035291073adab3bb02a24fc57"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9984,
+      "sha256": "0bcfbd0306a93cac618130e98abbfafa73e8779a34623fcc3a24e73a2d013c05"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 345,
+      "sha256": "9842f51a3d71cecbe6d28c1f7cacd83523fb496c90748c18d1495596a83fe336"
+    },
+    {
+      "path": "03_lane_system/lanes/43_inpainting_fundamentals/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 241,
+      "sha256": "b245ad43a554c14a16fc8d950cede4e51051565d6b498bf8bb6154a77f9171cb"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 139,
+      "sha256": "4cbb2d818359b4d6a36afa07ea764093cade75d30bc1c39f03f3315e84568596"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 604,
+      "sha256": "1e9409dbd0bc729ee12b5b7f7074aea7311738bb95bfa2dd8758eb8f0094a2b2"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 533,
+      "sha256": "62240c2b5bd418d73f0a4aa825b0034f0b51d874132b98144c44b8149388843d"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 112,
+      "sha256": "18528123d726f674418924c1696ab841c67fa4581b0b66d79b23ee49a8b06531"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 148,
+      "sha256": "abf5de7735a5fb9403d41c3a665aa2be797e11a01486200e23cbd32d6e69cbe6"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 455,
+      "sha256": "06d58b8eda0306f1eb20fb0fdba25a46c7c6ea1c60751fac8580b04a27b616f4"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 212,
+      "sha256": "e8f1882831d8592e6639d43d75b5711b30927ddea00eaeacc56b88c58f27c8b9"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9873,
+      "sha256": "f5776b9084ab9356dce55a36280611b8a45b39f9d2351909f796968c0d6b9a43"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 413,
+      "sha256": "fd8079b208c6584f3272546249b949435041ec8d3b236257175367885981dfba"
+    },
+    {
+      "path": "03_lane_system/lanes/44_video_vram_optimization/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 273,
+      "sha256": "128b17215df392e91f2746adfab40bf817760686f0ea0d2ed4f4b9bd0e3b8b9c"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 149,
+      "sha256": "32e66d20148e8c5b0f6779438d0bc2041474990c3885643e4dd38322ddd8c678"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 687,
+      "sha256": "6e402dd82df52091ffb414f93579c3d2b0676ca736b617914f1422a9460fc3ad"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 482,
+      "sha256": "70e876e0c09a6d94c31b709a4a13c0b09f88735563dcd8fc3d0c4889a0209195"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 106,
+      "sha256": "9ef48515f3a26de6e1fafcab0ca7001334ab045b649bad08328b55afc1e5aeaa"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 113,
+      "sha256": "f7531f58d7a2bfe1b6c6e08e1a5b52cec92718aac65121f0fcd9b644c3033336"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 472,
+      "sha256": "5ac32af817c26e8e86d6339687b859eb40cd735a24c6e2423f09a56c04bd88fe"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 139,
+      "sha256": "2d2b53a7dd2e4dd44a92bcb8f874a26a83be1b2aecc49d44d4bef820b5bada50"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 11094,
+      "sha256": "ede9496b26cd32a3e328b4f6da974101f65688cd0c4ed0d47e8f83134c5f776b"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 411,
+      "sha256": "e792f169c5ac93b210e9ff3b9db8ba15e2d6d3a42d874c973c89a7367a60dc3f"
+    },
+    {
+      "path": "03_lane_system/lanes/45_last_frame_chaining_video_extension/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 269,
+      "sha256": "f7abc01f1fe09232eb24a96dd0bd6e9a39ddfab8cf4f001a1c0e3ed688fa46bb"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 183,
+      "sha256": "4ed5d602fe44c495ee134dd0306f80f46ec88ec90b4f1948c358d2527336d3d4"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 608,
+      "sha256": "d335f2256ba1dcfbc5a15bbf21ee01a5cae9a43baed42697a0ab296b1c77ee2e"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 470,
+      "sha256": "0fbf9e19b24bc4941decb651a708ebed9dff46e5ba9d071208d46e91163bb17b"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 105,
+      "sha256": "83a267860d48510a3ff8c8076bbfc0517bfd018e194f447c009acd21aa0b88e5"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 165,
+      "sha256": "78120f351b1f821e44bc617302ae661c531311a8f5cddba62e65061156bc8e3f"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 545,
+      "sha256": "b58c6394524897054b40ad0866a8dfcd0f2960076ec91d2c40f6caf960189bde"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 191,
+      "sha256": "10937df8a95db4a349ebb020b32bc022a8ca1b7dbef4898c5dc76ee5938889ad"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10118,
+      "sha256": "defd1f4e84794608822dedf4cfbbdd36f5e1a9c5080d1e1dbbe7533e2c18fba3"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 335,
+      "sha256": "46ec15d231ea4199a85c0d39a6c8a999d640868783eb5af87db5d8c6340b9798"
+    },
+    {
+      "path": "03_lane_system/lanes/46_gradio_multi_venv_orchestration/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 257,
+      "sha256": "6355349825005340bad0132bb4068b8e0890074bba5597f95c7ecc0095a81a12"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 132,
+      "sha256": "5d094951d6d9e4dbadbb54cfa5cf6dc749e52476f4be7af5c1a0deb6ffe1a6d9"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 602,
+      "sha256": "71890bccfee3236f073329133020502ec58371c9e17c33a0148bb5d213c5e450"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 423,
+      "sha256": "c03c2caebf1724d39861466bb2c8e4d454612e43b53da9c5d0e605db53d084b5"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 86,
+      "sha256": "1f3f732e81fa742b78f9449ff1416e620599784aa6f801e8c11c0961feeb06ad"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 126,
+      "sha256": "8238d7a2cc0ffc50e24097979f7e6e94d818521fe5989fa78ce5438c01ac3e43"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 541,
+      "sha256": "bf08537cbacb270ccf771d270a1c2fb47f45b75760648c019d0ca20bdadd94c6"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 173,
+      "sha256": "3fedca1aca04d81c8535a6777e2c6e174e7901a4880974710703d92d080741dd"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9403,
+      "sha256": "a8a40223792bc8e4017a49737207062d86e9c8098fa7e1c068111e2d40ae61fa"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 323,
+      "sha256": "2f16a68362012c6ffc570647e2a34a23cd0dd8bc2b7aa467b9054a7cc3f01fa1"
+    },
+    {
+      "path": "03_lane_system/lanes/47_raw_rag_vs_atlas_comparison/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 249,
+      "sha256": "63eb5a5359695f3334c2d7e44c062016e55cb8c3b21c29dd10751c8030f35255"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 152,
+      "sha256": "bb19e4e524d641fdb8c8e753cd75e8bef752ac82498a368e2bc201d6d9984a40"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 627,
+      "sha256": "1a2af58099a37cba679501c47f0de33c093ab183e28ea677a089a37596e7d8b2"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 450,
+      "sha256": "59b549eb0a3d6d6e709c6ea0d4b0be872e48c56ca810dc6ddaf59772b50944e7"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 97,
+      "sha256": "fcc7ce496724c8f428b4432354a387b88d3293f254251a2cc05b77d3245fdc99"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 163,
+      "sha256": "cb5125cf6f1b35892d8a15a3416a8880832f856cd472cf8cadfae067083af6ca"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 550,
+      "sha256": "4015638edab7aa2d3f170ca71315ebfb6a2dfa1319b3657e6cf57ef525ebf1c5"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 139,
+      "sha256": "44559dbb0e02e5115e01e49b9e9217a356ce00bea8fc1f0b3e22fe11391252af"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9511,
+      "sha256": "d5f0b566d82e33feea4fd51498fe7364b5b111ce1e5e9c85001a27cd0e756794"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 332,
+      "sha256": "97051db0d9ee6b21adf3d50b39b3d8c42796fbbdb28e55702bf0e2d3ef13a916"
+    },
+    {
+      "path": "03_lane_system/lanes/48_small_vs_large_model_benchmarking/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 266,
+      "sha256": "b2b40a2a73bf86d89298ce0fc6728da0bd00bdaffe2e01ceb814762a86c85fe9"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 126,
+      "sha256": "ceb8e48d5ba00603476026100bc356a9a8f37ea878b62a4fa2ab9d0debcbaca2"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 610,
+      "sha256": "139b68dfe7e5685497b183df28839e2f2269c2f096f61ab67f9dba620c3e7e2d"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 439,
+      "sha256": "06ef989fca5f358fdd106cafe1fceebfcb829d545a4c33f0e936d52b09a839eb"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 84,
+      "sha256": "53bd32ebb9919f50d7ad756cb4408a949218a41bd7c0e26a3d5dbbd4184eb5d4"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 153,
+      "sha256": "20636a576b1f3e06e2e48f54493b1f01baf88bd81ecaf4717337dfeeac566519"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 537,
+      "sha256": "6f358e7d0cb68f805e4a01ca2a86aba4b96f6efe26f26bbc3c7603288b26b575"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 199,
+      "sha256": "1bca68fc9fe308e287bc291166e06be96afe3b6d9930b9910fd64e6c1acf6e5a"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 8986,
+      "sha256": "3640e11087ef0c28237327ada0e6ac1fdfdad25d6b727baca213ea4be70a9829"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 319,
+      "sha256": "c3b20bdea164a7f107912eff3f8a4f1978e5499929c56f23e5645c25d9009d18"
+    },
+    {
+      "path": "03_lane_system/lanes/49_aiwf_core_philosophy/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 240,
+      "sha256": "562f32c6a34d89b3acd37da4b11468ef35c938a8d8a02e053c29359bdf64a7b0"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 157,
+      "sha256": "fe82183ab6c3837f338de851daaac081cbcc94e8f6fca096d8680cd364467347"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 634,
+      "sha256": "0924337aa84e767c6169234b0d79631925e42df7042c14bf49e962aafb030963"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 438,
+      "sha256": "1b5df72b2d64b57597d1355a6ae8d314e126bc5e3320f8af4bbcaadb8efba1df"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 93,
+      "sha256": "356a2b22c76d3cc09d8d69917b9813030ab404a1cadabab326ba1ac966e868c4"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 143,
+      "sha256": "6ea4e3628a9a82c21fa12a02a74940b69bf8b15d1db7e7092c2be324c0b79cdb"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 548,
+      "sha256": "0559dff0009b7b097df3f7d905cc59c181623be40ff376267c74fa16a8283fb3"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 185,
+      "sha256": "3e87fc8f10b51fc2dafe1b2099984cc236eee6f915dde0870963da78a72cddc0"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 9254,
+      "sha256": "710ce1808a1bde80bfc365be04d55b38b7e03ebdb10da9a7832419adfe809166"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 365,
+      "sha256": "b53ee0661cb85827c0cb47179854aee42c5eb42b60a8377851f5af1d195f2532"
+    },
+    {
+      "path": "03_lane_system/lanes/50_diagram_visual_asset_system/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 258,
+      "sha256": "96028060632d12fedbd969af59f71d71b032f6f2db15e26a20d0eca2293f8fb8"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 157,
+      "sha256": "8ed1792ba24b5a80424215a6cbb9380ef6097d86d2e722f2004b9d0201c85a64"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 467,
+      "sha256": "db019bfd5fb9c825ac633017c41337e9852f231028d849b26b7c4a7c9ed73fa9"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 470,
+      "sha256": "c7c8f002ccf854775e1a1c9600b90c7a9f09409e3cb3a8ccd156e52819323879"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 96,
+      "sha256": "896b3c9272c4979a8bf789c84fd419119ee1fda65ce316049ff4b3f7761446d6"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 128,
+      "sha256": "fcfffff7dc24ec89f0cabdc1e86777dd38cca88f4547d1b46f513d41eb333365"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 499,
+      "sha256": "03b5aa565cf4515740e0b03f17eb024d90a1ceef414cd065c8174f04af42d409"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 143,
+      "sha256": "565b0a6b35f45d60d851e89b9be0746811f2016d9681dcb154d7065cd182f0fa"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10084,
+      "sha256": "6f3d3fb885148ea87a582706db188346907a8a62c2532f6b8a28525c20420f44"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 362,
+      "sha256": "c9967e04badcce482d0ceb308fc35b7a506484e34173becbc2f150bc26213359"
+    },
+    {
+      "path": "03_lane_system/lanes/51_atlas_lane_design_system/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 248,
+      "sha256": "a41ee86d4dee66d0c192051690319088318a20f1086a74cd7113405ff634233e"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 125,
+      "sha256": "27d63aa8f6bfb20bbab1b4f9361a28b242d6a2a79d8981f9adb79f3f81b84420"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 484,
+      "sha256": "fa8fec56086d9f1e866fd5fdd75e65a2f68d0dbbb05839dd3e5315be01b20f30"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 450,
+      "sha256": "e9ee8b2bb1ad2284be0c99bfac0070d481d0d81fbb3a3590e46fd602a0b84e97"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 89,
+      "sha256": "32d8c38da133da4871c6beff277ae08fadae0759148f8a0cfbc80a6b09c5fd43"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 120,
+      "sha256": "72c93859507f533fd903e7a161fda0ab2b3dedaf649b3a9db52315c61897f927"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 500,
+      "sha256": "909091167e4a415be41b535036ef48525f198c19688afb1470972a24065be41c"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 182,
+      "sha256": "a34b7784a0f13f038766edd0dbcd14782513a153f1843ae341947c1bdf5392c0"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10039,
+      "sha256": "6a9c1a7addbfa20808fe43fbfb23617562b24ad95a07297a1e371fa4c5f24893"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 336,
+      "sha256": "f7bb560b4926af6c6239193463f2008a6d652b361c5f2fe534fbf40ba2ffebf7"
+    },
+    {
+      "path": "03_lane_system/lanes/52_source_ledger_maintenance/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 250,
+      "sha256": "6599c851e7206496653780205416998aeb4ee2ed609c5bee9082f571916491f9"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/ANSWER_PATTERNS.md",
+      "category": "lane_card_source",
+      "bytes": 133,
+      "sha256": "3260bf07ee04b94307ab075a3acfd1f21a4e8248f023f213d00df002081fa86c"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/CANONICAL_OVERVIEW.md",
+      "category": "lane_card_source",
+      "bytes": 492,
+      "sha256": "fef2e894e097ba54bdc6772200f0999f0d1dcdda231e1169ef458d6da0fbac7d"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/CONCEPT_MAP.md",
+      "category": "lane_card_source",
+      "bytes": 505,
+      "sha256": "dba4faea58f9e8fbcb21cea6eef5f6abe7a9add54f73701d30115c03fa3081ee"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/DO_NOT_CONFUSE_WITH.md",
+      "category": "lane_card_source",
+      "bytes": 100,
+      "sha256": "5b3864237da5245262aa36a965897cdceb0c3cd50a29b2e6e256e0b135c54716"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/FAILURE_SIGNATURES.md",
+      "category": "lane_card_source",
+      "bytes": 155,
+      "sha256": "57d928dbcc15dfd3ac2a9057d291511ab859d8cb2e13a1f92908984eba9d265b"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/GAP_AUDIT_AND_VOL2_QUEUE.md",
+      "category": "lane_card_source",
+      "bytes": 507,
+      "sha256": "0dfcd6797c8dc29b6f543d0964324dc64266d4d04041c5715786e7f78f94491c"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/QA_TEST_PROMPTS.md",
+      "category": "lane_card_source",
+      "bytes": 188,
+      "sha256": "5d582341ab485437b33d3df40636c016f8c8dabb061e34d58a7e6bf2b00f4976"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/RETRIEVAL_CARDS.jsonl",
+      "category": "lane_card_source",
+      "bytes": 10074,
+      "sha256": "4cb21f66f870774c5eb211d212af56e7391b99a62ba8a400c0290a2944b25ebb"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/SOURCE_COVERAGE.md",
+      "category": "lane_card_source",
+      "bytes": 342,
+      "sha256": "552b39198772653be1b0d8bdc1e328a90b4333e476fcbc34a24c5680482945f0"
+    },
+    {
+      "path": "03_lane_system/lanes/53_claim_freshness_verification/lane_profile.json",
+      "category": "lane_card_source",
+      "bytes": 260,
+      "sha256": "b0089199260888d4d9d9e22dae89ac954312bb72052b85301d7f475fac3832e2"
+    },
+    {
+      "path": "04_training_data/ATLAS_CARD_SCHEMA_V1.json",
+      "category": "training_data_design",
+      "bytes": 1583,
+      "sha256": "3a206eb55b86eec1f9870f596bdf721e5a153540fc596af23756d8b31cac6f0d"
+    },
+    {
+      "path": "04_training_data/ATLAS_CARD_TEMPLATE.json",
+      "category": "training_data_design",
+      "bytes": 1435,
+      "sha256": "22c1f011a705efa33f77d74e1549a7f40b80dbb97f9bd794436e7770ce97b272"
+    },
+    {
+      "path": "04_training_data/ATLAS_SFT_FORMATTING_GUIDE.md",
+      "category": "training_data_design",
+      "bytes": 1051,
+      "sha256": "2c4d2dde95a0661248c070f7ec735c0503f742a4b8cbb1c70aa0cf8f7e5d4e29"
+    },
+    {
+      "path": "04_training_data/CONTEXT_PACK_DESIGN.md",
+      "category": "training_data_design",
+      "bytes": 2040,
+      "sha256": "37b447d6d773a9afc4118bd3124e712f80c6634d79a9faf53d7c8a1419de0604"
+    },
+    {
+      "path": "04_training_data/CONTEXT_PACK_SCHEMA_V1.json",
+      "category": "training_data_design",
+      "bytes": 1867,
+      "sha256": "7ed604f99552413a8d2a3bf69604e7d3d8352e4e91df4cb773c66060c6f04e4c"
+    },
+    {
+      "path": "04_training_data/DATASET_BUILD_PIPELINE.md",
+      "category": "training_data_design",
+      "bytes": 1903,
+      "sha256": "3d815756d79c363fc71dad2cab396b144bc8bb7890587a8fb9c8ec8e8e14a674"
+    },
+    {
+      "path": "04_training_data/DATASET_BUILD_PLAN.md",
+      "category": "training_data_design",
+      "bytes": 1049,
+      "sha256": "69a24699f85a547ba684a1758bed578504ec50e00246fafb685b9c68a218bcec"
+    },
+    {
+      "path": "04_training_data/DATASET_CARD_TEMPLATE.md",
+      "category": "training_data_design",
+      "bytes": 903,
+      "sha256": "8a717a8b0a4712ae3a04eb49deaeed0653b0f9b61c3e2367e177834a6f77196a"
+    },
+    {
+      "path": "04_training_data/MANUAL_TRAINING_DATA_REVIEW_CHECKLIST.md",
+      "category": "training_data_design",
+      "bytes": 1366,
+      "sha256": "531027ae3d4fa0e4b46df75e99e04dc607cb5f597a901e06c49527acf2576e56"
+    },
+    {
+      "path": "04_training_data/NEGATIVE_EXAMPLES_AND_DISTRACTORS.md",
+      "category": "training_data_design",
+      "bytes": 1733,
+      "sha256": "e131417b1adbb457edc456b191af63b872ea9634680fee12da3a03cdeeb6dc61"
+    },
+    {
+      "path": "04_training_data/OVERNIGHT_TRAINING_RUN_MATRIX.md",
+      "category": "training_data_design",
+      "bytes": 3305,
+      "sha256": "026b06f5005157ed21e7ef48e3c6f19d61dc1d449c2add0128b64e7219853102"
+    },
+    {
+      "path": "04_training_data/README.md",
+      "category": "training_data_design",
+      "bytes": 754,
+      "sha256": "10586f0cf8cf39eea7643b4d0a1ca2520eea5f2c955d140dd6a2b42687e52fe9"
+    },
+    {
+      "path": "04_training_data/RUNNABLE_TRAINING_LAYER.md",
+      "category": "training_data_design",
+      "bytes": 2241,
+      "sha256": "3d74d82fef9a5f0688db270e3aac727990d3a11e84e8d4d1aa9c3b4d1b1938af"
+    },
+    {
+      "path": "04_training_data/SAMPLE_ATLAS_READER_MINI_RECORDS.jsonl",
+      "category": "training_data_design",
+      "bytes": 88371,
+      "sha256": "d6a063c68c1f2d1f1c6b0b91dce18800c0c7ed4d102fcebb16abc2233528fb26"
+    },
+    {
+      "path": "04_training_data/SAMPLE_RECORDS.jsonl",
+      "category": "training_data_design",
+      "bytes": 10130,
+      "sha256": "b5aeeea501e5db738e43781974e2bf775ecd76bd55736ca196b9c64da39c0453"
+    },
+    {
+      "path": "04_training_data/SAMPLE_RECORDS_STATUS.md",
+      "category": "training_data_design",
+      "bytes": 1195,
+      "sha256": "f7a54b0d2b84fdd04c792e64167c84e005956aaa8f513b3f02c73a4edebb81e4"
+    },
+    {
+      "path": "04_training_data/SMOKE_TRAINING_RUN_PLAN.md",
+      "category": "training_data_design",
+      "bytes": 1308,
+      "sha256": "169af02c9c83665db170866958f2afae08dfa624c7864c2812e36aa01def3af4"
+    },
+    {
+      "path": "04_training_data/TRAINING_DATA_RISK_REGISTER.md",
+      "category": "training_data_design",
+      "bytes": 1217,
+      "sha256": "6de306e43ffef073029b1f18b404249f441abc8737c7a7efced79a7379ebf6d6"
+    },
+    {
+      "path": "04_training_data/TRAINING_DATA_SCHEMA.json",
+      "category": "training_data_design",
+      "bytes": 3299,
+      "sha256": "018afaee14196da901477d9406b6c90e0ad73b51e06e39ff7669aaae2508de12"
+    },
+    {
+      "path": "04_training_data/TRAINING_EXAMPLE_TYPES.md",
+      "category": "training_data_design",
+      "bytes": 1053,
+      "sha256": "6f10d31bc3ca6cff32e3d9a8b60f69e59683eb48a52ea0bd3fc1295c297afa5d"
+    },
+    {
+      "path": "04_training_data/TRAINING_PLAN_ATLAS_READER_MINI.md",
+      "category": "training_data_design",
+      "bytes": 5694,
+      "sha256": "60212e4cabebfd8b2c1a076a80fe13fd281866ebeae64d0c9f98640acea7476b"
+    },
+    {
+      "path": "04_training_data/TRAINING_RECORD_QUALITY_GATES.md",
+      "category": "training_data_design",
+      "bytes": 2934,
+      "sha256": "0108fb98bc171c874710a1289f3753dff5f6cd3f0043f644f446edf5b2cc5594"
+    },
+    {
+      "path": "04_training_data/TRAINING_RECORD_SCHEMA_V1.json",
+      "category": "training_data_design",
+      "bytes": 4521,
+      "sha256": "cba702f1b6eadbbc4b27719b884016f4be55efc873f4e03f345329c431fc652f"
+    },
+    {
+      "path": "04_training_data/TRAINING_RESEARCH_NOTES_v0.2.9-dev6.md",
+      "category": "training_data_design",
+      "bytes": 3584,
+      "sha256": "f7b15ce563fe48bdbace32c8d0d42c56238f4ca3effc9ac9c7216b1dd24b8920"
+    },
+    {
+      "path": "04_training_data/generated_seed_training_records.jsonl",
+      "category": "training_data_design",
+      "bytes": 68889,
+      "sha256": "a0e56697f41820926413b82d4a51db024d34a6e8fdaca579e3ee30e2ace12263"
+    },
+    {
+      "path": "05_evaluation/BASELINE_MATRIX.md",
+      "category": "evaluation_design",
+      "bytes": 1000,
+      "sha256": "77d6e2ef071a8c668a044aa1b49ca85ad2f2ea5b6526e8c711a36037000aeba1"
+    },
+    {
+      "path": "05_evaluation/EVALUATION_PLAN.md",
+      "category": "evaluation_design",
+      "bytes": 1189,
+      "sha256": "992d838bf0500c1a39ed3f7d16b792cc63a04934bc533e8d0298e1fedf26e1f6"
+    },
+    {
+      "path": "05_evaluation/GOLDEN_QUESTIONS_SEED.jsonl",
+      "category": "evaluation_design",
+      "bytes": 2040,
+      "sha256": "6763d69c2143e56b92bba72acce7aed17cffd3dc45c0c9b140efa32ffefad887"
+    },
+    {
+      "path": "05_evaluation/GOLDEN_QUESTIONS_SMOKE_25.jsonl",
+      "category": "evaluation_design",
+      "bytes": 5039,
+      "sha256": "b744c2f8579165751edf125d568ac4bb7fd82e21aadd5b589e83dc08804bee2b"
+    },
+    {
+      "path": "05_evaluation/README.md",
+      "category": "evaluation_design",
+      "bytes": 550,
+      "sha256": "c2a4ca2f5dbb1e006fd34b6ce31bb2f1e46c2a1ea687073e10c3ca0acb20e7ad"
+    },
+    {
+      "path": "05_evaluation/RESULTS_TEMPLATE.csv",
+      "category": "evaluation_design",
+      "bytes": 227,
+      "sha256": "fbad45648759ef3357d5e8e02c28ce1593f6cf69a5359e9f27043c4ccb639e1b"
+    },
+    {
+      "path": "05_evaluation/RUBRIC.md",
+      "category": "evaluation_design",
+      "bytes": 1742,
+      "sha256": "7d076fc0c6c73945f6817844f5c6c8642cea8ca139873fa2a539e43916f89c7c"
+    },
+    {
+      "path": "05_evaluation/SMOKE_RESULTS_TEMPLATE.csv",
+      "category": "evaluation_design",
+      "bytes": 160,
+      "sha256": "3ee6410180ad92f13777b4562c8d72f1b099b7dfb2ad5bfa36a6bff9512a25c4"
+    },
+    {
+      "path": "05_evaluation/SMOKE_TRAIN_PROTOCOL.md",
+      "category": "evaluation_design",
+      "bytes": 2273,
+      "sha256": "56eb17ad2cb9e2c6cff40c87288310ac0b0b61fec0df23bbeeb886f7adf7c3ba"
+    },
+    {
+      "path": "05_evaluation/SMOKE_TRAIN_RESULTS_REPORT_TEMPLATE.md",
+      "category": "evaluation_design",
+      "bytes": 828,
+      "sha256": "fded0c31f3e050fb029944caeb8ec8309ac5af26dabdb2b81e6a026a7ab63b6e"
+    },
+    {
+      "path": "05_evaluation/sample_smoke_results.csv",
+      "category": "evaluation_design",
+      "bytes": 10060,
+      "sha256": "e656146c3e108399943e7f58a9dd2015ae34bb094ceb32a4eaeb6432a24d04ba"
+    },
+    {
+      "path": "06_experiments/EXPERIMENT_LOG.csv",
+      "category": "repo_root_or_other",
+      "bytes": 104,
+      "sha256": "5243d92e8d5bb5f0840a6d9fca9301a5147423cfa3e0020b716499327ea9e164"
+    },
+    {
+      "path": "06_experiments/EXPERIMENT_TEMPLATE.md",
+      "category": "repo_root_or_other",
+      "bytes": 691,
+      "sha256": "7daa5fa2f85048f9e32218a7b1ee97a09f762e8584cc92935f7269a7bae9a234"
+    },
+    {
+      "path": "06_experiments/README.md",
+      "category": "repo_root_or_other",
+      "bytes": 242,
+      "sha256": "505dcbd1628bc3d511a6c93f36f3519ea33c35a0177185dad4952f8c2c93f2b3"
+    },
+    {
+      "path": "06_experiments/training_configs/A_sanity_r8_lr0001.json",
+      "category": "training_config",
+      "bytes": 1303,
+      "sha256": "2d63269d93695f3d528986f790cc7e96927b1cc779d0ff78f1f8e54e163e5ef2"
+    },
+    {
+      "path": "06_experiments/training_configs/B_baseline_r16_lr0002.json",
+      "category": "training_config",
+      "bytes": 1397,
+      "sha256": "981ef0ee2e58f99ab58817c3df04205a9c5afc61689c17410bf913076e823792"
+    },
+    {
+      "path": "06_experiments/training_configs/C_capacity_r32_lr0001.json",
+      "category": "training_config",
+      "bytes": 1397,
+      "sha256": "69f8c4c5555f494603925917ed60e4e67ab9e19b6417db67b0a71f6463b3a94d"
+    },
+    {
+      "path": "06_experiments/training_configs/D_stability_r32_lr00005.json",
+      "category": "training_config",
+      "bytes": 1400,
+      "sha256": "571709be38406ac60ce67df19ea40efa64cc961fabc7e5d4084d5aa27aee5a0c"
+    },
+    {
+      "path": "06_experiments/training_configs/E_nodrop_r16_lr0002.json",
+      "category": "training_config",
+      "bytes": 1392,
+      "sha256": "3034be0141961cf5806e520ed48b4820fc5ac1ea053cc6afce805b9f31336073"
+    },
+    {
+      "path": "06_experiments/training_configs/F_context4096_r16.json",
+      "category": "training_config",
+      "bytes": 1389,
+      "sha256": "31a4fd38d5561a6836efda4f7b9c0ab739d693a30000e756afb0afd68b0f1d19"
+    },
+    {
+      "path": "06_experiments/training_configs/G_rank64_stress.json",
+      "category": "training_config",
+      "bytes": 1386,
+      "sha256": "8ef44ebbcc403d12ddfa33cd70f1bba1ebaa6e07861fac524770b12729d56d3e"
+    },
+    {
+      "path": "06_experiments/training_configs/H_packing_efficiency.json",
+      "category": "training_config",
+      "bytes": 1394,
+      "sha256": "ebe1bb91334efd6717bdf59215be0c454ecace84202c46a17df0f4476174fb50"
+    },
+    {
+      "path": "06_experiments/training_configs/README.md",
+      "category": "training_config",
+      "bytes": 714,
+      "sha256": "ee1dc2e227749fd7339c48b738533d25c6086dd2aee79823d466ab6634fcc60b"
+    },
+    {
+      "path": "07_quality_control/GITHUB_STRUCTURE_QC_v0.2.7.md",
+      "category": "quality_control",
+      "bytes": 645,
+      "sha256": "a4ccfe1356832376b370e9b4603c4e6da77051da00659d0d5499eedb4dfd9eab"
+    },
+    {
+      "path": "07_quality_control/OWNER_REVIEW_CHECKLIST_v0.3.0.md",
+      "category": "quality_control",
+      "bytes": 1076,
+      "sha256": "3698646d0db21508e6b252f129edcd1767239bc76f432496a6af245b0a8552a3"
+    },
+    {
+      "path": "07_quality_control/POLISH_QC_v0.2.9-dev6.2.md",
+      "category": "quality_control",
+      "bytes": 824,
+      "sha256": "bef476ce2ad4e4d15ef6370a9ab6a1eee33d6d7d5e97fc3cdc82f73bf6a2ea3f"
+    },
+    {
+      "path": "07_quality_control/PUBLIC_REVIEW_CHECKLIST.md",
+      "category": "quality_control",
+      "bytes": 1802,
+      "sha256": "35cf5146177f97278fb6d1d028e9791ce5b810c740c9b9b9683e15ac18dace27"
+    },
+    {
+      "path": "07_quality_control/QC_REPORT_v0.2.6.md",
+      "category": "quality_control",
+      "bytes": 8743,
+      "sha256": "883dc59cd57d7835b9d5f9a2bbfdf006804a90cf32845254187af89d8a15abf9"
+    },
+    {
+      "path": "07_quality_control/QC_SUMMARY_v0.2.6.json",
+      "category": "quality_control",
+      "bytes": 2177,
+      "sha256": "26425c1159b44ebcf08a20de4f8c31227c003406d36098c84959026912a9e178"
+    },
+    {
+      "path": "07_quality_control/README.md",
+      "category": "quality_control",
+      "bytes": 134,
+      "sha256": "c97601144c1c74f3c03ad95c0d850f1cbf8953aa2d60be50da50e88d45bbc405"
+    },
+    {
+      "path": "07_quality_control/RELATED_WORK_AND_SMOKE_PROTOCOL_QC_v0.2.9-dev5.md",
+      "category": "quality_control",
+      "bytes": 2342,
+      "sha256": "7baaa6159e2ff25e6b41e5d1df45e27b9b6e81117c8f99fd28287042900d0b95"
+    },
+    {
+      "path": "07_quality_control/RUNNABLE_TRAINING_LAYER_QC_v0.2.9-dev7.md",
+      "category": "quality_control",
+      "bytes": 1066,
+      "sha256": "7951197832938b1c526d6185e19452183e1769d45044d16d7548cf85489092c9"
+    },
+    {
+      "path": "07_quality_control/SEED_LANE_GROWTH_QC_v0.2.8.md",
+      "category": "quality_control",
+      "bytes": 1457,
+      "sha256": "7cc06b6c6c65651287ca046418295aae0e25373898fae3c3e0ed6d7cf067765f"
+    },
+    {
+      "path": "07_quality_control/SEED_LANE_GROWTH_QC_v0.2.9-dev1.md",
+      "category": "quality_control",
+      "bytes": 496,
+      "sha256": "4cbca1c0e5c6b1aa16efa83de5dcd1e49bdfef98ee0d4df89c26d06f13e18d87"
+    },
+    {
+      "path": "07_quality_control/SEED_LANE_GROWTH_QC_v0.2.9-dev2.md",
+      "category": "quality_control",
+      "bytes": 567,
+      "sha256": "c2a31231303c3844239021565a978ddb8c81c5ec22fef3e4c563709d2b347555"
+    },
+    {
+      "path": "07_quality_control/SEED_LANE_GROWTH_QC_v0.2.9.md",
+      "category": "quality_control",
+      "bytes": 642,
+      "sha256": "cafd45749886491f8d2ac864d51075551e0a70052f09b6f1ad426e9cfbe4657b"
+    },
+    {
+      "path": "07_quality_control/SOURCE_POLICY_QC_v0.2.9-dev5-clean.md",
+      "category": "quality_control",
+      "bytes": 917,
+      "sha256": "4839141229884527c120718858540442571febf41ec022703dd08fd46909396a"
+    },
+    {
+      "path": "07_quality_control/TRAINING_LAYER_QC_REPORT_v0.2.9-dev4.md",
+      "category": "quality_control",
+      "bytes": 9694,
+      "sha256": "09a6bb5bb36b0f4d39e09a2d7027caaab43f92bb218cf39b2642394e757d5950"
+    },
+    {
+      "path": "07_quality_control/TRAINING_PLAN_QC_v0.2.9-dev3.md",
+      "category": "quality_control",
+      "bytes": 982,
+      "sha256": "e002331192e98dad2a4eccdf2133954a4203a9035ba7874d717129348db1c227"
+    },
+    {
+      "path": "07_quality_control/TRAINING_RESEARCH_MATRIX_QC_v0.2.9-dev6.md",
+      "category": "quality_control",
+      "bytes": 926,
+      "sha256": "e11223dcabc44b29bff14b32f5529921fab83f81b3d0d037270da8655a5a5c73"
+    },
+    {
+      "path": "07_quality_control/v0.3_OWNER_REVIEW_PACKET.md",
+      "category": "quality_control",
+      "bytes": 1107,
+      "sha256": "bb3effaa9ee503c3827821fd4a1cd5e7a2472c582827d22e02aac5b7d56007c9"
+    },
+    {
+      "path": "07_quality_control/v0.3_OWNER_REVIEW_REMINDER_v0.2.9.md",
+      "category": "quality_control",
+      "bytes": 534,
+      "sha256": "39dd6f6e06873df3a14c3541a826d9e660e747c788c64bdcae3dfc5bf435a75f"
+    },
+    {
+      "path": "08_visuals/ATLAS_ROUTING_FLOWCHART_OVERVIEW.png",
+      "category": "visual_asset",
+      "bytes": 1026374,
+      "sha256": "75886f8a09c6f059ba5e24c7128dcdc1fea8576ff2558cfb0c18d9851ed52123"
+    },
+    {
+      "path": "08_visuals/ATLAS_ROUTING_SYSTEM_FLOWCHART_OVERVIEW.png",
+      "category": "visual_asset",
+      "bytes": 1108293,
+      "sha256": "b8f3181b6d00844e9a6068347389fd5f6972fd0a71927c671336d52769f2de01"
+    },
+    {
+      "path": "08_visuals/ATLAS_SYSTEM_OVERVIEW_DIAGRAM.md",
+      "category": "visual_asset",
+      "bytes": 594,
+      "sha256": "75530308cd21644fd1f96018b7bfce5f09f25ac715a11a97559f65187d455b86"
+    },
+    {
+      "path": "08_visuals/ATLAS_SYSTEM_OVERVIEW_DIAGRAM.png",
+      "category": "visual_asset",
+      "bytes": 1700968,
+      "sha256": "02e989cc10ede75ea8afe8b16ecffe4fa0efb811320aa75867542096d029fdd7"
+    },
+    {
+      "path": "08_visuals/DIAGRAM_INDEX.md",
+      "category": "visual_asset",
+      "bytes": 641,
+      "sha256": "75f232d6becd116dceb1bf9938555baabcdd8d653ce55a05fd3f24871ad078e9"
+    },
+    {
+      "path": "08_visuals/README.md",
+      "category": "visual_asset",
+      "bytes": 398,
+      "sha256": "703cf9b59e41f163b5b0110095388488cff9926cf4304c3f8c87b2d80f3cd279"
+    },
+    {
+      "path": "09_research_notes/DECISION_LOG.md",
+      "category": "research_note",
+      "bytes": 892,
+      "sha256": "1ef73b6872973fee72dafc916514bd25b18cb773f37ce0f2f564d4153e2d976c"
+    },
+    {
+      "path": "09_research_notes/PROGRESS_LOG.md",
+      "category": "research_note",
+      "bytes": 1197,
+      "sha256": "5b5810167547b643344ceaeee11a9b3e9867f1b6b3970dd488a5a37d3616cfe9"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.1.md",
+      "category": "research_note",
+      "bytes": 801,
+      "sha256": "b32fd4673e0a662262a0ed04224f8321acd0947bbf625e15f39e15c7dce195a3"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.2.md",
+      "category": "research_note",
+      "bytes": 838,
+      "sha256": "aa9db7f341c4caaf31a7240c2d7ed78538b7af016b20ef49bcf85af3c5917a56"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.3.md",
+      "category": "research_note",
+      "bytes": 736,
+      "sha256": "4924d6c45917c41e904bc1e2a68f5a105c19972913cbc1f1d07ac4134ab8c218"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.4.md",
+      "category": "research_note",
+      "bytes": 634,
+      "sha256": "f09b3c56facd572ad632445913470ecdc74790db98e8cafdb6477d8e33e6761e"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.5.md",
+      "category": "research_note",
+      "bytes": 671,
+      "sha256": "8fb8bbf34e68d88e768ec47a24980ce2925f5ac3efd79dfad675e8ecaeaeef02"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.6.md",
+      "category": "research_note",
+      "bytes": 610,
+      "sha256": "e3b22a60a6c05f33f40d05c2cd816d90482426c04f69f06a137f42b9b41627a8"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.7.md",
+      "category": "research_note",
+      "bytes": 951,
+      "sha256": "e38bacca38c8a2105960b2aaefd429f642e78f98d5d0348c39ade0f8771d63a6"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.8.md",
+      "category": "research_note",
+      "bytes": 618,
+      "sha256": "0b7d684b1fd948693123f1e72902fb5a48006e2f066bd5352e7f4c49525190bb"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev1.md",
+      "category": "research_note",
+      "bytes": 494,
+      "sha256": "40eb27e26872e26ba1935fbe08a0891df1036f400de6648cc5723dc0d39ab892"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev2.md",
+      "category": "research_note",
+      "bytes": 367,
+      "sha256": "9db611ca6a0f03862532f8106a8122fe92893ee280e7665d8c40e5fe006c80d0"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev3.md",
+      "category": "research_note",
+      "bytes": 727,
+      "sha256": "694bd6e1f4645137ac772bf94ac7afc9e2650e5e58d219b25f47e540d3eda339"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev4.md",
+      "category": "research_note",
+      "bytes": 718,
+      "sha256": "1d65c613d877b03d760904a2a4c09cea158ceb4b39a7350cf83dec42b1c5b1a6"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev5-clean.md",
+      "category": "research_note",
+      "bytes": 610,
+      "sha256": "52a157f81568982dada06646866bc698f4b81c1a3c4bb394eed1d6fedcaae811"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev5.md",
+      "category": "research_note",
+      "bytes": 534,
+      "sha256": "cc5fd9cae3e5cd383e66f7e6b75aec8460379c10e41c4beed543b8b92ff6a0c8"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev6.1.md",
+      "category": "research_note",
+      "bytes": 465,
+      "sha256": "0c9dc013972de534c6a84b7a7b30adf10932ced6e387c17a8d6208037c722702"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev6.2.md",
+      "category": "research_note",
+      "bytes": 527,
+      "sha256": "649349e650390b947e2232f4ff8d80ec761eff0751b108d45046f58f1c0afdf4"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev6.md",
+      "category": "research_note",
+      "bytes": 504,
+      "sha256": "5fecfaf96d00c791e2b3bb0cad6bbf048422664e87fa6675913ec976a4c5694c"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9-dev7.md",
+      "category": "research_note",
+      "bytes": 619,
+      "sha256": "d9ed3f3e56eb43efe2de53d380bcfc34d12196dfc7c05cd069a48b4fd55a41f1"
+    },
+    {
+      "path": "09_research_notes/PROJECT_STATUS_v0.2.9.md",
+      "category": "research_note",
+      "bytes": 446,
+      "sha256": "907ecc50c3d09f6751e8582c3b4435e77d99e7c0de8a5f325dcf5893e69b3800"
+    },
+    {
+      "path": "09_research_notes/README.md",
+      "category": "research_note",
+      "bytes": 183,
+      "sha256": "ef4af3ee71d5689604448c0e6b0e8d08c784fb416df7a95ccb17f194fe83874a"
+    },
+    {
+      "path": "09_research_notes/RESEARCH_VALUE_NOTE.md",
+      "category": "research_note",
+      "bytes": 1451,
+      "sha256": "4d706b530a435af45a54ecd8687eed9c6a38178e3ca5e0e7e6dfc677ec0d472d"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/AI_FIELD_GUIDE_AGENT_PLAN.md",
+      "category": "user_provided_source_material",
+      "bytes": 1317,
+      "sha256": "ca6fcbfce84cd45a92410094e541d3d6a35e3c68cb2cb7ca65760ed2086f74b6"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHANGELOG.md",
+      "category": "user_provided_source_material",
+      "bytes": 1103,
+      "sha256": "15da66189dda365aa377c9b1ba8e33c431815ef43c838f46151de0cb426ba1a5"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/01_brand_hub_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 2824,
+      "sha256": "ec9d200528c7ef40b02e4f7236239d2f96e27f1a3a6e4ab75424b2c2ebcf0d67"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/02_envpack_workstation_validator_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3579,
+      "sha256": "3b059883fa625daf5ea89c99ed4b3e6b4589d6dbd46e62f9d7d64ecf4008c467"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/03_model_checker_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3403,
+      "sha256": "699f5ca8e299794388a8c1c310f64014e4323aa6c03b8ec88aab5561d0158e69"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/04_field_manual_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3919,
+      "sha256": "245edb852371b12bcdbf07ba9b88266e1cf558e60048995922cb756e051bb24b"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/05_knowledge_pack_assistant_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3063,
+      "sha256": "294884ed2f11cef611241c8caab466d8139fd6ed1cf65438a2682a24b2bce644"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/06_workflow_packs_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3413,
+      "sha256": "16fe2a5f836cdfebe4200d1737bd7f9a01b3d698b7304fdfaef72c7f5b8b5177"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/07_comfyui_nodes_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3343,
+      "sha256": "9109e3333cab299aa55bca5f088d80c774651482d310b5b3724fbc6e5498fe86"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/08_old_photo_restore_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3335,
+      "sha256": "555c431ad0edde936d2f7ae467520b5bc6156e362acd9d1e33207dddde944ae1"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/09_qwenvl_vqa_llm_nodes_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3483,
+      "sha256": "418a610feaa2f74d4a42f9cc844fb88d549627a6ec2c481cf0285c782fdf1dbe"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/10_aiwf_photos_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3119,
+      "sha256": "859d0c215258885a470d9a50df893daf20feee7ab88b57dfcc84c93b58f183e2"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/11_labs_preservation_bridge_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3386,
+      "sha256": "5bd53921bb27c6dda989a2f923bbe3b3f59d17b520de75ca33591c895bbd3dfc"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_HANDOFFS/12_release_packaging_chat.md",
+      "category": "user_provided_source_material",
+      "bytes": 3267,
+      "sha256": "ddbba40dfc47385dd97de8781f05b5891a8f85af6bcd000dba30f5689fcdee50"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CHAT_SCOPE_FIREWALL.md",
+      "category": "user_provided_source_material",
+      "bytes": 1588,
+      "sha256": "537b1d70483e8783367b3de6eba646f8d83ca7e2a53a1cc5f88817665110140f"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/CROSS_CHAT_CHECKLIST.md",
+      "category": "user_provided_source_material",
+      "bytes": 2127,
+      "sha256": "c93fd12eefbde2a8c75b468104c8ae97f29514b0cb9c991b7384e29c9928dcf2"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/MASTER_DISTRIBUTION_ROADMAP.md",
+      "category": "user_provided_source_material",
+      "bytes": 7397,
+      "sha256": "425505599c952658f15b2cf137fa8f619ebfcf3dadf4d350a6f4d74744a3d586"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/PROJECT_CHAT_MAP.md",
+      "category": "user_provided_source_material",
+      "bytes": 4036,
+      "sha256": "4055bc5cf6eb6f64287b796193be701ac28b6a5dd4251d2ae29c4b7efd2e06da"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/README.md",
+      "category": "user_provided_source_material",
+      "bytes": 1347,
+      "sha256": "ac26e83b51aadc44e140c76590ae737d96eed8092ae9fa014699ee37942d1af5"
+    },
+    {
+      "path": "10_source_materials/AIWF_Project_Chat_Distribution_Roadmap/AIWF-Project-Chat-Distribution-Roadmap/SENDOFF_MASTER.md",
+      "category": "user_provided_source_material",
+      "bytes": 2184,
+      "sha256": "6ef19ba2a6b7ce946959689055657b8089e422c4eb4b44f07755a06b34d6ac65"
+    },
+    {
+      "path": "10_source_materials/AIWF_force_multiplier_insert.md",
+      "category": "user_provided_source_material",
+      "bytes": 3361,
+      "sha256": "5603a979cb1e2dd66d37c2872cb7f5d7fc1d3e7c4bc499a516095d35a39515bf"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "category": "repo_root_or_other",
+      "bytes": 11325,
+      "sha256": "7d14de83427a8bee7ff85fe00be73503a87d68185148ab9dd627ec5c8bf6f44b"
+    },
+    {
+      "path": "DIRECTORY_MAP.md",
+      "category": "repo_root_or_other",
+      "bytes": 2371,
+      "sha256": "32552787441822eaef8a17be27a90a9916a168aa1615aa782773d8e822b1fbf6"
+    },
+    {
+      "path": "GITHUB_UPLOAD_NOTES.md",
+      "category": "repo_root_or_other",
+      "bytes": 853,
+      "sha256": "5af365ee21c33a212cd55f3dbd3d4c13fd0b229bb57b7a87109bf4eb6654905d"
+    },
+    {
+      "path": "HUMAN_RELEASE_APPROVAL_GATE.md",
+      "category": "repo_root_or_other",
+      "bytes": 2349,
+      "sha256": "f491096527c271f1c4d58f946e05db2b3204cd7d8adda18212b7eb6009ae21ad"
+    },
+    {
+      "path": "LICENSE_NOTICE.md",
+      "category": "repo_root_or_other",
+      "bytes": 478,
+      "sha256": "1c3e684e2d401693bab903a86e88c20a64fe76b31187753b10b8a9c08910b4e6"
+    },
+    {
+      "path": "MANIFEST.json",
+      "category": "repo_root_or_other",
+      "bytes": 22881,
+      "sha256": "1bba9be1e77acb117342c4896c201c3c6d8c45dafb02648a4b74f2c80d04764c"
+    },
+    {
+      "path": "MILESTONES.md",
+      "category": "repo_root_or_other",
+      "bytes": 10508,
+      "sha256": "d5a67748c40579d80152f4f1c6f4b55fb42cf557681adf26494bd79905a33c42"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "category": "repo_root_or_other",
+      "bytes": 571,
+      "sha256": "fbcb44c852190d6cd67a11bdec02ac85bb1f01638f057ab2e6be9fc5a36d9ab2"
+    },
+    {
+      "path": "README.md",
+      "category": "repo_root_or_other",
+      "bytes": 4340,
+      "sha256": "8d5a1e054f08266f314487cf44ef56baf1d597d02470def8c4c9d4728af554c7"
+    },
+    {
+      "path": "RELEASE_GATES.md",
+      "category": "repo_root_or_other",
+      "bytes": 2490,
+      "sha256": "1682a514312566fc6d799cbbac0be6d330f94247c4a14482aecbefd77608a48e"
+    },
+    {
+      "path": "REPO_NAVIGATION.md",
+      "category": "repo_root_or_other",
+      "bytes": 1841,
+      "sha256": "2af95bae6d07304c44ecf3fa70cd26802d36054ff434b6f35b8ed5e133ead96d"
+    },
+    {
+      "path": "ROADMAP.md",
+      "category": "repo_root_or_other",
+      "bytes": 9160,
+      "sha256": "7e7aa9efe9924a816094e732841e121a296e8a32674df55774eab4be29263885"
+    },
+    {
+      "path": "VERSIONING_POLICY.md",
+      "category": "repo_root_or_other",
+      "bytes": 4198,
+      "sha256": "009b0bf173a3c1f31fe57e5c09a478ddf002125295b699c37fd203329e05315e"
+    },
+    {
+      "path": "requirements-training.txt",
+      "category": "training_or_repo_code",
+      "bytes": 305,
+      "sha256": "a81c39fe489000f77df5a5d9c8053aed300175d7f47598a7bfb9d8fd412e2e17"
+    },
+    {
+      "path": "requirements.txt",
+      "category": "repo_root_or_other",
+      "bytes": 32,
+      "sha256": "4ade2f970c25446730ca8b83658d6e4bafeab368cf2b4cbccdf77ccb2b60bc3b"
+    },
+    {
+      "path": "scripts/__pycache__/compute_significance.cpython-313.pyc",
+      "category": "training_or_repo_code",
+      "bytes": 7276,
+      "sha256": "5ae1f55ef8e23e0b47b5cbfa00b302fdfa30ef29b31ee7b35597fc4a7f20b61f"
+    },
+    {
+      "path": "scripts/__pycache__/create_train_eval_split.cpython-313.pyc",
+      "category": "training_or_repo_code",
+      "bytes": 3452,
+      "sha256": "5d14438b4845b7766d5c3fca582bd39c067d5deb99d2fd7225d237b33591bad3"
+    },
+    {
+      "path": "scripts/__pycache__/render_atlas_sft_dataset.cpython-313.pyc",
+      "category": "training_or_repo_code",
+      "bytes": 5081,
+      "sha256": "164138c5d96b8d7e08e991291328e1fcc7c588da5e63b7f8e33bbf79295b8022"
+    },
+    {
+      "path": "scripts/__pycache__/train_atlas_reader_qlora.cpython-313.pyc",
+      "category": "training_or_repo_code",
+      "bytes": 21423,
+      "sha256": "41e00049c032a5e8fdee45a970c9418ac28624f0432714e9d7fe237f2f9591c5"
+    },
+    {
+      "path": "scripts/build_seed_training_records.py",
+      "category": "training_or_repo_code",
+      "bytes": 4088,
+      "sha256": "f0e79c90dd2717770b64ef3300aa7e4c2c5254849204609bda028a8e33c09a7b"
+    },
+    {
+      "path": "scripts/check_training_record_quality.py",
+      "category": "training_or_repo_code",
+      "bytes": 2899,
+      "sha256": "53820bc698981e0af4903736406e88b83601b23861cacf5d40b0f1e9a9dcd3c9"
+    },
+    {
+      "path": "scripts/compute_significance.py",
+      "category": "training_or_repo_code",
+      "bytes": 3080,
+      "sha256": "9d1f0228c28aa96641af0c9744fc8f8bdb550cea136303a9ea81197724a1f786"
+    },
+    {
+      "path": "scripts/create_train_eval_split.py",
+      "category": "training_or_repo_code",
+      "bytes": 1767,
+      "sha256": "f3cdcd2ce6863af6afebe1bad2c7348a8bc18aa9a811f7caeaa0935e193b3290"
+    },
+    {
+      "path": "scripts/render_atlas_sft_dataset.py",
+      "category": "training_or_repo_code",
+      "bytes": 2993,
+      "sha256": "3aec2f6b5b03a1d185897e69584d6c6211beefbda810ac9a82a29cc50d005125"
+    },
+    {
+      "path": "scripts/summarize_results.py",
+      "category": "training_or_repo_code",
+      "bytes": 1570,
+      "sha256": "bffe5dd766f521202cb6396afe5addbd498579ecf01f2a84f14ba245e5271a94"
+    },
+    {
+      "path": "scripts/train_atlas_reader_qlora.py",
+      "category": "training_or_repo_code",
+      "bytes": 15226,
+      "sha256": "4c0e47c30b54ad60787be860297f2511e51e97e232cc56dc7dbd23bbe8375e11"
+    },
+    {
+      "path": "scripts/validate_seed_cards.py",
+      "category": "training_or_repo_code",
+      "bytes": 3900,
+      "sha256": "0f155b9908b742372225fb7e841dc6c5216d2e481ef453e7367d7deb82e87065"
+    },
+    {
+      "path": "scripts/validate_training_records.py",
+      "category": "training_or_repo_code",
+      "bytes": 3398,
+      "sha256": "44e5cac7c8cf367c1e23c0550132e60863f2ee64b96abc5d0d64c30947e7b326"
+    },
+    {
+      "path": "tools/powershell/dry_run_training_config.ps1",
+      "category": "training_or_repo_code",
+      "bytes": 278,
+      "sha256": "0f2c975be465408788a5357acbd0bbfb629a76992c22788d093e18a3f527d6f9"
+    },
+    {
+      "path": "tools/powershell/train_atlas_reader.ps1",
+      "category": "training_or_repo_code",
+      "bytes": 251,
+      "sha256": "25e50c5700db3f8e87414e36ddb8dd0bec1be1ec41c66236f796116791691f15"
+    }
+  ]
+}

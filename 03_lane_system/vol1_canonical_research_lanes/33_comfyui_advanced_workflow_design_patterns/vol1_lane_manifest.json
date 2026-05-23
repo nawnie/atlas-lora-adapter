@@ -1,0 +1,20 @@
+{
+  "lane_id": "RP33",
+  "slug": "33_comfyui_advanced_workflow_design_patterns",
+  "title": "ComfyUI Advanced Workflow Design Patterns",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md",
+    "lane_profile.json",
+    "vol1_lane_manifest.json"
+  ],
+  "retrieval_cards": 12,
+  "source_anchors": 11
+}

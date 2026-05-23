@@ -1,0 +1,16 @@
+{
+  "lane_id": "31_comfyui_datatype_conversion_boundaries",
+  "slug": "31_comfyui_datatype_conversion_boundaries",
+  "title": "ComfyUI Datatype Conversion and Boundary Design",
+  "status": "canonical_current",
+  "freshness": "fast_moving",
+  "claim_confidence": "official_docs_synthesized",
+  "primary_use": "Route advanced ComfyUI datatype, socket conversion, and boundary questions.",
+  "source_priority": [
+    "official_comfyui_docs",
+    "current_comfyui_source",
+    "verified_custom_node_examples"
+  ],
+  "default_answer_gate": "Explain datatype contract and boundary first; then code-level changes; then graph-level consequences.",
+  "retrieval_card_count": 12
+}

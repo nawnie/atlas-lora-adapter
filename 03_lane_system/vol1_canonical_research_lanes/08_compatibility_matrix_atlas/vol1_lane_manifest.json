@@ -1,0 +1,32 @@
+{
+  "lane_id": "RP08",
+  "slug": "08_compatibility_matrix_atlas",
+  "title": "Compatibility Matrix RAG",
+  "vol1_status": "balanced_baseline_created",
+  "created_day": "2026-05-19",
+  "source_folders": [
+    "AIWF_RAG_Concept_Additions_v0_1",
+    "AIWF_Pip_Package_RAG_Starter_v1_9",
+    "aiwf_node_research_pass02N_flux_model_control_sampler_mds_v1_4"
+  ],
+  "source_counts": {
+    "files": 692,
+    "md": 486,
+    "csv": 129,
+    "json": 23,
+    "code": 43
+  },
+  "kit_files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "card_count": 9,
+  "status_before": "concept note only; now promoted to Vol. 1 lane"
+}

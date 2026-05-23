@@ -1,0 +1,41 @@
+{
+  "lane_id": "18_mlops_llmops_release_management",
+  "title": "MLOps, LLMOps, and Release Management",
+  "version": "v1.1",
+  "status": "vol1_research_lane_added",
+  "files": [
+    "README_VOL1.md",
+    "VOL1_SCOPE.md",
+    "CANONICAL_OVERVIEW.md",
+    "CONCEPT_MAP.md",
+    "EMBEDDING_AND_CHUNKING_STRATEGY.md",
+    "RETRIEVAL_CARDS.jsonl",
+    "QA_TEST_PROMPTS.md",
+    "GAP_AUDIT_AND_VOL2_QUEUE.md",
+    "SOURCE_COVERAGE.md"
+  ],
+  "retrieval_card_count": 12,
+  "related_lanes": [
+    "02_atlas_architecture_chunking_embedding",
+    "11_gradio_ui_research",
+    "24_ai_application_architecture"
+  ],
+  "sources": [
+    {
+      "title": "MLflow GenAI eval and monitoring",
+      "url": "https://mlflow.org/docs/latest/genai/eval-monitor/"
+    },
+    {
+      "title": "MLflow evaluation datasets",
+      "url": "https://mlflow.org/docs/latest/genai/datasets/"
+    },
+    {
+      "title": "Arize AI observability",
+      "url": "https://arize.com/"
+    },
+    {
+      "title": "LangChain / LangSmith platform",
+      "url": "https://www.langchain.com/"
+    }
+  ]
+}

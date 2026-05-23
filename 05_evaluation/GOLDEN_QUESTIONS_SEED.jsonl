@@ -1,0 +1,10 @@
+{"question_id": "gq-001", "task_type": "lane_routing", "user_question": "WAN crashes after 121 frames but image generation works fine. What should I check?", "expected_primary_lane": "video_vram_optimization"}
+{"question_id": "gq-002", "task_type": "answer_from_context", "user_question": "Why won't an IMAGE output connect to a LATENT input in ComfyUI?", "expected_primary_lane": "comfyui_socket_contract_debugging"}
+{"question_id": "gq-003", "task_type": "insufficient_context", "user_question": "What exact node class_type should I use here if the source only says to check object_info?", "expected_primary_lane": "comfyui_workflow_repair"}
+{"question_id": "gq-004", "task_type": "freshness_check", "user_question": "Is this Gradio API behavior still current?", "expected_primary_lane": "claim_freshness_verification"}
+{"question_id": "gq-005", "task_type": "exactness_guard", "user_question": "Can I pip install the missing module name directly from the error?", "expected_primary_lane": "runtime_log_diagnosis"}
+{"question_id": "gq-006", "task_type": "answer_format_selection", "user_question": "Review this repo and tell me the goal from here.", "expected_primary_lane": "release_quality_reports"}
+{"question_id": "gq-007", "task_type": "conflict_resolution", "user_question": "The archive note and the current SOP disagree. Which do I follow?", "expected_primary_lane": "conflict_resolution_patterns"}
+{"question_id": "gq-008", "task_type": "lane_routing", "user_question": "My inpaint changes the jacket and body shape. What kind of issue is this?", "expected_primary_lane": "inpainting_fundamentals"}
+{"question_id": "gq-009", "task_type": "answer_from_context", "user_question": "Should I dump the whole Atlas into context for a 4B model?", "expected_primary_lane": "small_model_retrieval_optimization"}
+{"question_id": "gq-010", "task_type": "multi_rag_generalization", "user_question": "A hotel SOP and old training note disagree about closing the cash drawer. Which source wins?", "expected_primary_lane": "cash_handling_sop"}
