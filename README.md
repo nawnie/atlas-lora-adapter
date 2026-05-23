@@ -158,7 +158,7 @@ lora_training_lab/05_evaluation/SMOKE_TRAIN_PROTOCOL.md
 
 ## Repository map
 
-The landing page stays short on purpose. The build notes, audits, and handoff records live in the repo where reviewers can inspect them without crowding the front page.
+This README is the project landing page. Build notes, audits, and handoff records are kept in dedicated files so reviewers can inspect them without crowding the project overview.
 
 Start here:
 
@@ -290,15 +290,15 @@ Approved: promote to v0.3.0
 
 No AI assistant or automation may promote this project across a `.0` milestone gate without that approval.
 
-## Current best next step
+## Next task
 
-The next real work should be:
+The next real task will be:
 
 ```text
 turn scaffold training records into answer-quality records
 run the 3-lane smoke protocol
 score the 4-arm comparison
-publish the outcome honestly
+publish the raw data and assessment
 ```
 
 ## Project records
@@ -313,4 +313,4 @@ GITHUB_UPLOAD_NOTES.md
 RAG_HANDOFF_GUIDE.md
 ```
 
-The short version: this is a pre-training research lab, not a finished adapter. The next useful result is a measured run log, even if the result is "this version failed."
+Current status: pre-training research lab. No finished adapter is claimed. The next publishable artifact is a measured run log with raw data and assessment.
