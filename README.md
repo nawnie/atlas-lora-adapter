@@ -22,7 +22,7 @@ Training status: **no adapter trained yet**
 
 Atlas Reader LoRA is a structured-RAG research project testing whether a small LoRA adapter can learn a **portable reading protocol** for a named Atlas contract.
 
-The short version:
+Concept summary:
 
 ```text
 A normal RAG gives the model a pile of notes.
@@ -53,16 +53,16 @@ The Atlas Reader LoRA teaches the model how to read the map.
 
 ## Research rationale
 
-This project is worth exploring because the outcome is unknown but testable.
+This project targets a bounded research question with an unknown but testable outcome.
 
 ```text
 Unknown does not mean impossible.
 Unknown means instrument it.
 ```
 
-The current goal is not to claim a win.
+The current goal is not to claim a performance result.
 
-The current goal is to build the test bench, run it locally, save the logs, and let the evidence decide.
+The current goal is to build the test bench, run it locally, save logs, and publish measured results.
 
 See:
 
@@ -179,7 +179,7 @@ The Atlas contract defines the shape of the structured RAG system:
 5D = up to 5 cards in the context pack
 ```
 
-The adapter should learn behavior:
+Target adapter behavior:
 
 ```text
 read query
@@ -193,7 +193,7 @@ answer compactly
 
 The Atlas keeps the knowledge.
 
-The LoRA should learn how to use the Atlas.
+The LoRA target is structured Atlas use, not memorization of the Atlas contents.
 
 ## Diagrams
 
