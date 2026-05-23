@@ -42,7 +42,7 @@ The Atlas Reader LoRA teaches the model how to read the map.
   <img src="08_visuals/ATLAS_ROUTING_SYSTEM_FLOWCHART_OVERVIEW.png" alt="How Atlas cards and the five-card context pack work" width="900">
 </p>
 
-<p align="center"><strong>How the cards work:</strong> selected cards form a compact context pack so small models get a map instead of an all-you-can-eat buffet of notes.</p>
+<p align="center"><strong>How the cards work:</strong> selected cards form a compact context pack so small models get a map instead of an unfocused pile of notes.</p>
 
 <p align="center">
   <img src="08_visuals/ATLAS_ROUTING_FLOWCHART_OVERVIEW.png" alt="How Atlas lanes route a query to cards and sources" width="900">
@@ -158,7 +158,7 @@ lora_training_lab/05_evaluation/SMOKE_TRAIN_PROTOCOL.md
 
 ## Repository map
 
-The landing page stays short on purpose. The build notes, audits, and handoff records live in the repo where reviewers can inspect them without making the front page read like a printer jam.
+The landing page stays short on purpose. The build notes, audits, and handoff records live in the repo where reviewers can inspect them without crowding the front page.
 
 Start here:
 
