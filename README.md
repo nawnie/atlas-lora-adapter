@@ -4,31 +4,48 @@
   <img src="08_visuals/AIWF_LOGO.png" alt="AI Without Fear logo" width="220">
 </p>
 
-## Current status: pre-install
+## Current status
 
-This package has not been installed on the target PC yet.
+The repo has moved past the initial pre-training scaffold phase.
 
-No training run has completed.
+A first measured O mixed-schema off-ramp adapter run has been recorded. This is an internal evaluation result, not a final proof of open-world generalization.
 
-No adapter exists yet.
+Current best evaluated direction:
 
-No performance wins are claimed.
+```text
+O_mixed_schema_offramp_4b_r16_lr0001_1epoch
+```
 
-Report templates are included because future runs need clean places to record evidence.
+Key O results:
 
-Current version: **v0.2.9-dev21**  
-Status: **GitHub upload prep / seed-build / public-review package**  
-Training status: **no adapter trained yet**
+| Eval | O Result |
+|---|---:|
+| Compact seed cards | 65/65 |
+| Targeted top-1 card | 64/65 |
+| Targeted top-3 cards | 65/65 |
+| Off-ramp focused | 8/8 |
+| Hard ID-copy | 14/16 |
 
-Atlas Reader LoRA is a structured-RAG research project testing whether a small LoRA adapter can learn a **portable reading protocol** for a named Atlas contract.
+See:
 
-Concept summary:
+```text
+docs/atlas/o_mixed_schema_offramp/O_MIXED_SCHEMA_OFFRAMP_REPORT.md
+05_evaluation/previous_adapter_results/PREVIOUS_ADAPTER_RESULTS_FROM_8ZIP.md
+```
+
+## Concept summary
+
+Atlas Reader LoRA is a structured-RAG research project testing whether a small LoRA adapter can learn a portable reading protocol for a named Atlas contract.
 
 ```text
 A normal RAG gives the model a pile of notes.
 An Atlas gives it a map.
 The Atlas Reader LoRA teaches the model how to read the map.
 ```
+
+The Atlas keeps the knowledge.
+
+The LoRA target is structured Atlas use, not memorization of the Atlas contents.
 
 ## Visual overview
 
@@ -50,26 +67,15 @@ The Atlas Reader LoRA teaches the model how to read the map.
 
 <p align="center"><strong>How lanes route the query:</strong> lanes act as broad routes; cards inside the lane point the model toward the relevant evidence.</p>
 
-
 ## Research rationale
 
-This project targets a bounded research question with an unknown but testable outcome.
+This project targets a bounded research question with measurable outcomes:
 
 ```text
-Unknown does not mean impossible.
-Unknown means instrument it.
+Can a small adapter improve how a model reads structured RAG context?
 ```
 
-The current goal is not to claim a performance result.
-
-The current goal is to build the test bench, run it locally, save logs, and publish measured results.
-
-See:
-
-```text
-01_strategy/RESEARCH_RATIONALE_UNKNOWN_MEANS_INSTRUMENT_IT.md
-05_evaluation/EVALUATION_RATIONALE_USEFUL_FAILURE.md
-```
+The O run supports the mixed-schema off-ramp direction under the recorded internal evaluation conditions. Broader validation is still required.
 
 ## AI Without Fear identity
 
@@ -83,24 +89,16 @@ Train the behavior. Keep the knowledge in the Atlas.
 No proof without a run log.
 ```
 
-Brand/system files:
-
-```text
-01_strategy/AIWF_BRAND_SYSTEM.md
-00_landing_page/AIWF_ATLAS_READER_LANDING_DRAFT.md
-08_visuals/AIWF_VISUAL_BRANDING_NOTES.md
-```
-
 ## What this project is
 
 This project is a research/design repository for:
 
 - structured Atlas lanes;
 - compact retrieval cards;
-- 5-card context-pack routing;
+- context-pack routing;
 - source-priority and exactness-guard behavior;
-- small-model-first training experiments;
-- evaluation before performance claims.
+- small-model-first adapter experiments;
+- evaluation before broad performance claims.
 
 ## What this project is not
 
@@ -108,60 +106,12 @@ This project is **not** claiming:
 
 - a new LoRA algorithm;
 - a new foundation model;
-- proof that the adapter works before training/evaluation;
+- proof that the adapter transfers across domains;
 - proof that small models equal larger models globally;
-- that diagrams or metaphors are research evidence.
+- that diagrams or metaphors are research evidence;
+- that Atlas replaces current source verification.
 
-## Current seed status
-
-```text
-18 seed lanes
-216 seed cards
-21 sample/scaffold training records
-3 diagrams
-```
-
-The sample training records are **schema/scaffold examples**, not final SFT-quality records.
-
-
-## Quick start for reviewers
-
-Read these first:
-
-```text
-REPO_NAVIGATION.md
-DIRECTORY_MAP.md
-01_strategy/RELATED_WORK.md
-01_strategy/SOURCE_AND_ATTRIBUTION_POLICY.md
-lora_training_lab/04_training_data/OVERNIGHT_TRAINING_RUN_MATRIX.md
-lora_training_lab/05_evaluation/SMOKE_TRAIN_PROTOCOL.md
-07_quality_control/PUBLIC_REVIEW_CHECKLIST.md
-```
-
-## Repository map
-
-This README is the project landing page. Build notes, audits, and packaging records are kept in dedicated files so reviewers can inspect them without crowding the project overview.
-
-Start here:
-
-```text
-REPO_NAVIGATION.md
-PROJECT_STATUS.md
-CHANGELOG.md
-07_quality_control/PUBLIC_REVIEW_CHECKLIST.md
-```
-
-## Main idea
-
-The Atlas contract defines the shape of the structured RAG system:
-
-```text
-128L = 128 lanes
-12C = 12 cards per lane
-5D = up to 5 cards in the context pack
-```
-
-Target adapter behavior:
+## Target adapter behavior
 
 ```text
 read query
@@ -170,75 +120,25 @@ use selected cards
 ignore distractors
 respect source priority
 qualify stale/missing evidence
+use off-ramp behavior when Atlas evidence is absent
 answer compactly
 ```
 
-The Atlas keeps the knowledge.
+## Evaluation path
 
-The LoRA target is structured Atlas use, not memorization of the Atlas contents.
-
-## Diagrams
-
-The three project diagrams are displayed near the top of this README and stored in:
+Earlier adapter results are summarized in:
 
 ```text
-08_visuals/
+05_evaluation/previous_adapter_results/
 ```
 
-Included diagrams:
+The O mixed-schema off-ramp result is summarized in:
 
 ```text
-ATLAS_SYSTEM_OVERVIEW_DIAGRAM.png — what the LoRA adapter is
-ATLAS_ROUTING_SYSTEM_FLOWCHART_OVERVIEW.png — how the cards work
-ATLAS_ROUTING_FLOWCHART_OVERVIEW.png — how lanes route the query
+docs/atlas/o_mixed_schema_offramp/
 ```
 
-See:
-
-```text
-08_visuals/DIAGRAM_INDEX.md
-```
-
-## Training plan
-
-Training work is planned but not executed.
-
-Important files:
-
-```text
-lora_training_lab/04_training_data/TRAINING_PLAN_ATLAS_READER_MINI.md
-lora_training_lab/04_training_data/TRAINING_RECORD_QUALITY_GATES.md
-lora_training_lab/04_training_data/OVERNIGHT_TRAINING_RUN_MATRIX.md
-lora_training_lab/04_training_data/ATLAS_SFT_FORMATTING_GUIDE.md
-lora_training_lab/06_experiments/training_configs/
-```
-
-## Evaluation plan
-
-The next proof step is a smoke train and 4-arm evaluation:
-
-```text
-A: base model, no RAG
-B: base model + raw RAG
-C: base model + Atlas RAG
-D: base model + Atlas Reader LoRA + Atlas RAG
-```
-
-The key comparison is:
-
-```text
-C vs D
-```
-
-because that tests whether the LoRA adds value beyond Atlas RAG alone.
-
-Evaluation files:
-
-```text
-lora_training_lab/05_evaluation/SMOKE_TRAIN_PROTOCOL.md
-05_evaluation/GOLDEN_QUESTIONS_SMOKE_25.jsonl
-scripts/compute_significance.py
-```
+The next useful run is a P cleanup pass focused on exact lane/card ID preservation and clean answer wording.
 
 ## Source policy
 
@@ -250,31 +150,10 @@ Citable sources for this project are:
 - measured local outputs;
 - project-authored notes clearly marked as drafts or internal reasoning.
 
+AI assistants and drafting tools are not evidence sources.
+
 See:
 
 ```text
 01_strategy/SOURCE_AND_ATTRIBUTION_POLICY.md
 ```
-
-## Next task
-
-The next real task will be:
-
-```text
-turn scaffold training records into answer-quality records
-run the 3-lane smoke protocol
-score the 4-arm comparison
-publish the raw data and assessment
-```
-
-## Project records
-
-Detailed build history and quality-control notes are intentionally kept outside the landing page:
-
-```text
-CHANGELOG.md
-09_research_notes/
-07_quality_control/
-```
-
-Current status: pre-training research lab. No finished adapter is claimed. The next publishable artifact is a measured run log with raw data and assessment.
