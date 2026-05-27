@@ -1,47 +1,32 @@
 # Project Status
 
-Version: v0.2.9-dev21  
-Status: GitHub upload prep / public-review package  
-Date: 2026-05-23
+Date: 2026-05-27
+Status: O evaluation recorded
 
 ## Current state
 
-```text
-seed lanes: 18
-seed cards: 216
-sample/scaffold records: 21
-diagrams: 3
-adapter trained: no
-training run completed: no
-GitHub repo initialized: no
-```
+The repo has moved past the earlier pre-training scaffold status. Earlier files that say no adapter had been trained reflect the May 23 upload-prep state and are now superseded by the May 27 O evaluation records.
 
-## Upload shape
+## Current best evaluated direction
 
-This folder is the LoRA adapter research package. It keeps `lora_training_lab/` because that is the adapter/training lane.
+The current best evaluated Atlas adapter direction is the O mixed-schema run.
 
-Large preserved incoming Atlas payloads, incoming visual-source archives, and forensic Git history remain on disk for local provenance, but are ignored by `.gitignore` for a normal public GitHub upload.
+| Eval | O Result |
+|---|---:|
+| Compact seed cards | 65/65 |
+| Targeted top-1 card | 64/65 |
+| Targeted top-3 cards | 65/65 |
+| Off-ramp focused | 8/8 |
+| Hard ID-copy | 14/16 |
+
+## Safe current claim
+
+Atlas O is the best evaluated adapter direction in this repo so far under the recorded internal evaluation conditions.
+
+## Claim boundary
+
+Do not claim open-world generalization, universal model portability, global 4B parity with larger models, or production readiness from this run.
 
 ## Next work
 
-1. Initialize Git only after owner approval.
-2. Convert scaffold training records into answer-quality records.
-3. Run the 3-lane smoke-train protocol.
-4. Score the four-arm evaluation.
-5. Decide whether scaling to the full 128-lane Atlas is justified.
-
-## Governance
-
-This is not v0.3.0.
-
-Owner approval is required before milestone promotion.
-
-## Pre-install / no-results guard
-
-This project has not yet been installed on the target PC.
-
-No adapter has been trained.
-
-No evaluation result exists yet.
-
-Prepared scripts, templates, and diagrams are not wins; they are the test bench.
+The next run should focus on exact lane/card ID preservation while still answering the user request cleanly.
