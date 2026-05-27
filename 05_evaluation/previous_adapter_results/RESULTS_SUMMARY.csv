@@ -1,0 +1,8 @@
+run,adapter_pass,base_pass,adapter_avg_total_tokens,base_avg_total_tokens,key_read
+J_seed_cards_full_r16_lr0002_base_vs_adapter,59/65,5/65,652.94,647.97,Best 0.5B compact-card run before O
+K_seed_cards_full_r16_lr0002_atlas_trigger_base_vs_adapter,58/65,10/65,687.83,693.58,Activator-token variant did not help
+L_seed_cards_capacity_r32_lr0001_base_vs_adapter,57/65,5/65,653.05,647.97,Higher-rank 0.5B variant did not improve over J
+N_seed_cards_4b_r16_lr0001_1epoch_base_vs_adapter,65/65,1/65,647.00,646.40,Best compact-card quality run before O
+base_vs_adapter_20260526_095842,2/2,0/2,,,Tiny smoke check
+base_vs_adapter_20260526_095918,38/65,4/65,,,Early full 65-record run
+workspace_rag_J_base_vs_adapter,2/65,0/65,3327.37,3325.91,Raw workspace context was costly and noisy
