@@ -1,0 +1,6 @@
+Eval,Pass,Total,Avg Tokens,Pass Rate
+Compact seed,65,65,651.4,100.0
+Top-1,64,65,423.6,98.46153846153847
+Top-3,65,65,660.3,100.0
+Off-ramp,8,8,421.3,100.0
+Hard ID,14,16,742.0,87.5
